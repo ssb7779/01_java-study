@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/01_java-study.iml" filepath="$PROJECT_DIR$/.idea/01_java-study.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/pch-java-workspace.iml" filepath="$PROJECT_DIR$/.idea/pch-java-workspace.iml" />
     </modules>
   </component>
 </project>
