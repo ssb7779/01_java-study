@@ -7,13 +7,13 @@ public class PracApplication6 {
         int engScore = 80;
         int mathScore = 40;
 
-        int sumScore
+        int sumScore = korScore + mathScore + engScore;
+        int avgScore = sumScore / 3;
 
-        String result = ( &&  == 'Y') ? "합격" : "불합격";
-        System.out.println(result);
+        String result = ( korScore >= 40 && engScore >= 40 && mathScore >= 40 && avgScore >= 60 ) ? "합격" : "불합격";
 
-        int sumScore = (int)(korScore + mathScore + engScore);
         System.out.println("합계 : " + sumScore);
-        System.out.println("평균 : " + sumScore / 3);
+        System.out.println("평균 : " + avgScore);
+        System.out.println("결과 : " + result);
     }
 }
