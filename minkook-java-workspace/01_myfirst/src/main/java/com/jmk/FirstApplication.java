@@ -42,6 +42,7 @@ public class FirstApplication {
 
         //안녕하세요 xxx에 오신걸 환영합니다! x월 x일까지 잘해봐요!
         System.out.printf("안녕하세요 %s에 오신걸 환영합니다! %d월 %d일까지 잘해봐요","신세계", 2, 2);
+
     } //class end
 
     /*
