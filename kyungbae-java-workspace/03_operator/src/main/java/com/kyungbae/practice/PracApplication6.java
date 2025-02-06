@@ -17,17 +17,27 @@ public class PracApplication6 { // class start
 
         int korScore = 40;
         int engScore = 40;
-        int mathScore = 100;
+        int mathScore = 60;
 
         boolean min = korScore >= 40 || engScore >= 40 || mathScore >= 40;  // 최소 점수컷
         int sum = korScore + engScore + mathScore;  // 합계
-        double avg = sum / 3;   // 평균
+        double avg = sum / 3.0;   // 평균
         boolean avgMin = avg >= 60.0;   // 최소 평균컷
         String result = min && avgMin ? "합격" : "불합격";
 
         System.out.printf("합계 : %d\n평균 : %.1f\n%s", sum, avg, result);
 
 
+
+/*
+        System.out.println("합계 : " + sum);
+
+        System.out.println("평균 : " + avg);
+
+        System.out.println((korScore >=40 && engScore >=40 && mathScore >= 40 && avg >= 60) ? "합격" : "불합격");
+
+
+ */
 
 
     } // main end
