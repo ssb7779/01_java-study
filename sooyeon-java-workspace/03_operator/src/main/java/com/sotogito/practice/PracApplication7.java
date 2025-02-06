@@ -6,7 +6,6 @@ public class PracApplication7 {
          * 사과 92새
          * 10개 | 10개 | 10개
          * 상자 10개(max) + 상자 1개(2개)
-         *
          */
 
         /**
@@ -18,10 +17,11 @@ public class PracApplication7 {
         int sizeOfBucket = 10; // 바구니당 담을 수 있는 최대 개수
         int numOfBucket = 0;  // 필요한 바구니 수
 
+        // numOfBucket = numOfApples / sizeOfBucket + numOfApples % sizeOfBucket > 0 ? 1 : 0;
         numOfBucket = numOfApples / sizeOfBucket;
-        numOfBucket += numOfApples% sizeOfBucket >0 ? 1 : 0;
-
+        numOfBucket += numOfApples % sizeOfBucket > 0 ? 1 : 0;
 
         System.out.println("필요한 바구니의 수 : " + numOfBucket);  // 10이 출력되어야됨
     }
+
 }
