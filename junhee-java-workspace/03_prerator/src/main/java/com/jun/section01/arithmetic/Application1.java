@@ -24,6 +24,7 @@ public class Application1 {
         System.out.println(num1 * num2);
         System.out.println(num1 / num2); // 나누기했을 때의 몫
         System.out.println(num1 % num2); // 나누기했을 때의 나머지
+        //실수 대입해서 해보기
         
         // 값 % 2 == 0 => 짝수
         // 값 % 2 == 1 => 홀수
