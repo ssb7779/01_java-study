@@ -7,7 +7,7 @@ public class PracApplication6 {
         int eng = 60;
 
         int sum = kor + math + eng;
-        int avg = sum / 3;
+        double avg = sum / 3.0;
 
         String result = (kor >=40 && math >=40 && eng >=40 &&avg >=60) ? "합격": "불합격";
 
