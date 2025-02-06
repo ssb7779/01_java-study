@@ -15,10 +15,9 @@ public class PracApplication6 {
         int math = 40;
 
         // int total = korean + english + math;
-        int average = (korean + english + math) / 3;
+        double average = (korean + english + math) / 3; //FIXME int -> double 형변환, 데이터 손실
 
-        String result = (korean >= 40 && english >= 40 && math >= 40 &&
-                average >= 60) ? "합격" : "불합격";
+        String result = (korean >= 40 && english >= 40 && math >= 40 && average >= 60) ? "합격" : "불합격";
 
         System.out.println(result);
     }
