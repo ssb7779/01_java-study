@@ -10,8 +10,7 @@ public class PracApplication1 {
 
         System.out.println("a: " + a); // a: 1
         System.out.println("b: " + b); // b: -6
-        System.out.println("c: " + c); // 내가쓴오답 c: 6 정답 c: 7
-        System.out.println("d: " + d); // 내가쓴오답 d: 8 정답 d: 9
-        //질문
+        System.out.println("c: " + c); // c: 7
+        System.out.println("d: " + d); // d: 9
     }
 }
