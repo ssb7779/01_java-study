@@ -10,7 +10,7 @@ public class PracApplication7 {
 //        int numOfBucket = ?;   // 필요한 바구니 수
 //        System.out.println("필요한 바구니의 수 : " + numOfBucket);  // 10이 출력되어야됨
 
-        int numOfApples = 12;
+        int numOfApples = 92;
         int sizeOfBucket = 10;
 
         int result = (numOfApples % sizeOfBucket == 0) ? numOfApples / sizeOfBucket : numOfApples / sizeOfBucket + 1;
@@ -36,6 +36,14 @@ public class PracApplication7 {
              (numOfApples % sizeOfBucket == 0) ? numOfApples / sizeOfBucket : numOfApples / sizeOfBucket + 1
          */
 
+        /*
+         ## 정답 ##
+
+         int numOfBucket = numOfApples / sizeOfBucket + (numOfApples % sizeOfBucket > 0 ? 1 : 0);
+
+
+
+         */
 
 
 

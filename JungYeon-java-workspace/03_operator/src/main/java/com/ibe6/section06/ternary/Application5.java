@@ -7,8 +7,8 @@ public class Application5 {
 
       int num = -3;
 
-        // 수정하기 String result (num <0) ? "음수이다"  : ( num == 0 ? "0이다" : "양수이다" );
-       // System.out.println(result);
+      String result = (num < 0) ? "음수이다"  : ( num == 0 ? "0이다" : "양수이다" );
+      System.out.println(result);
 
     }
 

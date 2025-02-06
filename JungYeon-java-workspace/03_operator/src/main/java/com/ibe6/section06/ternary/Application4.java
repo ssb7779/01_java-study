@@ -6,9 +6,11 @@ public class Application4 {
         // 영문자일 경우 "영문자이다", 그게 아닐 경우 "영문자가 아니다"
 
 
-        // 수정 char ch = 3;
-        // 수정 String result = ( (ch >= 'A') && (ch <= 'Z') ) ? "영문자이다" || "영문자가 아니다";
-        // 수정 System.out.println(result);
+       char ch = 3;
+       String result = ( ch >= 'A' && ch <= 'Z'
+                            || ch >= 'a' && ch <= 'z' ) ? "영문자이다"
+                                                        : "영문자가 아니다";
+       System.out.println(result);
 
     }
 }
