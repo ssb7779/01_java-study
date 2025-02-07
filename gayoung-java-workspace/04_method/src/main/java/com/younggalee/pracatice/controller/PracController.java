@@ -61,9 +61,10 @@ public class PracController {
     public void practice4() {
         Scanner sc = new Scanner(System.in);
         System.out.print("주민번호를 입력하세요. : ");
-        String personalID = sc.nextLine();
-        char gender = personalID.charAt(7);
-        String result = gender == 2 ? "여자" : "남자";
+//        String personalID = sc.nextLine();
+//        char gender = personalID.charAt(7);
+        char gender = sc.next().charAt(7);
+        String result = gender == '2' ? "여자" : "남자";
 
         System.out.println(result);
 
