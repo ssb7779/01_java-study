@@ -23,6 +23,8 @@ public class PracController {
         double height = sc.nextDouble();
 
         System.out.println("키 " + height + "인 " + age + "살 " + result + " " + name + "님 반갑습니다^^");
+        // 그냥 gender+자 했어도 됐음!!
+
     }
 
     public void practice2() {
@@ -31,6 +33,7 @@ public class PracController {
         System.out.print("문자열을 입력하세요: ");
 
         String fruit = sc.nextLine();
+        // 변수 기록 중요!
 
         char fruit0 = fruit.charAt(0);
         char fruit1 = fruit.charAt(1);
@@ -43,9 +46,6 @@ public class PracController {
 
 
 //        char fruit1 = sc.nextLine();
-
-//
-//
 //        System.out.println("두 번째 문자: " + fruit1);
 
 
@@ -70,7 +70,7 @@ public class PracController {
 
         System.out.print("성별(M/F): ");
         char gender = sc.nextLine().charAt(0);
-        String result = gender == 'M' || gender == 'm' ? "남학생" : "여학생";
+        String result = (gender == 'M' || gender == 'm') ? "남학생" : "여학생";
 
 
         System.out.print("성적(소수점 아래 둘째 자리까지): ");
@@ -84,10 +84,16 @@ public class PracController {
         Scanner sc = new Scanner(System.in);
 
         System.out.print("주민번호를 입력하세요(-포함): ");
-        char num = sc.nextLine().charAt(8);
+        char num = sc.nextLine().charAt(7); // 0부턴데 8로 썼음! 주의
         String result = num == '1' || num == '3' ? "남자" : "여자";
 
         System.out.println(result);
+
+        /*
+        String str = sc.nextLine();
+        char gender = str.charAt(7); // '1'또는 '2'또는 '3'또는 '4'
+        string ~~
+         */
 
     }
 
@@ -128,9 +134,16 @@ public class PracController {
 
         System.out.print("점수: ");
         int score = sc.nextInt();
+        String result = score / 10 == 9 ? "축하합니다." : "분발하세요.";
 
+        // 혹은
+        // String result = score >= 90 && score <=100 ? "축하합니다." : "분발하세요.";
+
+        /*
+        오답
         String result = score >= 90 ? "축하합니다" : "분발하세요";
-
         System.out.println(result);
+         */
+
     }
 }

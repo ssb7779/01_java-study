@@ -1,6 +1,7 @@
 package com.ibe6.practice.run;
 
-import com.ibe6.practice.controller.PracController;
+//import com.ibe6.practice.controller.PracController;
+import com.ibe6.practice.controller.*;
 
 import java.util.Scanner;
 
