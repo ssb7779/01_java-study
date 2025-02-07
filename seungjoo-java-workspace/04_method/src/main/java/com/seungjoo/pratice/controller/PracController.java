@@ -94,7 +94,7 @@ public class PracController {
         sc.nextLine();
         System.out.println("정수3:");
         int num3 = sc.nextInt();
-        boolean result = (num1 == num2 || num2 == num3)? true : false;
+        boolean result = (num1 == num2 && num2 == num3)? true : false;
         System.out.println(result);
     }
     public void practice7() {
