@@ -26,6 +26,9 @@ public class PracApplication7 { // class start
 
         System.out.println("필요한 바구니의 수 : " + numOfBucket);  // 10이 출력되어야됨
 
+
+//        int numOfBucket = numOfApples / sizeOfBucket + (numOfApples % sizeOfBucket > 0 ? 1 : 0);
+
     } // main end
 
 } // class end

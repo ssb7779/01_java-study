@@ -7,6 +7,10 @@ public class PracApplication5 {
         String result = (a <= 13) ? "어린이" : ((a > 13 && a <=19) ? "청소년" : "성인");
         System.out.println(result);
 
-        //질문 : 음수처리?
+        /*
+            선생님 풀이
+             String result = (a <= 13) ? "어린이" : ((a <=19) ? "청소년" : "성인");
+         */
+        //질문 : 음수처리? -> 음수 고려 안함
     }
 }
