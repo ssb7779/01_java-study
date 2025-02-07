@@ -6,10 +6,10 @@ public class PracApplication {
 //        contrl.practice1();
 //        contrl.practice2();
 //        contrl.practice3();
-//        contrl.practice4();
+        contrl.practice4();
 //        contrl.practice5();
 //        contrl.practice6();
-        contrl.practice7();
+//        contrl.practice7();
 
 
     }
