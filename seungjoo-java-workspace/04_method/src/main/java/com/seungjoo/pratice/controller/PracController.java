@@ -64,7 +64,7 @@ public class PracController {
         Scanner sc = new Scanner(System.in);
         System.out.println("주민번호를 입력하세요(- 포함):");
         String num = sc.nextLine();
-        char sex = num.charAt(8);
+        char sex = num.charAt(7);
         String gender = (sex == '2' || sex == '4') ? "여자" : "남자";
         System.out.println(gender);
     }
