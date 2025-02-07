@@ -42,10 +42,9 @@ public class Calculator {
              3. 매개변수는 해당 메소드 내부에서만 사용 가능
          */
 
-
-        // 특정 값을 전달받아 해당 값을 출력 가능
     }
 
+    // 특정 값을 전달받아 해당 값을 출력 가능
     public void printIntNumber(int num) {
         System.out.println("전달받은 정수값은 " +num + "입니다.");
     }

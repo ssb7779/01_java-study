@@ -93,8 +93,11 @@ public class PracController {
 
         String gender = (num == '1' || num == '3') ? ("남자")
                       : (num == '2' || num == '4') ? ("여자") : ("?") ;
-        // char 형태로 나왔으니 num에 대입되는 숫자는 정수형이
-        // 아닌 문자형이므로 문자형으로 비교해야함
+        // num이 char 형태로 저장됐으니 num과 비교되는 숫자는
+        // 정수형이 아닌 문자형이므로 문자형으로 비교해야함
+
+        // 질문 : 그럼 출력 값의 형태가 무엇인지는 확인을 못하나..?
+        
         System.out.println(num);
         System.out.println(gender);
     }
@@ -105,7 +108,50 @@ public class PracController {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("정수1 : ");
-        
+        int num1 = sc.nextInt();
+
+        System.out.println("정수2 : ");
+        int num2 = sc.nextInt();
+
+        System.out.println("비교값 : ");
+        int num3 = sc.nextInt();
+
+        boolean bool = ((num3 <= num1) || (num3 > num2)) ? true : false ;
+
+        System.out.println(bool);
+
+
+
+    }
+
+    public void practice6() {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("정수1 : ");
+        int num1 = sc.nextInt();
+
+        System.out.println("정수2 : ");
+        int num2 = sc.nextInt();
+
+        System.out.println("정수3 : ");
+        int num3 = sc.nextInt();
+
+        boolean bool = (num1 == num2) && (num2 == num3) ? true : false;
+
+        System.out.println(bool);
+
+    }
+
+    public void practice7() {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("점수 : ");
+        int score = sc.nextInt();
+
+        String st = score >= 90 && score <= 100 ? "축하합니다" : "분발하세요";
+        System.out.println(st);
     }
 
 

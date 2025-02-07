@@ -10,6 +10,9 @@ public class PracApplication {
 //        pc.practice2();
 //        pc.practice3();
 //        pc.practice4();
+//        pc.practice5();
+//        pc.practice6();
+//        pc.practice7();
 
 
     }

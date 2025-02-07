@@ -1,6 +1,7 @@
 package com.jjanggu.section02.package_import;
 
 import com.jjanggu.section01.method.Calculator;
+import com.jjanggu.section01.method.*; // method라는 패키지 안에 있는 모든 클래스를 불러옴.
 
 public class Application2 {
     public static void main(String[] args) {
