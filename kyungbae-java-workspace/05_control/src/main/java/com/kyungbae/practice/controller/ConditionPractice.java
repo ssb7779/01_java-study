@@ -156,9 +156,9 @@ public class ConditionPractice {
         System.out.print("키(m)를 입력해 주세요 : ");
         double height = sc.nextDouble();
         System.out.print("몸무게(kg)를 입력해 주세요 : ");
-        double weight = sc. nextDouble();
+        double weight = sc.nextDouble();
 
-        double bmi = weight / height * height;
+        double bmi = weight / (height * height);
 
         if (bmi <= 18.5 ) {
             System.out.println("저체중");
@@ -172,5 +172,146 @@ public class ConditionPractice {
             System.out.println("고도 비만");
         }
     } // practice7 end
+
+    public void practice8() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("피연산자1 입력 : ");
+        int num1 = sc.nextInt();
+        System.out.print("피연산자1 입력 : ");
+        int num2 = sc.nextInt();
+        sc.nextLine();
+        System.out.print("연산자를 입력(+,-,*,/,%) : ");
+        char calc = sc.nextLine().charAt(0);
+
+        int result = 0;
+        switch (calc) {
+            case '+':
+                result = (num1 + num2);
+                break;
+            case '-':
+                result = (num1 - num2);
+                break;
+            case '*':
+                result = (num1 * num2);
+                break;
+            case '/':
+                result = (num1 / num2);
+                break;
+            case '%':
+                result = (num1 % num2);
+                break;
+            default:
+        }
+        if (result == 0) {
+            System.out.println("잘못 입력하셨습니다. 프로그램을 종료합니다.");
+        } else {
+            System.out.printf("%d %c %d = %d", num1, calc, num2, result);
+        }
+
+    } // p8 end
+
+    public void practice9() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("중간 고사 점수 : ");
+        int mScore = sc.nextInt();
+        System.out.print("기말 고사 점수 : ");
+        int lScore = sc.nextInt();
+        System.out.print("과제 점수 : ");
+        int examScore = sc.nextInt();
+        System.out.print("출석 횟수 : ");
+        int attend = sc.nextInt();
+
+        double mScoreResult = mScore * 0.2;
+        double lScoreResult = lScore * 0.3;
+        double examScoreResult = examScore * 0.3;
+        double attendScoreResult = attend * 0.2;
+        double finalResult = (mScoreResult + lScoreResult + examScoreResult + attendScoreResult);
+
+        System.out.println("==========결과===========");
+        if(attend >= 20 * 0.7) { // 출석합격
+            if (finalResult <= 70) {
+                // 출석합격 점수 미달
+                System.out.printf("FAIL [점수 미달] (총점 %.1f)", finalResult);
+            }else {
+                // 출석합격 점수 합격
+                System.out.printf("중간 고사 점수(20) : %.1f\n" +
+                        "기말 고사 점수(30) : %.1f\n" +
+                        "과제 점수(30) : %.1f\n" +
+                        "출석 점수(20) : %.1f\n" +
+                        "총점 : %f.1\n" +
+                        "PASS",
+                        mScoreResult, lScoreResult, examScoreResult, attendScoreResult, finalResult);
+            }
+        }else { // 점수미달
+            if ( finalResult >= 70) {
+                // 출석 미달 점수 합격
+                System.out.printf("FAIL [출석 횟수 부족] (%d/20)", attend);
+            }else {
+                // 출석 미달 점수 미달
+                System.out.printf("FAIL [점수 미달] (총점 %.1f)", finalResult);
+                System.out.printf("FAIL [출석 횟수 부족] (%d/20)", attend);
+            }
+        }
+
+    } // p9 end
+
+    public void menuView() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("실행할 기능을 선택하세요.");
+        System.out.println("1. 메뉴 출력");
+        System.out.println("2. 짝수/홀수");
+        System.out.println("3. 합격/불합격");
+        System.out.println("4. 계절");
+        System.out.println("5. 로그인");
+        System.out.println("6. 권한 확인");
+        System.out.println("7. BMI");
+        System.out.println("8. 계산기");
+        System.out.println("9. 점수 결과 출력");
+
+        System.out.print("선택 : ");
+        int prac = sc.nextInt();
+
+        switch (prac) {
+            case 1:
+                System.out.println("===== 1. 메뉴 출력 =====");
+                practice1();
+                break;
+            case 2:
+                System.out.println("===== 2. 짝수/홀수 =====");
+                practice2();
+                break;
+            case 3:
+                System.out.println("===== 3. 합격/불합격 =====");
+                practice3();
+                break;
+            case 4:
+                System.out.println("======= 4. 계절 =======");
+                practice4();
+                break;
+            case 5:
+                System.out.println("====== 5. 로그인 ======");
+                practice5();
+                break;
+            case 6:
+                System.out.println("===== 6. 권한 확인 =====");
+                practice6();
+                break;
+            case 7:
+                System.out.println("======= 7. BMI =======");
+                practice7();
+                break;
+            case 8:
+                System.out.println("======= 8. 계산기 =======");
+                practice8();
+                break;
+            case 9:
+                System.out.println("==== 9. 점수 결과 확인 ====");
+                practice8();
+                break;
+            default:
+                System.out.println("다시 확인해주세요.");
+        }
+
+    } // menuView end
 
 } // class end

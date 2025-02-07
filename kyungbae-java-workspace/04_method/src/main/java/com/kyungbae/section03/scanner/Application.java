@@ -7,15 +7,10 @@ public class Application {
         KeyboardInput key = new KeyboardInput();
 
 //        key.testBasicScanner();
-
 //        key.testScannerExample1();
-
 //        key.testWarningCase1();
-
 //        key.testWarningCase2();
-
 //        key.testSpecialCase();
-
         key.testScannerExample2();
 
     } // main end
