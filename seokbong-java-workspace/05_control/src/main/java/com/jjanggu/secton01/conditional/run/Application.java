@@ -46,7 +46,7 @@ public class Application {
 //        cp.practice3();
 //        cp.practice4();
 //        cp.practice5();
-        cp.practice6();
-
+//        cp.practice6();
+        cp.practice7();
     }
 }
