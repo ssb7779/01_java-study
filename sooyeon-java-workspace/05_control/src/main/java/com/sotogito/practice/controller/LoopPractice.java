@@ -276,7 +276,6 @@ public class LoopPractice {
 //        for (int i = fundraisingUnit; i <= targetAmount; i+= fundraisingUnit){ //문제 : 조건이 안맞으면 그 후 계산 안함
 //            count++;
 //            System.out.printf("%d회 모금액 : %d원\n",count,i);
-//        }
 
         while (totalAmount < targetAmount){ //작은 상태로 들어감 - 9940
             totalAmount += fundraisingUnit; //계산은 큰 상태에서 끝남 - 10010
