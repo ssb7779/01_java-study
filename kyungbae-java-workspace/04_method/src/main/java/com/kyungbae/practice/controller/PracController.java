@@ -174,6 +174,7 @@ public class PracController {
         int num3 = sc.nextInt();
 
         boolean result = (num1 == num2) == (num2 == num3) == (num1 ==num3);
+//        boolean result = (num1 == num2) == (num2 == num3);
 
         System.out.println(
                 result
@@ -191,6 +192,10 @@ public class PracController {
         int score = sc.nextInt();
         String result = score >= 90 && score < 100 ? "축하합니다" : "분발하세요";
         System.out.println(result);
+        /*
+            Sting result = score / 10 == 9 ? "축하합니다" : "분발하세요";
+            10으로 나눴을때 9면 90점대
+         */
 
     } // p7 end
 

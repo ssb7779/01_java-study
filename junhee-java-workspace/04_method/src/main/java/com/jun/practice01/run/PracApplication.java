@@ -8,7 +8,12 @@ public class PracApplication {
         Praccontroller pr = new Praccontroller();
 //        pr. practice1();
 //        pr. practice2();
-        pr. practice3();
+//        pr. practice3();
+//        pr. practice4();
+//        pr. practice5();
+//        pr. practice6();
+//        pr. practice7();
+
 
 
 
