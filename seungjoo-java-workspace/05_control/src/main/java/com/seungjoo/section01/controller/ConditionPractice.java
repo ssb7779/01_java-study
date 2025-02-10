@@ -231,8 +231,10 @@ public class ConditionPractice {
         }
 
     }
-    public void practice10() {
+    public void menuView() {
         Scanner sc = new Scanner(System.in);
+        System.out.println('실행할 기능을 선택하세요.');
+        System.out.println("1");
 
     }
 
