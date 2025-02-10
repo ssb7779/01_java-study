@@ -215,4 +215,43 @@ public class ConditionPractice {
         }
     }
 
+    public void practice10() {
+        System.out.println("문제 번호를 입력하세요");
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+
+        switch (num) {
+            case 1:
+                practice1();
+                break;
+            case 2:
+                practice2();
+                break;
+            case 3:
+                practice3();
+                break;
+            case 4:
+                practice4();
+                break;
+            case 5:
+                practice5();
+                break;
+            case 6:
+                practice6();
+                break;
+            case 7:
+                practice7();
+                break;
+            case 8:
+                practice8();
+                break;
+            case 9:
+                practice9();
+                break;
+            default:
+                System.out.println("잘못입력했습니다.");
+        }
+
+    }
+
 }
