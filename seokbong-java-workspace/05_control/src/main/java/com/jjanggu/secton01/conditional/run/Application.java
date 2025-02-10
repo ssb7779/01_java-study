@@ -1,7 +1,7 @@
 package com.jjanggu.secton01.conditional.run;
 import com.jjanggu.secton01.conditional.controller.If;
 import com.jjanggu.secton01.conditional.controller.Switch;
-import com.jjanggu.secton01.conditional.controller.ConditionPractice;
+import com.jjanggu.prcatice.controller.ConditionPractice;
 
 public class Application {
     public static void main(String[] args) {
@@ -47,6 +47,9 @@ public class Application {
 //        cp.practice4();
 //        cp.practice5();
 //        cp.practice6();
-        cp.practice7();
+//        cp.practice7();
+        cp.practice8();
+
     }
+
 }
