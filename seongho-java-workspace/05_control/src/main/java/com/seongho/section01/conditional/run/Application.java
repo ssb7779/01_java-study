@@ -1,5 +1,4 @@
 package com.seongho.section01.conditional.run;
-
 import com.seongho.section01.conditional.controller.ConditionPractice;
 import com.seongho.section01.conditional.controller.If;
 import com.seongho.section01.conditional.controller.Switch;
