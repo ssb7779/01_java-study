@@ -5,6 +5,11 @@ import java.util.Scanner;
 public class Break {
     /*
         ## break문 ##
+        1. break문으로 switch문을 종료시킬수 있듯이
+           while문이나 for문 같은 반복문에서도 반복문을 강제로 종료시킬 수 있음
+        2. 주로 반복문 안에서 반복문이 종료될 조건과 함께 사용
+        3. 유의사항
+           중첩 반복문일 경우 break문이 속해있는 최근접의 반복문만 종료됨
 
      */
 

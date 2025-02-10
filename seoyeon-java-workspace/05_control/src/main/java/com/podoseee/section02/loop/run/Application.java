@@ -6,7 +6,11 @@ public class Application {
 
     /*
         ## 반복문 ##
-        1.
+        1. 특정 문장들을 반복적으로 수행할 수 있도록 하는 구문
+        2. 종류
+           1) for문
+           2) while문
+              ㄴ do while문
      */
     public static void main(String[] args){
         While w = new While();
