@@ -224,8 +224,7 @@ public class ConditionPractice {
         double mScoreResult = mScore * 0.2;
         double lScoreResult = lScore * 0.3;
         double examScoreResult = examScore * 0.3;
-        double attendScoreResult = attend * 0.2;
-        double finalResult = (mScoreResult + lScoreResult + examScoreResult + attendScoreResult);
+        double finalResult = (mScoreResult + lScoreResult + examScoreResult + attend);
 
         System.out.println("==========결과===========");
         if(attend >= 20 * 0.7) { // 출석합격
@@ -237,10 +236,10 @@ public class ConditionPractice {
                 System.out.printf("중간 고사 점수(20) : %.1f\n" +
                         "기말 고사 점수(30) : %.1f\n" +
                         "과제 점수(30) : %.1f\n" +
-                        "출석 점수(20) : %.1f\n" +
-                        "총점 : %f.1\n" +
+                        "출석 점수(20) : %d\n" +
+                        "총점 : %.1f\n" +
                         "PASS",
-                        mScoreResult, lScoreResult, examScoreResult, attendScoreResult, finalResult);
+                        mScoreResult, lScoreResult, examScoreResult, attend, finalResult);
             }
         }else { // 점수미달
             if ( finalResult >= 70) {
@@ -306,7 +305,7 @@ public class ConditionPractice {
                 break;
             case 9:
                 System.out.println("==== 9. 점수 결과 확인 ====");
-                practice8();
+                practice9();
                 break;
             default:
                 System.out.println("다시 확인해주세요.");
