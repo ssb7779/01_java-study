@@ -1,8 +1,8 @@
-package com.minkook.conditional.run;
+package com.minkook.section01.conditional.run;
 
-import com.minkook.conditional.controller.ConditionPractice;
-import com.minkook.conditional.controller.If;
-import com.minkook.conditional.controller.Switch;
+import com.minkook.section01.conditional.controller.ConditionPractice;
+import com.minkook.section01.conditional.controller.If;
+import com.minkook.section01.conditional.controller.Switch;
 
 public class Application {
     public static void main(String[] args) {

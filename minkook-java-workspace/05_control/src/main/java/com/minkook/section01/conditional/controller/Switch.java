@@ -1,4 +1,4 @@
-package com.minkook.conditional.controller;
+package com.minkook.section01.conditional.controller;
 
 import java.util.Scanner;
 
