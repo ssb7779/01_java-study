@@ -255,7 +255,6 @@ public class ConditionPractice {
 
             int attendancePercent = (attendance / 20) * 100;
             if (attendancePercent > 70) {
-                isScoreConfirmation = true;
                 isAttendanceConfirmation = true;
             }
         }
