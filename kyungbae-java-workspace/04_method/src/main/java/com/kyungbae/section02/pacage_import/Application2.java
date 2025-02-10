@@ -14,6 +14,9 @@ public class Application2 {
 
             # 다른 패키지에 존재하는 클래스의 메소드 호출 방법2
             사용할 클래스를 import문을 통해 선언해두기
+
+            # 패키지 안에 모든 class 를 가져올 때
+            com.packagename.packagename.*
          */
         Calculator calc = new Calculator();
         calc.sum(1,3);

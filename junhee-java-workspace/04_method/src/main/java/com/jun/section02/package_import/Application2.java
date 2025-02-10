@@ -1,6 +1,7 @@
 package com.jun.section02.package_import;
 
 import com.jun.section01.method. Calculator;
+// *은 전체를 의미
 
 public class Application2 {
     public static void main(String[] args) {
