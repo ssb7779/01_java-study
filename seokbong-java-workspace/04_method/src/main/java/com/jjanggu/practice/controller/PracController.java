@@ -10,7 +10,6 @@ public class PracController {
 
         System.out.println("이름을 입력하세요 : ");
         String name = sc.nextLine();
-
         System.out.println("나이를 입력하세요 : ");
         int age = sc.nextInt();
 
@@ -18,7 +17,6 @@ public class PracController {
 
         System.out.println("성별을 입력하세요(남/여) : ");
         char gender = sc.nextLine().charAt(0);
-
         System.out.println("키를 입력하세요(cm) : ");
         double height = sc.nextDouble();
 
@@ -78,7 +76,7 @@ public class PracController {
         System.out.println("성적(소수점 아래 둘째 자리까지) : ");
         double average = sc.nextDouble();
 
-        System.out.printf("%d학년 %d반 %d번 %s의 성적은 %.2f이다.", grade, classNum, num, sgender, average);
+        System.out.printf("%d학년 %d반 %d번 %s %s의 성적은 %.2f이다.", grade, classNum, num, name, sgender, average);
 
 
 
@@ -97,7 +95,8 @@ public class PracController {
         // 정수형이 아닌 문자형이므로 문자형으로 비교해야함
 
         // 질문 : 그럼 출력 값의 형태가 무엇인지는 확인을 못하나..?
-        
+        // 어쩔 수 없이 그때 그때 잘 확인하면서 비교하는게 best?인듯?
+
         System.out.println(num);
         System.out.println(gender);
     }
@@ -116,7 +115,7 @@ public class PracController {
         System.out.println("비교값 : ");
         int num3 = sc.nextInt();
 
-        boolean bool = ((num3 <= num1) || (num3 > num2)) ? true : false ;
+        boolean bool = (num3 <= num1) || (num3 > num2);
 
         System.out.println(bool);
 
@@ -137,7 +136,7 @@ public class PracController {
         System.out.println("정수3 : ");
         int num3 = sc.nextInt();
 
-        boolean bool = (num1 == num2) && (num2 == num3) ? true : false;
+        boolean bool = (num1 == num2) && (num2 == num3);
 
         System.out.println(bool);
 
@@ -150,7 +149,7 @@ public class PracController {
         System.out.println("점수 : ");
         int score = sc.nextInt();
 
-        String st = score >= 90 && score <= 100 ? "축하합니다" : "분발하세요";
+        String st = score >= 90 && score < 100 ? "축하합니다" : "분발하세요";
         System.out.println(st);
     }
 
