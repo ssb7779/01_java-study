@@ -251,12 +251,12 @@ public class ConditionPractice {
         double total = midtermScore + finalScore + taskScore + attendanceScore;
 
         if (total >= 70) {
+            isScoreConfirmation = true;
+
             int attendancePercent = (attendance / 20) * 100;
             if (attendancePercent > 70) {
                 isScoreConfirmation = true;
                 isAttendanceConfirmation = true;
-            }else {
-                isScoreConfirmation = true;
             }
         }
 
