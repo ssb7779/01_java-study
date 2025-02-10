@@ -8,17 +8,18 @@ public class LoopPractice {
         System.out.print("1이상의 숫자를 입력하세요: ");
         int num = sc.nextInt();
 
-
-        for(int i = 1; i<=num; i++){
-            System.out.println(i + " ");
-            if(num <=0){
-                System.out.println("잘못 입력하셨습니다");
-            }
-
-
+        if(num >= 1) {
+        for(int i = 1; i <= num; i++) {
+            System.out.print(i + " ");
+        }
+            System.out.println();
+        }else{
+            System.out.println("잘못 입력하셨습니다.");
         }
     }
+
     public void practice2(){
+
 
     }
 
