@@ -64,7 +64,7 @@ public class ConditionPractice {
         int eng = sc.nextInt();
 
         int sum = kor + math + eng;
-        double avg = sum / 3;
+        double avg = sum / 3.0;
 
         // 각각 40점 이상이면서 평균이 60점 이상일 경우 => 합격
         // 불합격인 경우 => 불합격
@@ -219,6 +219,11 @@ public class ConditionPractice {
         int num2 = sc.nextInt();
         System.out.println("연산자를 입력(+,-,*,/,%): ");
         char operator = sc.nextLine().charAt(0);
+
+        /*
+
+
+         */
 
 
 
