@@ -6,6 +6,7 @@ public class ConditionPractice {
     public void practice1() {
         Scanner sc = new Scanner(System.in);
         int num = sc.nextInt();
+        System.out.println("동작할 시스템 번호를 입력해 주세요");
 
         switch (num) {
             case 1:
@@ -37,7 +38,7 @@ public class ConditionPractice {
             System.out.println("양수만 입력해 주세요");
         }
 
-        System.out.println("num");
+        System.out.println(num);
 
     }
 
@@ -63,6 +64,7 @@ public class ConditionPractice {
     public void practice4() {
         Scanner sc = new Scanner(System.in);
         int month = sc.nextInt();
+        System.out.println("확인하고자 하는 달을 입력하세요");
 
         switch (month) {
             case 1, 2, 12:
@@ -186,7 +188,7 @@ public class ConditionPractice {
         int finalScore = sc.nextInt();
         double finalRate = finalScore * 0.3;
         System.out.println(finalRate);
-        ;
+
         System.out.println("과제점수");
         int assignmentScore = sc.nextInt();
         double assignmentRate = assignmentScore * 0.3;
