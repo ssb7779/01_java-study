@@ -29,7 +29,7 @@ public class Application {
 //        i.testBasicElseIf();
 //        i.testBasicIf();
         ConditionPractice c = new ConditionPractice();
-        c.practice9();
+        c.menuView();
 
     }
 }
