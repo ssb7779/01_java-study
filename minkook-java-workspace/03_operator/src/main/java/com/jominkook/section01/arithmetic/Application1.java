@@ -29,7 +29,7 @@ public class Application1 {
         //값 % 2 == 0 => 짝수임
         //값 % 2 == 1 => 홀수임
 
-        
+
 
     }
 }

@@ -1,5 +1,5 @@
 package com.younggalee.section02.package_import;
-import com.younggalee.section01.method.Calculator;
+import com.younggalee.section01.method.Calculator; // 패키지만 쓰는거 아님. 사용할 클래스명까지 잘 작성해주어야함.
 
 public class Application2 {
     public static void main(String[] args){
@@ -13,3 +13,4 @@ public class Application2 {
 
     }
 }
+
