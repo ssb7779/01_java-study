@@ -177,6 +177,7 @@ public class ArrayPractice {
         Scanner sc = new Scanner(System.in);
         // 치킨 배열
         String[] menu = {"후라이드", "양념", "간장", "파닭"};
+
         // 치킨 검색
         System.out.print("치킨 이름을 입력하세요 : ");
         String ck = sc.nextLine();
@@ -193,6 +194,41 @@ public class ArrayPractice {
 
 
     } // p9 end
+
+    public void practice10(){
+
+        int[] arr = new int[10];
+        for (int i = 0; i < arr.length; i++){
+            arr[i] = (int)(Math.random() * 10 + 1);
+        }
+
+        for (int i : arr){
+            System.out.print(i + " ");
+        }
+
+    } // p10 end
+
+    public void practice11(){
+
+        Scanner sc = new Scanner(System.in);
+        System.out.print("주민등록번호(-포함) : " );
+        String str = sc.nextLine();
+
+        String[] sarr = new String[14];
+
+        for (int i = 0; i < str.length(); i++){
+            if (i > 7) {
+                sarr[i] = "*";
+            }else {
+                sarr[i] = str.charAt(i) + "";
+            }
+        }
+        for (String i : sarr){
+            System.out.print(i);
+        }
+
+    } // p11 end
+
 
 
 } // class end
