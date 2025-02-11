@@ -64,7 +64,7 @@ public class PracController {
         System.out.println(grade + "학년 " + classNum + "반 " + number + "번 " + name + " " + gender + "학생의 성적은 " + score + "이다.");
         
         /* 선생님 코드
-        System.out.print("성별
+        System.out.printf("%d학년 %d반 %d번 %s %s의 성적은 %.2f이다", grade, classNum, num, name, student, score);
          */
     }
 

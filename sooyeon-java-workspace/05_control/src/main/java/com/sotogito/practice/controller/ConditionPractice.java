@@ -251,12 +251,11 @@ public class ConditionPractice {
         double total = midtermScore + finalScore + taskScore + attendanceScore;
 
         if (total >= 70) {
+            isScoreConfirmation = true;
+
             int attendancePercent = (attendance / 20) * 100;
             if (attendancePercent > 70) {
-                isScoreConfirmation = true;
                 isAttendanceConfirmation = true;
-            }else {
-                isScoreConfirmation = true;
             }
         }
 
@@ -274,6 +273,16 @@ public class ConditionPractice {
             }
         }else {
             System.out.printf("FAIL [점수 미달] (총점 %.1f)",total);
+            System.out.printf("FAIL [출석 횟수 부족] (%d/20)",attendance);
+        }
+
+
+
+        //FIXME if문 분리하기
+        if(!isAttendanceConfirmation){
+            System.out.printf("FAIL [출석 횟수 부족] (%d/20)",attendance);
+        }
+        if(!isScoreConfirmation){
             System.out.printf("FAIL [출석 횟수 부족] (%d/20)",attendance);
         }
     }

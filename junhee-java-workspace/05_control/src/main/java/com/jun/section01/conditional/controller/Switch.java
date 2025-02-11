@@ -8,10 +8,20 @@ public class Switch {
     /*
         ## switch문 ##
         1. 여러 케이스들 중 실행할 코드를 선택할 수 있는 구문
-        2. 실행할 코드들은 case별로 작성(case문)
-        3. switch문에 작성한 표현시의 결과값과 일치하는 case문이 실행
+        2. 실행할 코드들은 case별로 작성 (case문)
+        3. switch문에 작성한 표현식의 결과값과 일치하는 case문이 실행
+        4. 작성 형식 ───────────────────────┐
+           │ switch(표현식) { 				│
+           │	case 값1: 실행구문1; break; │
+           │	case 값2: 실행구문2; break;	│
+           │    case 값3: 실행구문3; break;	│
+           │    [default: 실행구문4;] 		│
+           │ }                       		│
+           └────────────────────────────────┘
         5. 유의사항
-
+           1) 표현식에는 byte, short, int, char, String(JDK 1.7이상) 타입 중 하나만 작성가능
+           2) 특정 case문만 실행하고 자동으로 switch 전체블럭을 빠져나가질 않음
+              따라서 각 case 별 실행내용 뒤에 break; 를 직접 작성해야됨
      */
 
     public void testBasicSwitch(){
@@ -101,6 +111,7 @@ public class Switch {
             String genderStr = "";
 
             switch(gender){
+                // case 'm' : case 'M'
                 case 'm':
                 case 'M': genderStr = "남학생"; break;
                 case 'f':

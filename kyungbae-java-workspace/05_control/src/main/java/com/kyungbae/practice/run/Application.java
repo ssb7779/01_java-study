@@ -17,7 +17,31 @@ public class Application {
 //        cp.practice7();
 //        cp.practice8();
 //        cp.practice9();
-        cp.menuView();
+//        cp.menuView();
+
+        LoopPractice l = new LoopPractice();
+
+//        l.practice1();
+//        l.practice2();
+//        l.practice3();
+//        l.practice4();
+//        l.practice5();
+//        l.practice6();
+//        l.practice7();
+//        l.practice8();
+//        l.practice9();
+//        l.practice10();
+//        l.practice11();
+//        l.practice11_1();
+//        l.practice12();
+//        l.practice13();
+//        l.practice14();
+
+//        l.star1();
+//        l.star2();
+//        l.star3();
+//        l.star4();
+        l.star5();
 
     } // main end
 
