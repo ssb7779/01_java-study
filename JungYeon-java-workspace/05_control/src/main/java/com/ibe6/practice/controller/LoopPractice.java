@@ -112,8 +112,22 @@ public class LoopPractice {
         int num1 = sc.nextInt();
         System.out.print("두 번째 숫자: ");
         int num2 = sc.nextInt();
-        for(int i=1; i< )
 
+        while (true) {
+            if(num1 >= 1 && num2 >= 1) {
+                int min = Math.min(num1, num2); // 호출시 비교
+                int max = Math.min(num1, num2);
+            for (int i=min; i<=max; i++ ) {
+                System.out.print(i + " ");
+            }
+            System.out.println();
+            break;
+
+            }else{
+                System.out.print("1이상의 숫자만을 입력해주세요");
+            }
+
+    }
 
     }
 
@@ -169,15 +183,89 @@ public class LoopPractice {
         int startNum = sc.nextInt();
         System.out.print("공차: ");
         int blankNum = sc.nextInt();
-        for(int i=1; i<10; i++){
+        for(int i=0; i<10; i++){
             System.out.print(startNum + " ");
             startNum += blankNum;
         }
     }
 
-    public void practice12(){
+    public void practice12() {
+        Scanner sc = new Scanner(System.in);
+    /*
+    정수 두 개와 연산자(문자열)로 입력 받고 입력된 연산자에 따라 알맞은 결과를 출력하세요.
+    단, 해당 프로그램은 연산자 입력에 “exit”라는 값이 들어올 때까지 무한 반복하며
+    “exit”가 들어오면 “프로그램을 종료합니다.”를 출력하고 종료합니다.
+    또한 연산자가 나누기이면서 두 번째 정수가 0으로 들어오면
+    “0으로 나눌 수 없습니다. 다시 입력해주세요.”를 출력하며,
+    없는 연산자가 들어올 시 “없는 연산자입니다. 다시 입력해주세요.”라고 출력하고
+    두 경우 모두 처음으로 돌아가 사용자가 다시 연산자부터 입력하도록 하세요.
+     */
+    /*
+        무한반복 {
+            1. 연산자 이벽받기
+            2. 정수 두개 입력받기
+                >> 연산자가 / 거나 % 일때 두번째 정수값이 0일 경우 => "0으로 나눌수없다~~"
+                   반복문 다시 시작
+            3. 연산기호에 따라 해당 연산 결과 출력
+                >> 연산기호를 잘못 입력했을 경우 => "없는 연산자다~~" 반복문 다시 시작
+        }
+     */
+        while (true) {
+            // 1. 연산자 입력받기
+            System.out.print("연산자(+, -, *, /, %) : ");
+            String op = sc.nextLine();
+
+            // >> exit처리
+            if(op.equals("exit")){
+                System.out.println("프로그램을 종료합니다.");
+                break;
+            }
+
+            // 2. 정수 두개 입력받기
+            System.out.print("정수1 : ");
+            int num1 = sc.nextInt();
+            System.out.print("정수2 : ");
+            int num2 = sc.nextInt();
+
+            sc.nextLine(); // 버퍼 비우기
+
+            // >> 나눗셈 처리
+            if((op.equals("/") || op.equals("%")) && num2 == 0){
+                System.out.println("0으로 나눌 수 없습니다. 다시 입력해주세요. \n");
+                continue;
+            }
+
+            // 3. 연산 기호에 따라 해당 결과 출력
+            int result = 0; // 연산결과를 기록할 변수
+            switch (op) {
+                case "+":
+                    result = num1 + num2;
+                    break;
+                case "-":
+                    result = num1 - num2;
+                    break;
+                case "*":
+                    result = num1 * num2;
+                    break;
+                case "/":
+                    result = num1 / num2;
+                    break;
+                case "%":
+                    result = num1 % num2;
+                    break;
+                default: // >> 없는 연산자 처리
+                    System.out.println("없는 연산자입니다. 다시 입력해주세요.\n");
+                    continue;
+            }
+            System.out.printf("%d %s %d = %d\n\n", num1, op, num2, result);
+        }
+    }
+
+    public void practice13(){
+        Scanner sc = new Scanner(System.in);
 
     }
+
 
 
 
