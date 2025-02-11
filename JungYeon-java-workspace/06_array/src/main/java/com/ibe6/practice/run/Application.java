@@ -12,7 +12,6 @@ public class Application {
 //        ap.practice4();
 //        ap.practice5();
 //        ap.practice6();
-        ap.practice7();
 
 
     }
