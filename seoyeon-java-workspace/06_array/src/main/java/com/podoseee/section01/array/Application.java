@@ -9,6 +9,12 @@ public class Application {
         //a.testBasicArray3();
         //a.testArrayException();
         //a.testBasicArray4();
-        a.testArrayExample1();
+        //a.testArrayExample1();
+        //a.testArrayExample2();
+        //a.testArrayExample3();
+        //a.testArrayExample4();
+        //a.testArrayFault();
+
+        a.testEnhancedFor();
     }
 }
