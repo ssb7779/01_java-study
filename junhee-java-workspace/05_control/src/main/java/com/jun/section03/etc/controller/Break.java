@@ -1,6 +1,5 @@
 package com.jun.section03.etc.controller;
 
-
 import java.util.Scanner;
 
 public class Break {
@@ -82,5 +81,3 @@ public class Break {
 
 
 }
-
-
