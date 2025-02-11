@@ -1,6 +1,7 @@
 package com.podoseee.practice.controller;
 
 import java.util.Scanner;
+//import java.lang.*;
 
 public class LoopPractice {
 
@@ -15,7 +16,6 @@ public class LoopPractice {
         } else {
             System.out.println("잘못 입력하셨습니다.");
         }
-
     }
 
     public void practice2() {
@@ -81,6 +81,11 @@ public class LoopPractice {
             }
         }
         System.out.println(" = " + sum);
+
+        // 선생님코드
+        /*
+
+         */
     }
 
     public void practice6() {
@@ -213,6 +218,58 @@ public class LoopPractice {
 
     public void practice12(){
 
+        Scanner sc = new Scanner(System.in);
+
+        /*
+            무한반복 {
+                1. 연산자 입력받기
+                        >> 사용자가 입력한 연산자가 "exit"일 경우 => 프로그램 종료
+                2. 정수 두 개 입력받기
+                        >> 연산자가 / 거나 % 일때 두번째 정수값이 0일 경우 => "0으로 나눌수없다~~" 반복문 다시 시작
+                3. 연산기호에 따라 해당 연산 결과 출력
+                        >> 연산기호를 잘못 입력했을 경우 => "없는 연산자다~~" 반복문 다시 시작
+            }
+         */
+
+        while(true){
+            // 1. 연산자 입력받기
+            System.out.print("연산자(+,-,*,/,%,exit) : ");
+            String op = sc.nextLine();
+
+            // >> exit 처리
+            if(op.equals("exit")){
+                System.out.println("프로그램을 종료합니다.");
+                break;
+            }
+
+            // 2. 정수 두 개 입력받기
+            System.out.print("정수1 : ");
+            int num1 = sc.nextInt();
+            System.out.print("정수2 : ");
+            int num2 = sc.nextInt();
+
+            sc.nextLine(); //  버퍼 비우기
+
+            // >> 나눗셈 처리
+            if((op.equals("/") || op.equals("%")) && num2 == 0){
+                System.out.println("0으로 나눌 수 없습니다. 다시 입력해주세요.\n");
+                continue;
+            }
+
+            // 3. 연산기호에 따라 해당 연산 결과 출력
+            int result = 0; // 연산 결과를 기록할 변수
+            switch(op){
+                case "+": result = num1 + num2; break;
+                case "-": result = num1 - num2; break;
+                case "*": result = num1 * num2; break;
+                case "/": result = num1 / num2; break;
+                case "%": result = num1 % num2; break;
+                default:
+                    System.out.println("없는 연산자입니다. 다시 입력해주세요.\n");
+                    continue;
+            }
+            System.out.printf("%d %s %d = %d\n\n", num1, op, num2, result);
+        }
     }
 
     public void practice13(){
