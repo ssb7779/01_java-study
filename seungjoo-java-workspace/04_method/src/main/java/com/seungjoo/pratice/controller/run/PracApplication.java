@@ -1,6 +1,6 @@
-package com.seungjoo.pratice.controller;
+package com.seungjoo.pratice.controller.run;
 
-import java.util.Scanner;
+import com.seungjoo.pratice.controller.PracController;
 
 public class PracApplication
         {
