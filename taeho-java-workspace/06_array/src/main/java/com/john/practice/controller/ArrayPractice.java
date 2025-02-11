@@ -105,21 +105,27 @@ public class ArrayPractice {
 
     public void practice8() {
         Scanner sc = new Scanner(System.in);
-        System.out.print("홀수인 정수를 입력하세요: ");
-        int n = sc.nextInt();
-
-        int[] intArr = new int[n];
-        int arrLength = intArr.length;
-
-        for (int i = 0; i < n; i++) {
-            if (i <= (arrLength / 2)) {
-                intArr[i] = i + 1;
+        while (true) {
+            System.out.print("홀수인 정수를 입력하세요: ");
+            int n = sc.nextInt();
+            if ((n % 2 == 0) || (n < 1)) {
+                System.out.println("다시 입력하세요");
+                sc.nextLine();
             } else {
-                intArr[i] = arrLength - i;
+                int[] intArr = new int[n];
+                int arrLength = intArr.length;
+                for (int i = 0; i < n; i++) {
+                    if (i <= (arrLength / 2)) {
+                        intArr[i] = i + 1;
+                    } else {
+                        intArr[i] = arrLength - i;
+                    }
+                }
+                for (int i = 0; i < n; i++) {
+                    System.out.print(intArr[i] + " ");
+                }
+                break;
             }
-        }
-        for (int i = 0; i < n; i++) {
-            System.out.print(intArr[i] + " ");
         }
     }
 
@@ -169,7 +175,7 @@ public class ArrayPractice {
         }
     }
 
-    public void slackQuiz(){
+    public void slackQuiz() {
         char[] upperAlpha = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
         char[] lowerAlpha = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
 
@@ -186,20 +192,20 @@ public class ArrayPractice {
             char c = s.charAt(i);
             int idx = 0;
             if (c >= 'a' && c <= 'z') {
-                for(int j = 0; j < 26; j++) {
-                    if(lowerAlpha[j] == c) {
+                for (int j = 0; j < 26; j++) {
+                    if (lowerAlpha[j] == c) {
                         idx = (j + n) % 26;
                         chArr[i] = lowerAlpha[idx];
                     }
                 }
-            }else if (c >= 'A' && c <= 'Z') {
-               for(int j = 0; j < 26; j++) {
-                   if(upperAlpha[j] == c) {
-                       idx = (j + n) % 26;
-                       chArr[i] = upperAlpha[idx];
-                   }
-               }
-            }else{
+            } else if (c >= 'A' && c <= 'Z') {
+                for (int j = 0; j < 26; j++) {
+                    if (upperAlpha[j] == c) {
+                        idx = (j + n) % 26;
+                        chArr[i] = upperAlpha[idx];
+                    }
+                }
+            } else {
                 System.out.println("알파벳이 아닌 값을 입력했습니다. 프로그램을 종료합니다");
                 return;
             }
