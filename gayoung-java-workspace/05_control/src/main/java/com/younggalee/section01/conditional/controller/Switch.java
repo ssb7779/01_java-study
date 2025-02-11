@@ -9,7 +9,7 @@ public class Switch {
     break 없으면 이후 케이스 구문 모두 실행됨. 주의.
 
     >유의사항
-    표현식에는 byte, short, int, char, String(JDL 1.7이상) 타입중 하나만 작성가능 (실수불가)
+    표현식에는 byte, short, int, char, String(JDL 1.7이상) 타입중 하나만 작성가능 (실수불가) *********** ex) double은 불가
     특정 case문만 실행하고 자동으로 switch {} 블럭 빠져나가지 않음.
     따라서 각 case 별 실행내용 뒤에 break; 직접 작성해야함.
      */

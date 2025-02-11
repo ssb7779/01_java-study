@@ -62,6 +62,10 @@ public class PracController {
         double score = sc.nextDouble();
 
         System.out.println(grade + "학년 " + classNum + "반 " + number + "번 " + name + " " + gender + "학생의 성적은 " + score + "이다.");
+        
+        /* 선생님 코드
+        System.out.printf("%d학년 %d반 %d번 %s %s의 성적은 %.2f이다", grade, classNum, num, name, student, score);
+         */
     }
 
     public void practice4(){
@@ -71,6 +75,7 @@ public class PracController {
         char gender = (sc.nextLine().charAt(7) == (1 || 3)) ? "남자" : "여자";
         System.out.println(gender);
         */
+        // 숫자가 아니라 문자값이다
         char gender = sc.nextLine().charAt(7);
 
         String result = (gender == '1' || gender == '3') ? "남자" : "여자";
@@ -113,7 +118,12 @@ public class PracController {
         System.out.print("점수 : ");
         int score = sc.nextInt();
 
-        System.out.println((score >= 90) ? "축하합니다" : "분발하세요.");
+        //방법1
+        System.out.println((score >= 90 && score < 100) ? "축하합니다" : "분발하세요."); // 100 미만도 적어주기
+
+        //방법2
+        //String result = score / 10 == 9 ? "축하합니다" : "분발하세요";
+        //System.out.println(result);
     }
 }
 
