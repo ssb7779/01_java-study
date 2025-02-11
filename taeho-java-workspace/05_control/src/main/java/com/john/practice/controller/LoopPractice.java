@@ -211,7 +211,8 @@ public class LoopPractice {
                 sc.nextLine();
                 continue;
             }
-            if (operator.equals("/") && y == 0) {
+            // 조건 누락
+            if ((operator.equals("/") || operator.equals("%")) && y == 0) {
                 System.out.println("0으로 나눌 수 없습니다. 다시 입력해주세요.");
                 sc.nextLine();
                 continue;
