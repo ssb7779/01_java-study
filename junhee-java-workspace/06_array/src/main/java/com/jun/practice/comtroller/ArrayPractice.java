@@ -1,5 +1,6 @@
 package com.jun.practice.comtroller;
 
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class ArrayPractice {
@@ -74,14 +75,26 @@ public class ArrayPractice {
 
         Scanner sc = new Scanner(System.in);
 
+        /*
+
+         */
+
+
         System.out.print("문자열: ");
         String str1 = sc.nextLine();
 
+
+
         System.out.print("문자:" );
         String str2 = sc.nextLine();
-
+        for(int i = 0; i<str1.length(); i++){
+            System.out.print(str1.charAt(i) + " ");
+        }
 
         char[]ch = new char[str1.length()];
+
+
+
 
         
 
@@ -89,4 +102,9 @@ public class ArrayPractice {
 
 
     }
+
+    public void practice6(){
+        
+    }
+
 }
