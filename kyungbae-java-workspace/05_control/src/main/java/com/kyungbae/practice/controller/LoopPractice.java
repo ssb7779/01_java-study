@@ -227,18 +227,27 @@ public class LoopPractice {
 
         while (true) {
             System.out.print("연산자(+,-,*,/,%) : ");
-//            sc.nextLine();
             String cha = sc.nextLine();
 
             if (cha.equals("exit")) {
                 System.out.println("프로그램을 종료합니다.");
-                return;
+//                return;
+                break;
             } else {
                 char op = cha.charAt(0);
                 System.out.print("정수1 : ");
                 int num1 = sc.nextInt();
                 System.out.print("정수2 : ");
                 int num2 = sc.nextInt();
+
+//                sc.nextLine(); // 개행문자 제거 <= 루프 후 문자열에 추가되는 문제
+                /*
+                    // 나눗셈 처리
+                if((op == '/' || op == '%') && num2 == 0){
+                    System.out.println("0으로 나눌 수 없습니다. 다시 입력해주세요.\n");
+                    continue;
+                }
+                 */
 
                 int result = 0;
                 int loop = 0;
@@ -252,9 +261,15 @@ public class LoopPractice {
                     case '*':
                         result = num1 * num2;
                         break;
-                    case '%':
-                        result = num1 % num2;
-                        break;
+                    case '%': // 이것도 나눗셈 연산
+                        if (num2 != 0) {
+                            result = num1 % num2;
+                            break;
+                        } else {
+                            System.out.println("0으로 나눌 수 없습니다. 다시 입력해주세요.");
+                            loop += 1;
+                            break;
+                        }
                     case '/':
                         if (num2 != 0) {
                             result = num1 / num2;
@@ -269,8 +284,8 @@ public class LoopPractice {
                         loop += 1;
                 }
                 if(loop != 1) {
-                    System.out.printf("%d %c %d = %d", num1, op, num2, result);
-                    break;
+                    System.out.printf("%d %c %d = %d\n", num1, op, num2, result);
+//                    break;
                 }
 
             }
