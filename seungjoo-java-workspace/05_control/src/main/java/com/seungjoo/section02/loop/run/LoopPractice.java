@@ -290,22 +290,8 @@ public class LoopPractice {
 
         }
     }
+
     public void practice13() {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("문자열:");
-        String str = sc.nextLine();
-        System.out.println("찾고자 하는 문자:");
-        String str1 = sc.nextLine();
-        int total = 0;
-
-        for(int i =0; i < str.length(); i++){
-            if(str.charAt(i) == str1.charAt(0)){
-                total++;
-            }
-        }
-        System.out.println("포함된 갯수:" + total);
-
-
 
     }
     public void practice14() {
@@ -325,7 +311,6 @@ public class LoopPractice {
         System.out.println();
         System.out.println("총 모금횟수: " + cnt +"회");
     }
-
 
 
 
