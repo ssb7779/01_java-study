@@ -257,7 +257,10 @@ public class ArrayPractice {
         }
 //        System.out.println(Arrays.toString(arr));
 
+
+
     } // p12 end
+
 
 
 
