@@ -211,13 +211,14 @@ public class LoopPractice {
 
             System.out.println("정수1 : ");
             int num1 = sc.nextInt();
-            sc.nextLine();
+            //sc.nextLine(); //FIXME 없어도 됨. 마지막 nextInt에만
 
             System.out.println("정수2 : ");
             int num2 = sc.nextInt();
             sc.nextLine();
 
-            if (operator.equals("/") && num2 == 0) { //재입력1
+            //FIXME && 가 ||보다 우선순위가 높아서 묶어줘야함
+            if ((operator.equals("/") || operator.equals("%")) && num2 == 0) { //재입력1 //fixme ArithmeticException 예외 잡아줌 //FIXME %도 나누기의 결과이기 때문에 추가해야됨
                 System.out.println("0으로 나눌 수 없습니다. 다시 입력해주세요.");
                 continue;
             }
@@ -256,16 +257,16 @@ public class LoopPractice {
         char findWord = sc.nextLine().charAt(0);
 
         int count = 0;
-        for(int i = 0; i < inputWord.length(); i++){
-            char indexChr  = inputWord.charAt(i);
-            if(findWord == indexChr){
+        for (int i = 0; i < inputWord.length(); i++) {
+            char indexChr = inputWord.charAt(i);
+            if (findWord == indexChr) {
                 count++;
             }
         }
-        System.out.printf("포함된 갯수 : %d",count);
+        System.out.printf("포함된 갯수 : %d", count);
     }
 
-    public void p14(){
+    public void p14() {
         int fundraisingUnit = 70;
         int targetAmount = 10_000;
 
@@ -277,13 +278,24 @@ public class LoopPractice {
 //            count++;
 //            System.out.printf("%d회 모금액 : %d원\n",count,i);
 
-        while (totalAmount < targetAmount){ //작은 상태로 들어감 - 9940
+        while (totalAmount < targetAmount) { //작은 상태로 들어감 - 9940
             totalAmount += fundraisingUnit; //계산은 큰 상태에서 끝남 - 10010
             count++;
-            System.out.printf("%d회 모금액 : %6d원\n",count,totalAmount);
+            System.out.printf("%d회 모금액 : %6d원\n", count, totalAmount);
         }
 
-        System.out.printf("총 모금횟수 : %d",count);
+        System.out.printf("총 모금횟수 : %d", count);
         System.out.println("-------------------- ");
+    }
+
+    //-------------------------------------------------------------------------------------------------
+
+    public void star1(){
+        /**
+         * *
+         * **
+         * ***
+         * ****
+         */
     }
 }
