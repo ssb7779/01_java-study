@@ -87,6 +87,16 @@ public class LoopPractice {
     }
 
     public void practice6() {
+
+        /*
+        int max = 0;
+        int min = 0;
+
+        max = Math.max(num1,num2);
+        min = Math.max(num1,num2); //Math 클래스에 min메소드 호출 시 int형 *두 개* 전달하면 둘중 작은 수(int)를 돌려줌
+        //이도 마찬가지로 static이기 때문에 별도의 선언없이 사용가능
+
+         */
         Scanner sc = new Scanner(System.in);
         System.out.print("첫 번째 숫자 : ");
         int num1 = sc.nextInt();
@@ -175,7 +185,7 @@ public class LoopPractice {
             int startNum = sc.nextInt();
             if (startNum < 2 || startNum > 9) {
                 System.out.println("2~9 사이의 숫자만 입력해주세요.\n");
-            } else {
+            } else { // if에 더 주류의 조건, 실행문 담기
                 for (int i = startNum; i <= 9; i++) {
                     System.out.printf("===== %d단 =====\n", i);
                     for (int j = 1; j <= 9; j++) {
@@ -189,21 +199,21 @@ public class LoopPractice {
     public void practice11(){
         Scanner sc = new Scanner(System.in);
         System.out.print("시작 숫자 : ");
-        int num = sc.nextInt();
+        int start = sc.nextInt();
         System.out.print("공차 : ");
-        int num2 = sc.nextInt();
+        int num = sc.nextInt();
 
         for (int i=0; i<10; i++){
-            System.out.print(num + num2*i);
+            System.out.print(start + num*i);
             System.out.print(" ");
+            //System.out.print(start + " ");
+            //start += num;
         }
     }
 
     public void practice12() {
-
-
+        Scanner sc = new Scanner(System.in);
         while (true) {
-            Scanner sc = new Scanner(System.in);
             System.out.print("연산자(+, -, *, /, %) : ");
             String operator = sc.nextLine();
 
@@ -216,33 +226,24 @@ public class LoopPractice {
             int num1 = sc.nextInt();
             System.out.print("정수2 : ");
             int num2 = sc.nextInt();
+            sc.nextLine();
 
+            if((operator.equals("/") || operator.equals("%")) && num2 == 0){
+                System.out.println("0으로 나눌 수 없습니다. 다시 입력해주세요.");
+                continue;
+            }
 
+            int result = 0;
             switch (operator) {
-                case "+":
-                    System.out.printf("%d %s %d = %d\n", num1, operator, num2, num1 + num2);
-                    break;
-                case "-":
-                    System.out.printf("%d %s %d = %d\n", num1, operator, num2, num1 - num2);
-                    break;
-                case "*":
-                    System.out.printf("%d %s %d = %d\n", num1, operator, num2, num1 * num2);
-                    break;
-                case "/":
-                    if (num2 == 0) {
-                        System.out.println("0으로 나눌 수 없습니다. 다시 입력해주세요.");
-                        break;
-                    }
-                    System.out.printf("%d %s %d = %d\n", num1, operator, num2, num1 / num2);
-                    break;
-                case "%":
-                    System.out.printf("%d %s %d = %d\n", num1, operator, num2, num1 % num2);
-                    break;
+                case "+": result = num1 + num2; break;
+                case "-": result = num1 - num2; break;
+                case "*": result = num1 * num2; break;
+                case "/": result = num1 / num2; break;
+                case "%": result = num1 * num2; break;
                 default:
                     System.out.println("없는 연산자입니다. 다시 입력해주세요.");
-
             }
-            System.out.println();
+            System.out.printf("%d %s %d = %d\n\n", num1, operator, num2, result);
         }
     }
 
