@@ -66,7 +66,7 @@ public class ArrayCopy {
     public void testDeepArrayCopy3() {
         /*
             ## Deep Copy Arrays.copyOf() 활용
-            내부족으로 새로우 배열객체를 생성해서 복사가 진행된 후 반환
+            내부적으로 새로우 배열객체를 생성해서 복사가 진행된 후 반환
             Arrays.copyOf(OriginArray, copyLength);
          */
         int[] originalArray = {1, 2, 3, 4, 5};

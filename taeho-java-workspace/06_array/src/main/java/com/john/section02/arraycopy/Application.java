@@ -10,7 +10,7 @@ public class Application {
 //        ac.testDeepArrayCopy();
 //        ac.testDeepArrayCopy2();
 //        ac.testDeepArrayCopy3();
-        ac.testDeepArrayCopy4();
+//        ac.testDeepArrayCopy4();
 
         int[] arr = {1,2,3,4,5};
         System.out.println("Original Array: " + Arrays.toString(arr));
