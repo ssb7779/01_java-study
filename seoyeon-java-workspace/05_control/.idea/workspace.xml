@@ -4,153 +4,126 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee46592d-5eeb-47a2-84a8-6395b743d5e3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../06_array/src/main/java/com/podoseee/dimensional/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../06_array/src/main/java/com/podoseee/dimensional/DimensionalArray.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../06_array/src/main/java/com/podoseee/section02/arraycopy/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../06_array/src/main/java/com/podoseee/section02/arraycopy/ArrayCopy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01_myfirst/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01_myfirst/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01_myfirst/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01_myfirst/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01_myfirst/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01_myfirst/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01_myfirst/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01_myfirst/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01_myfirst/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01_myfirst/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01_myfirst/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01_myfirst/src/main/java/com/podoseee/FirstApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02_variable/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02_variable/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02_variable/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02_variable/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02_variable/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02_variable/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02_variable/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02_variable/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02_variable/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02_variable/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02_variable/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02_variable/src/main/java/com/podoseee/practice/PracApplication1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02_variable/src/main/java/com/podoseee/practice/PracApplication2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02_variable/src/main/java/com/podoseee/practice/PracApplication3.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02_variable/src/main/java/com/podoseee/practice/PracApplication4.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02_variable/src/main/java/com/podoseee/practice/PracApplication5.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02_variable/src/main/java/com/podoseee/section01/literal/Application1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02_variable/src/main/java/com/podoseee/section02/variable/Application1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02_variable/src/main/java/com/podoseee/section02/variable/Application2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02_variable/src/main/java/com/podoseee/section02/variable/Application3.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02_variable/src/main/java/com/podoseee/section02/variable/Application4.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02_variable/src/main/java/com/podoseee/section03/constant/Application1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02_variable/src/main/java/com/podoseee/section04/casting/Application1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02_variable/src/main/java/com/podoseee/section04/casting/Application2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03_operator/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03_operator/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03_operator/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03_operator/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03_operator/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03_operator/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03_operator/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03_operator/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03_operator/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03_operator/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03_operator/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03_operator/src/main/java/com/podoseee/practice/PracApplication1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03_operator/src/main/java/com/podoseee/practice/PracApplication2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03_operator/src/main/java/com/podoseee/practice/PracApplication3.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03_operator/src/main/java/com/podoseee/practice/PracApplication4.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03_operator/src/main/java/com/podoseee/practice/PracApplication5.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03_operator/src/main/java/com/podoseee/practice/PracApplication6.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03_operator/src/main/java/com/podoseee/practice/PracApplication7.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03_operator/src/main/java/com/podoseee/section01/arithmetic/Application1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03_operator/src/main/java/com/podoseee/section02/assignment/Application1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03_operator/src/main/java/com/podoseee/section03/in_decrement/Application1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03_operator/src/main/java/com/podoseee/section03/in_decrement/Application2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03_operator/src/main/java/com/podoseee/section03/in_decrement/Application3.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03_operator/src/main/java/com/podoseee/section03/in_decrement/Quiz.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03_operator/src/main/java/com/podoseee/section04/comparison/Application1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03_operator/src/main/java/com/podoseee/section04/comparison/Application2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03_operator/src/main/java/com/podoseee/section05/logical/Application1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03_operator/src/main/java/com/podoseee/section05/logical/Application2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03_operator/src/main/java/com/podoseee/section05/logical/Application3.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03_operator/src/main/java/com/podoseee/section05/logical/Application4.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03_operator/src/main/java/com/podoseee/section05/logical/Application5.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03_operator/src/main/java/com/podoseee/section05/logical/Application6.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03_operator/src/main/java/com/podoseee/section06/ternary/Application1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03_operator/src/main/java/com/podoseee/section06/ternary/Application2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03_operator/src/main/java/com/podoseee/section06/ternary/Application3.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03_operator/src/main/java/com/podoseee/section06/ternary/Application4.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03_operator/src/main/java/com/podoseee/section06/ternary/Application5.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03_operator/src/main/java/com/podoseee/section06/ternary/Application6.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../04_method/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../04_method/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../04_method/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../04_method/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../04_method/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../04_method/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../04_method/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../04_method/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../04_method/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../04_method/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../04_method/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../04_method/src/main/java/com/podoseee/practice/controller/GitTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../04_method/src/main/java/com/podoseee/practice/controller/GitTest2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../04_method/src/main/java/com/podoseee/practice/run/PracApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../04_method/src/main/java/com/podoseee/section01/method/Application1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../04_method/src/main/java/com/podoseee/section01/method/Application2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../04_method/src/main/java/com/podoseee/section01/method/Application3.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../04_method/src/main/java/com/podoseee/section01/method/Application4.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../04_method/src/main/java/com/podoseee/section01/method/Calculator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../04_method/src/main/java/com/podoseee/section02/package_import/Application1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../04_method/src/main/java/com/podoseee/section02/package_import/Application2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../04_method/src/main/java/com/podoseee/section03/scanner/Application.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../04_method/src/main/java/com/podoseee/section03/scanner/KeyboardInput.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+    <list default="true" id="682ece7f-ee2e-43d1-a861-cdb2b0ca5f42" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/podoseee/section01/conditional/controller/ConditionPractice.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/podoseee/section01/conditional/controller/If.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/podoseee/section01/conditional/run/Application.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/podoseee/section03/etc/run/Application.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../06_array/src/main/java/com/podoseee/practice/controller/ArrayPractice.java" beforeDir="false" afterPath="$PROJECT_DIR$/../06_array/src/main/java/com/podoseee/practice/controller/ArrayPractice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../06_array/src/main/java/com/podoseee/section01/array/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/../06_array/src/main/java/com/podoseee/section01/array/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../06_array/src/main/java/com/podoseee/section01/array/Array.java" beforeDir="false" afterPath="$PROJECT_DIR$/../06_array/src/main/java/com/podoseee/section01/array/Array.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="ProjectColorInfo">{
-  &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 0
 }</component>
-  <component name="ProjectId" id="2suwASNf17XMFEEFyfmQlIigcGQ" />
+  <component name="ProjectId" id="2sgwfIdrK2jSq68RZnvj1ZYLphE" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/dev/workspaces/01_java-study/seoyeon-java-workspace/04_method&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Gradle.05_control [:com.podoseee.practice.run.Application.main()].executor": "Run",
+    "Gradle.05_control [:com.podoseee.section01.conditional.run.Application.main()].executor": "Run",
+    "Gradle.05_control [:com.podoseee.section02.loop.run.Application.main()].executor": "Run",
+    "Gradle.05_control [:com.podoseee.section03.etc.run.Application.main()].executor": "Run",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/dev/workspaces/01_java-study/seoyeon-java-workspace/06_array",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RunManager" selected="Application.com.podoseee.practice.run.Application">
+    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.podoseee.section01.conditional.run.Application" />
+      <module name="05_control.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.podoseee.section01.conditional.run.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="com.podoseee.practice.run.Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.podoseee.practice.run.Application" />
+      <module name="05_control.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.podoseee.practice.run.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="com.podoseee.section02.loop.run.Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.podoseee.section02.loop.run.Application" />
+      <module name="05_control.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.podoseee.section02.loop.run.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="com.podoseee.section03.etc.run.Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.podoseee.section03.etc.run.Application" />
+      <module name="05_control.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.podoseee.section03.etc.run.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.com.podoseee.practice.run.Application" />
+        <item itemvalue="Application.com.podoseee.section03.etc.run.Application" />
+        <item itemvalue="Application.com.podoseee.section02.loop.run.Application" />
+        <item itemvalue="Application.Application" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -162,15 +135,14 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="ee46592d-5eeb-47a2-84a8-6395b743d5e3" name="Changes" comment="" />
-      <created>1739318624239</created>
+      <changelist id="682ece7f-ee2e-43d1-a861-cdb2b0ca5f42" name="Changes" comment="" />
+      <created>1738890630832</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1739318624239</updated>
-      <workItem from="1739318626925" duration="30000" />
-      <workItem from="1739336073981" duration="10000" />
-      <workItem from="1739336103661" duration="80000" />
-      <workItem from="1739336246855" duration="3000" />
+      <updated>1738890630832</updated>
+      <workItem from="1738890631889" duration="36305000" />
+      <workItem from="1739165423339" duration="11300000" />
+      <workItem from="1739186091205" duration="75000" />
     </task>
     <servers />
   </component>

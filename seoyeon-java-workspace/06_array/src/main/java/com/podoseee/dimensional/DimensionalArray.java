@@ -1,5 +1,7 @@
 package com.podoseee.dimensional;
 
+import java.util.Scanner;
+
 public class DimensionalArray {
     /*
         ## 2차원 배열 ##
@@ -85,5 +87,60 @@ public class DimensionalArray {
             }
             System.out.println();
         }
+    }
+
+    public void testDimensionalArray5(){
+        /*
+            실습.
+            사용자에게 3명의 국어점수와 영어점수를 입력받아
+            2차원 double배열(2행4열)의 형태로 저장하려고한다.
+
+            이때 매번 사용자에게 입력받아
+                첫번째 행에는 국어점수들을 기록하고
+                두번째 행에는 영어점수들을 기록한다.
+
+            그리고 각 행의 마지막열에는 각 언어별 총점을 기록한다.
+
+            국어입력 국어입력 국어입력 "국어총점"
+            영어입력 영어입력 영어입력 "영어총점"
+
+            위와 같은 형태로 기록될 수 있도록 하시오.
+
+            해당 2차원 배열에 모든 요소를 순차적으로 출력해보고
+            추가로 국어의 평균점수, 영어의 평균점수도 출력하시오.
+         */
+
+        double[][] arr = new double[2][4];
+
+        Scanner sc = new Scanner(System.in);
+
+        for(int i=0; i<arr.length; i++){
+
+            // 한 행 시작
+            double sum = 0.0; // 해당 행의 입력 점수값의 총합을 기록하기 위한 변수
+            for(int j=0; j<arr[i].length-1; j++){ // j=0~2
+                System.out.print( (i==0 ? "국어" : "영어") + "점수 : " );
+                /*if(i==0) {
+                    System.out.print("국어점수 : ");
+                }else{
+                    System.out.print("영어점수 : ");
+                }*/
+                arr[i][j] = sc.nextDouble();
+                sum += arr[i][j];
+            }
+            arr[i][3] = sum; // 해당 행의 입력작업이 다 끝나면 직접 마지막열을 선택해서 총점 기록
+            // 한 행 끝
+        }
+
+        for(int i=0; i<arr.length; i++){
+            for(int j=0; j<arr[i].length; j++){
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println();
+        }
+
+        System.out.println("국어점수 평균 : " + arr[0][3]/3);
+        System.out.println("영어점수 평균 : " + arr[1][3]/3);
+
     }
 }
