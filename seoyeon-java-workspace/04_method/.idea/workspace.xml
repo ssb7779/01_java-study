@@ -5,14 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8e0a19e0-9b80-41d4-a56a-386e63ee04c1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../05_control/src/main/java/com/podoseee/practice/controller/ConditionPractice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/04_method.iml" beforeDir="false" afterPath="$PROJECT_DIR$/04_method.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../05_control/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../05_control/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../05_control/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../05_control/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../05_control/src/main/java/com/podoseee/practice/run/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/../05_control/src/main/java/com/podoseee/practice/run/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework_variable-to-control/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework_variable-to-control/.idea/gradle.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +63,8 @@
       <workItem from="1739345761250" duration="27000" />
       <workItem from="1739345884473" duration="10000" />
       <workItem from="1739349941934" duration="23000" />
+      <workItem from="1739362677662" duration="118000" />
+      <workItem from="1739363025022" duration="1000" />
     </task>
     <servers />
   </component>

@@ -5,16 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="682ece7f-ee2e-43d1-a861-cdb2b0ca5f42" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/podoseee/practice/controller/ConditionPractice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../04_method/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../04_method/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../04_method/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../04_method/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../04_method/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../04_method/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../04_method/04_method.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../04_method/04_method.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/podoseee/practice/run/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/podoseee/practice/run/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/podoseee/section01/conditional/controller/ConditionPractice.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/podoseee/section01/conditional/run/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/podoseee/section01/conditional/run/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework_variable-to-control/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework_variable-to-control/.idea/gradle.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +46,7 @@
     &quot;Gradle.05_control [:com.podoseee.section01.conditional.run.Application.main()].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.05_control [:com.podoseee.section02.loop.run.Application.main()].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.05_control [:com.podoseee.section03.etc.run.Application.main()].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
@@ -152,6 +146,8 @@
       <workItem from="1739186091205" duration="75000" />
       <workItem from="1739345790028" duration="93000" />
       <workItem from="1739349965675" duration="467000" />
+      <workItem from="1739362675994" duration="1000" />
+      <workItem from="1739362797298" duration="226000" />
     </task>
     <servers />
   </component>
