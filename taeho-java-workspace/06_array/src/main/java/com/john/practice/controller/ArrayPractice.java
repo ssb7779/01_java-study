@@ -210,7 +210,15 @@ public class ArrayPractice {
                 return;
             }
         }
+        /*
+        String result = "";
+        for(int i = 0; i< chArr.length; i++) {
+            result += chArr[i];
+        }
+         */
+        String result = String.valueOf(chArr);
 
+        System.out.println(result);
         System.out.printf("기존 문자열: %s\n", s);
         System.out.print("변경된 문자열: ");
         System.out.print(chArr);
