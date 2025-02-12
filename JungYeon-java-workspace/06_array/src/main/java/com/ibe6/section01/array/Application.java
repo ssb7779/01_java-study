@@ -1,4 +1,6 @@
-package com.ibe6.setion01.array;
+package com.ibe6.section01.array;
+
+import com.ibe6.section02.arraycopy.ArrayCopy;
 
 public class Application {
     public static void main(String[] args) {
@@ -11,6 +13,12 @@ public class Application {
 //        a.testArrayExample1();
 //        a.testArrayExample2();
 //        a.testArrayExample3();
-        a.testArrayExample4();
+//        a.testArrayExample4();
+
+//        a.remind();
+//        a.homework();
+
     }
+
+
 }
