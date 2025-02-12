@@ -5,6 +5,6 @@ import com.minkook.practice.controller.ArrayPractice;
 public class Application {
     public static void main(String [] args){
         ArrayPractice ap = new ArrayPractice();
-        ap.practice8();
+        ap.practice12();
     }
 }
