@@ -153,5 +153,38 @@ public class Function {
 
     } // pStarNumber end
 
+    public void sumRandom() {
+
+        int random = (int)(Math.random() * 100 + 1);
+        int sum = 0;
+        for (int i = 1; i <= random; i++) {
+            sum += i;
+        }
+        System.out.printf("1부터 %d까지의 합 : %d", random, sum);
+
+    } // sumRandom end
+
+    public void exceptGugu() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("정수 : ");
+        int num = sc.nextInt();
+
+        for (int i = 1; i <= 9; i++) {
+            if ((i % num) != 0) {
+                System.out.printf("%d * %d = %d\n", num, i, num * i);
+            }
+        }
+
+    } // exceptGugu end
+
+    public void diceGame() {
+        Scanner sc = new Scanner(System.in);
+        int dice1 = (int)(Math.random() * 6 + 1);
+        int dice2 = (int)(Math.random() * 6 + 1);
+
+
+
+
+    } // diceGame
 
 } // class end

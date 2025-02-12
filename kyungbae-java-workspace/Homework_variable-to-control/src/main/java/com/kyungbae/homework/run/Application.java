@@ -12,7 +12,9 @@ public class Application {
 //        f.totalCalculator();
 //        f.printProfile();
 //        f.printScore();
-        f.printStarNumber();
+//        f.printStarNumber();
+//        f.sumRandom();
+        f.exceptGugu();
 
     }
 
