@@ -173,4 +173,13 @@ public class ArrayPractice {
 
     }
 
+    public void homework(){
+        // arr[i] = (char)(str.charAt(i) + 1);
+        // String.valueOf() (문자열화시키고자하는값) : 전달값을 가지고 문자열로 만들어 반환
+        // -> arr도 가능 String.valueOf(arr) => 모두 합침
+        // Arrays.toString(arr) : 구분자로 나누어 합침
+
+
+    }
+
 }

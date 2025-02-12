@@ -1,9 +1,10 @@
-package com.sotogito.practice;
+package com.sotogito.practice.controller;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 
-public class Controller {
+public class ArrayPractice {
     Scanner sc = new Scanner(System.in);
 
     public void p1() {
@@ -134,14 +135,15 @@ public class Controller {
             }
 
             int[] nums = new int[size];
-            int middleIndex = size / 2 + 1; //3
+            int reductionStartIndex = size / 2 + 1;
 
             for (int i = 0; i < size; i++) {
-                if (i == middleIndex) {
-                    for (int j = i; j < size; j++) {
-                        nums[j] = size - j;
-                    }
-                    break; //이거 안쓰면 아래 덮어씌워짐
+                if (i >= reductionStartIndex) {
+                    nums[i] = size - i;
+//                    for (int j = i; j < size; j++) {
+//                        nums[j] = size - j;
+//                    }
+                    continue; //이거 안쓰면 아래 덮어씌워짐
                 }
                 nums[i] = i + 1;
             }
@@ -205,6 +207,105 @@ public class Controller {
             printout += registrationNumberToken[i];
         }
         System.out.println(printout);
+    }
+
+    /// /////////////////////////////////////////////////////////////
+
+    public void p12() {
+        int[] numbers = new int[10];
+
+        for (int i = 0; i < numbers.length; i++) {
+            int randomNum = 0;
+
+            while (true) {
+                randomNum = (int) (Math.random() * 10 + 1);
+
+                int count = numbers.length;
+                for (int number : numbers) {
+                    if (randomNum != number) {
+                        count--;
+                    }
+                }
+                if (count == 0) {
+                    break;
+                }
+            }
+            numbers[i] = randomNum;
+        }
+
+        for (int number : numbers) {
+            System.out.print(number + " ");
+        }
+    }
+
+    public void p13() {
+        System.out.println("배열의 크기를 입력하세요. : ");
+        int size = sc.nextInt();
+        sc.nextLine();
+        String[] books = new String[size];
+        int nowIndex = 0;
+
+        while (true) {
+            for (int i = nowIndex; i < size; i++) {
+                System.out.printf("%d번째 문자열 : ", i + 1);
+                books[i] = sc.nextLine();
+                nowIndex++;
+            }
+
+            System.out.println("더 값을 입력하시겠습니까?(Y/N) : ");
+            char continueWhether = sc.nextLine().toUpperCase().charAt(0);
+
+            if (continueWhether == 'N') {
+                break;
+            }
+
+            System.out.println("더 입력하고 싶은 개수 : "); //TODO 음수넣으면?
+            size += sc.nextInt();
+            sc.nextLine();
+            books = Arrays.copyOf(books, size);
+        }
+        System.out.println(Arrays.toString(books));
+    }
+
+    //TODO 못풀음
+    public void p14() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("월: ");
+        int month = sc.nextInt();
+
+        String[] seasons = {"겨울", "봄", "여름", "가을"};
+
+        /**
+         * 12
+         * 1
+         * 2
+         *
+         * 3
+         * 4
+         * 5
+         *
+         * 6
+         * 7
+         * 8
+         *
+         * 9
+         * 10 뭐야ㅐ
+         * 11
+         */
+        //12, 4 +1
+        System.out.println(seasons[month % 4]);
+    }
+
+    public void p15() {
+        int[] a = {10, 20, 30, 0, 0, 0};
+        int[] b = {40, 50, 60};
+
+        for (int i = 3; i < a.length; i++) {
+            a[i] = b[i % b.length];
+        }
+
+        //System.arraycopy(b,0,a,3,3);
+        System.out.println(Arrays.toString(a));
     }
 
 }
