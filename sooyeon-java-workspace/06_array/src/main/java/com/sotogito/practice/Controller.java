@@ -134,14 +134,15 @@ public class Controller {
             }
 
             int[] nums = new int[size];
-            int middleIndex = size / 2 + 1; //3
+            int reductionStartIndex = size / 2 + 1;
 
             for (int i = 0; i < size; i++) {
-                if (i == middleIndex) {
-                    for (int j = i; j < size; j++) {
-                        nums[j] = size - j;
-                    }
-                    break; //이거 안쓰면 아래 덮어씌워짐
+                if (i >= reductionStartIndex) {
+                    nums[i] = size - i;
+//                    for (int j = i; j < size; j++) {
+//                        nums[j] = size - j;
+//                    }
+                    continue; //이거 안쓰면 아래 덮어씌워짐
                 }
                 nums[i] = i + 1;
             }
