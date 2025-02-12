@@ -15,8 +15,8 @@ public class Application {
 //        arrPrac.practice8();
 //        arrPrac.practice9();
 //        arrPrac.practice10();
-        arrPrac.practice11();
-
-
+//        arrPrac.practice11();
+//        arrPrac.practice12();
+        arrPrac.practice13();
     }
 }
