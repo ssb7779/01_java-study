@@ -5,7 +5,6 @@ public class Continue {
         ## continue문 ##
         1. 반복문의 시작 지점으로 프로그램의 흐름이 이동되는 구문
         2. 반복문 내에서 특정 구문을 제외하고 실행하고 싶을 경우 주로 사용
-
      */
 
     public void testBasicContinue(){
