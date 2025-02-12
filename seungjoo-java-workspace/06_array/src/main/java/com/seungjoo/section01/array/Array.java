@@ -1,5 +1,6 @@
 package com.seungjoo.section01.array;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Array {
@@ -332,26 +333,27 @@ public class Array {
     4. char배열의 각 인덱스에 담긴 문자값들을 하나의 문자열로 합쳐서 변수(String result)에 기록하기
     5. 해당 문자열 변수 결과값 출력
  */
-    public void homeWork(){
+    public void homeWork() {
         Scanner sc = new Scanner(System.in);
         String str = sc.nextLine();
         char[] arr = new char[str.length()];
 
-        for(int i = 0; i < str.length(); i++){
-            arr[i] = (char)(str.charAt(i) + 1);
+        for (int i = 0; i < str.length(); i++) {
+            arr[i] = (char) (str.charAt(i) + 1); //문자 + 숫자 == 숫자타입으로 변환이 되서 이후에 char타입으로 변환해주어야함
         }
         String result = "";
-        for(char ch : arr){
+        for (char ch : arr) {
             result += ch;
         }
         System.out.println(result);
+
+//        String result = String.valueOf(arr); //배열의 요소들을 ,와 구분자 없이 합쳐서 반환해줌
+//    Arrays.toString(arr);  배열의 요소를 합쳐서 String으로 반환 ->대괄호에 ,를 기준으로 구분하여 반환
+// [10,20,30] 이렇게 반환
+
+        //String.valueOf(문자열화시키고자하는 값) -> 배열이 됬든 숫자가됬든 문자열로 만들어 반환
+
     }
-
-
-
-
-
-
 
 
 

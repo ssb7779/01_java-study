@@ -7,6 +7,6 @@ public class Application {
 
 
         ArrayPractice arr = new ArrayPractice();
-        arr.practice11();
+        arr.practice12();
     }
 }
