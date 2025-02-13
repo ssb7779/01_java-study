@@ -270,4 +270,28 @@ public class Array {
         }
     }
 
+    public void homework() {
+        Scanner sc = new Scanner(System.in);
+        String word = sc.nextLine();
+
+        char[] wordToken = new char[word.length()];
+        String result = "";
+        //String result = null; //fixme 만약 null로 초기화하고 += 하면 null 뒤에 += 됨
+
+        for (int i = 0; i < word.length(); i++) {
+            wordToken[i] = word.charAt(i);
+        }
+
+        for (char c : wordToken) {
+            result += (char) (c + 1);
+        }
+
+        System.out.println(result);
+        System.out.println(String.valueOf(wordToken)); //fixme 특정 값을 문자열로 만들어 반환
+    }
+
+    public void remind() {
+        int[] arr = {1, 2, 3, 4, 5};
+        System.out.println(Arrays.toString(arr)); //TODO 배열 모두 출력
+    }
 }
