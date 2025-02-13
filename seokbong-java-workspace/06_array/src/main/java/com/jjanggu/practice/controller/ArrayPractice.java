@@ -245,15 +245,17 @@ public class ArrayPractice {
                 String[] copy = new String[num1+num2];
                 System.arraycopy(arr, 0, copy, 0, num1);
 
-                for(int i = num1 +1; i < copy.length; i++){
+                for(int i = num1 ; i < copy.length; i++){
                     System.out.println((i + 1) + "번째 문자열 : ");
                     copy[i] = sc.nextLine();
                 }
 
+
+
             } else if (ans == 'N' || ans == 'n') {
                 for(int i =0; i < arr.length; i++){
                     System.out.print(arr[i] + " ");
-                }
+                }break;
             }
         }
 
