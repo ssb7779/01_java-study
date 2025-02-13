@@ -275,7 +275,26 @@ public class ArrayPractice {
 
         String[] seasons = {"겨울", "봄", "여름", "가을"};
 
-        System.out.println(seasons[(month / 3) % 4]);
+        /**
+         * 12
+         * 1
+         * 2
+         *
+         * 3
+         * 4
+         * 5
+         *
+         * 6
+         * 7
+         * 8
+         *
+         * 9
+         * 10 뭐야ㅐ
+         * 11
+         */
+        //12, 4 +1
+//        System.out.println(seasons[month % 4]);
+        System.out.println((month/3)%4);
     }
 
     public void p15() {
