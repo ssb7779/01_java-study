@@ -14,12 +14,12 @@ public class Application {
         단점 :
             - 객체 생성 구문으로 끝나는게 아니라 매번 메소드를 호출해야하는 번거로움이 있음. 2번은 한줄로 끝남
          */
-        UserDTO user1 = new UserDTO();
-        System.out.println(user1.getInformation());
-        user1.setId("user01");
-        user1.setPwd("pass01");
-        user1.setName("홍길동");
-        System.out.println(user1.getInformation());
+//        UserDTO user1 = new UserDTO();
+//        System.out.println(user1.getInformation());
+//        user1.setId("user01");
+//        user1.setPwd("pass01");
+//        user1.setName("홍길동");
+//        System.out.println(user1.getInformation());
 
         /*
         2. 매개변수 생성자를 이용하여 필드값 초기화
@@ -31,18 +31,18 @@ public class Application {
            :선택적으로 초기화(수정)하고 싶을때 해당 매개변수 생성자가 없으면 불가능하다.
 
          */
-        UserDTO user2 = new UserDTO("user02", "pass 02" , "이가영");
-        System.out.println(user2.getInformation());
-
-
-        // ex ) 비밀번호 변경요청
-        user2.setPwd("1234"); // setter 무조건 존재해야함.
-
-        // ex) 아이디 찾기 요청
-        System.out.println(user2.getId()); // getter 가 무조건 존재해야함.
-
-
-        System.out.println("==========================");
+//        UserDTO user2 = new UserDTO("user02", "pass 02" , "이가영");
+//        System.out.println(user2.getInformation());
+//
+//
+//        // ex ) 비밀번호 변경요청
+//        user2.setPwd("1234"); // setter 무조건 존재해야함.
+//
+//        // ex) 아이디 찾기 요청
+//        System.out.println(user2.getId()); // getter 가 무조건 존재해야함.
+//
+//
+//        System.out.println("==========================");
         /* 실습
         화장품과 관련된 데이터를 보관할 CosmeticDTO 클래스를 작성해보시오.
         이름, 가격, 브랜드, 카테고리, 할인 여부를 속성으로 가져야한다.
@@ -64,6 +64,20 @@ public class Application {
 
            각 객체의 정보 출력
          */
+
+        // 1번 방식
+        CosmeticDTO cosm1 = new CosmeticDTO();
+        cosm1.setName("젠틀토닝로션");
+        cosm1.setPrice(23000);
+        cosm1.setBrand("아벤느");
+        cosm1.setCategory("스킨케어");
+        cosm1.setIsDiscount(true);
+        System.out.println(cosm1.getInformation());
+
+
+        // 2번 방식
+        CosmeticDTO cosm2 = new CosmeticDTO("팬라이너", 15000, "클리오", "스킨케어", false);
+        System.out.println(cosm2.getInformation());
 
     }
 }
