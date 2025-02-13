@@ -293,7 +293,8 @@ public class ArrayPractice {
          * 11
          */
         //12, 4 +1
-        System.out.println(seasons[month % 4]);
+//        System.out.println(seasons[month % 4]);
+        System.out.println((month/3)%4);
     }
 
     public void p15() {
