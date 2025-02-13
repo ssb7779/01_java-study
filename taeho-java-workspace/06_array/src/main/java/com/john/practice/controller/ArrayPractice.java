@@ -210,9 +210,107 @@ public class ArrayPractice {
                 return;
             }
         }
+        /*
+        String result = "";
+        for(int i = 0; i< chArr.length; i++) {
+            result += chArr[i];
+        }
+         */
+        String result = String.valueOf(chArr);
 
+        System.out.println(result);
         System.out.printf("기존 문자열: %s\n", s);
         System.out.print("변경된 문자열: ");
         System.out.print(chArr);
+    }
+
+    public void practice12() {
+        int[] intArr = new int[10];
+        int duplicateIndex = 0;
+        // 값이 들어갈 때마다 배열 순회필요(중복 조회)
+        // 중복인 경우 인덱스초과
+        while (duplicateIndex < 10) {
+            // 배열에 추가할 랜덤값
+            int randomInt = (int) (Math.random() * 10 + 1);
+            // 중복 검사
+            boolean isDuplicate = false;
+            for (int i : intArr) {
+                if (i == randomInt) {
+                    isDuplicate = true;
+                    break;
+                }
+            }
+            if (!isDuplicate) {
+                intArr[duplicateIndex] = randomInt;
+                duplicateIndex++;
+            }
+        }
+        System.out.println(Arrays.toString(intArr));
+    }
+
+    public void practice13() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("배열의 크기를 입력하세요: ");
+        int n = sc.nextInt();
+        sc.nextLine();
+        String[] strArr = new String[n];
+        int pointer = 0;
+
+        while (true) {
+            System.out.print("문자열 입력: ");
+            String s = sc.nextLine();
+            strArr[pointer] = s;
+            System.out.println(Arrays.toString(strArr));
+            pointer++;
+
+            if (pointer == n) {
+                System.out.print("더 값을 입력하시겠습니까?(Y/N): ");
+                char ch = sc.nextLine().charAt(0);
+                if (ch == 'Y' || ch == 'y') {
+                    System.out.print("더 입력하고 싶은 개수: ");
+                    int addNum = sc.nextInt();
+                    sc.nextLine();
+                    strArr = Arrays.copyOf(strArr, strArr.length + addNum);
+                    // 첫 n값에 추가적으로 늘린 배열만큼 추가
+                    n += addNum;
+                } else {
+                    break;
+                }
+
+            }
+        }
+        System.out.println(Arrays.toString(strArr));
+    }
+
+    public void practice14() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("월: ");
+        int month = sc.nextInt();
+
+        String[] seasons = {"겨울", "봄", "여름", "가을"};
+        System.out.println(
+                (month == 12) || (month == 1) || (month == 2) ? "겨울" :
+                        (month == 3) || (month == 4) || (month == 5) ? "봄" :
+                                (month == 6) || (month == 7) || (month == 8) ? "여름" :
+                                        (month == 9) || (month == 10) || (month == 11) ? "가을" : "잘못된 입력값입니다");
+    }
+
+    public void practice15() {
+        int[] a = {10, 20, 30, 0, 0, 0};
+        int[] b = {40, 50, 60};
+        /* for 사용
+        int bIndex = 0;
+        for (int i = 0; i < a.length; i++) {
+            if(a[i] == 0){
+                a[i] = b[bIndex];
+                bIndex++;
+            }
+        }
+        System.out.println(Arrays.toString(a));
+         */
+
+        //System.arraycopy(originArray, copy start index, copyArray, copy start index, copy val count)
+        System.arraycopy(b, 0, a, 3, b.length);
+        System.out.println(Arrays.toString(a));
     }
 }
