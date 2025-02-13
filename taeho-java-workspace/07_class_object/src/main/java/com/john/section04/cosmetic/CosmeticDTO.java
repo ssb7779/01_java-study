@@ -53,6 +53,7 @@ public class CosmeticDTO {
     }
 
     public String getInformation() {
+        // 굳이 변수를 선언하지 않고 내부에 삼항연산자를 바로 사용하는 것도 가능
         String discount = isDiscount ? "할인함" : "할인안함";
         return "화장품명: " + name + "\n" +
                 "가격: " + price + "\n" +
