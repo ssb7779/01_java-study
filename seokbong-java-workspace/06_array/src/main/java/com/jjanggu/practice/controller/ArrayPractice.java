@@ -202,4 +202,67 @@ public class ArrayPractice {
             System.out.print(ch[i]);
         }
     }
+
+    public void practice12() {
+
+        int[] arr = new int[10];
+
+        for(int i = 0; i < arr.length; i++){
+            arr[i] = (int)(Math.random() * 10 +1);
+            for(int j = 0; j < i; j++){
+                if(arr[i] == arr[j]){
+                    i--;
+                }
+            }
+        }
+        for(int i = 0; i < arr.length; i++){
+            System.out.print(arr[i] + " ");
+        }
+    }
+
+    public void practice13() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("배열의 크기 입력 : ");
+        int num1 = sc.nextInt();
+        sc.nextLine();
+
+        String[] arr = new String[num1];
+        for(int i = 0; i < arr.length; i++) {
+            System.out.println((i + 1) + "번째 문자열 : ");
+            arr[i] = sc.nextLine();
+        }
+        // 입력된 배열 크기 만큼 문자열 나열
+
+
+        while (true){
+
+            System.out.println("더 값을 입력하시겠습니까?(Y/N)");
+            char ans = sc.nextLine().charAt(0);
+
+            if(ans == 'Y' || ans =='y') {
+                System.out.println("더 입력하고 싶은 개수 : ");
+                int num2 = sc.nextInt();
+                String[] copy = new String[num1+num2];
+                System.arraycopy(arr, 0, copy, 0, num1);
+
+                for(int i = num1 ; i < copy.length; i++){
+                    System.out.println((i + 1) + "번째 문자열 : ");
+                    copy[i] = sc.nextLine();
+                }
+
+
+
+            } else if (ans == 'N' || ans == 'n') {
+                for(int i =0; i < arr.length; i++){
+                    System.out.print(arr[i] + " ");
+                }break;
+            }
+        }
+
+
+
+
+
+
+    }
 }
