@@ -1,5 +1,6 @@
 package com.younggalee.practice.controller;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class ArrayPractice {
@@ -175,10 +176,94 @@ public class ArrayPractice {
         }
 
     }
+    public void practice12() {
+        int[] arr = new int[10];
+        int[] table = new int[10];
+
+        for (int i=0; i<10 ; i++) {
+            while (true) {
+                int random = (int) (Math.random() * 10 + 1);
+                if (table[random-1] == 0) {
+                    table[random-1] = 1;
+                    arr[i] = random;
+                    break;
+                }
+            }
+        }
+        for (int i=0; i<10; i++) {
+            System.out.print(arr[i] + " ");
+        }
+    }
+    public void practice13() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("배열의 크기를 입력하세요 : ");
+        int lenOfArray = sc.nextInt();
+        sc.nextLine();
+
+        String[] original = new String[lenOfArray];
+        String[] result;
+
+        for(int i=0; i<lenOfArray; i++){
+            System.out.printf("%d번째 문자열 : ", i+1);
+            original[i] = sc.nextLine();
+        }
+        result = original;
+        
+        while(true) {
+            System.out.print("더 값을 입력하시겠습니까?(Y/N) : ");
+            String more = sc.nextLine();
+            if (more.equals("y") || more.equals("Y")) {
+                System.out.print("더 입력하고 싶은 개수 : ");
+                int additionalLen = sc.nextInt();
+                sc.nextLine();
+                lenOfArray += additionalLen;
+
+                String[] upgradeArr = Arrays.copyOf(original, lenOfArray);
+
+                for (int i = lenOfArray; i < upgradeArr.length; i++) {
+                    System.out.printf("%d번째 문자열 : ", i+1);
+                    upgradeArr[i] = sc.nextLine();
+                }
+                result = upgradeArr;
+
+            } else if (more.equals("n") || more.equals("N")) {
+                System.out.println(Arrays.toString(result));
+                break;
+                int n = 0;
+
+//                seasions[n/3%4]
+            }
+        }
+    }
+
 }
 
-//char[] ch = new char[str.length()];
-//
-//        for (int i=0; i<str.length();i++){
-//ch[i] = str.charAt(i);
-//        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
