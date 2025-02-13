@@ -12,6 +12,8 @@ public class Monster_Good {
         // this : 객체생성시 해당 객체의 주소값을 저장하고 있는 레퍼런스 변수
         if (hp < 0) {
             this.hp = 0; // 필드hp =0;
+            // this. => 필드 값으로 선택하기
+            // ex) hp = 0; => 메소드의 hp 값 this.hp = 0; => 필드의 hp값
         } else {
             this.hp = hp;
         }
