@@ -5,6 +5,8 @@
       <module fileurl="file://$PROJECT_DIR$/04_method.iml" filepath="$PROJECT_DIR$/04_method.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/04_method.main.iml" filepath="$PROJECT_DIR$/.idea/modules/04_method.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/04_method.test.iml" filepath="$PROJECT_DIR$/.idea/modules/04_method.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/org.example.04_method.main.iml" filepath="$PROJECT_DIR$/.idea/modules/org.example.04_method.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/org.example.04_method.test.iml" filepath="$PROJECT_DIR$/.idea/modules/org.example.04_method.test.iml" />
     </modules>
   </component>
 </project>
