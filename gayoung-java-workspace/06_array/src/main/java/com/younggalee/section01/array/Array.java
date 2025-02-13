@@ -289,6 +289,38 @@ public class Array {
 
         }
 
+        public void homework(){
+        /*사용자에게 문자열 하나를 입력받아
+        해당 문자열의 각 문자마다 +1이 진행된 문자열을 얻고 싶다.
+         */
+            Scanner sc = new Scanner(System.in);
+            System.out.print("아무 문자열이나 입력하시오: ");
+            String word = sc.nextLine();
+
+            char[] arr = new char[word.length()];
+            for (int i=0; i<arr.length; i++){
+                arr[i] = (char)(word.charAt(i) + 1);
+            }
+
+            /*
+            String result = ""; // null;  // nullbbq 이렇게됨
+            // null뒤에 연결되기 때문에 null이 아니라 ""해야함
+            for(int i=0; i<arr.length;i++){
+                result += arr[i];
+                // char >> String :for문을 통해 문자열화하기
+            }
+            */
+
+
+
+            // String.valueOf(문자열화시키고자하는 값) : 이것도 static이라 별도의 선언없이 사용가능함.
+            String result = String.valueOf(arr); //*******
+            System.out.println(result);
+        }
+        /*
+
+        */
+
     }
 
 
