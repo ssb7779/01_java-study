@@ -16,5 +16,6 @@ public class Application {
 //        a.testArrayFault();
 //        a.testEnhancedFor();
         a.homework();
+//        a.remind();
     }
 }

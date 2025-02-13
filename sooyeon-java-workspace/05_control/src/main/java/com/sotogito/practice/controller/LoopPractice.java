@@ -290,12 +290,192 @@ public class LoopPractice {
 
     //-------------------------------------------------------------------------------------------------
 
-    public void star1(){
-        /**
-         * *
-         * **
-         * ***
-         * ****
-         */
+    public static void main(String[] args) {
+        LoopPractice lp = new LoopPractice();
+        lp.star5();
     }
+
+
+    /*
+     *
+     **
+     ***
+     ****
+     */
+    public void star1() {
+        int layer = sc.nextInt();
+
+        for (int i = 0; i < layer; i++) {
+            for (int j = 0; j < i + 1; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
+
+    /*
+     ****
+     ***
+     **
+     *
+     */
+    public void star2() {
+        int layer = sc.nextInt();
+
+        for (int i = layer; i > 0; i--) {
+            for (int j = i; j > 0; j--) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
+    /*
+
+     **********       (* 10개)
+     *        *       (* 1개 + 공백 8개 + * 1개)
+     *        *       (* 1개 + 공백 8개 + * 1개)
+     *         *       (* 1개 + 공백 8개 + * 1개)
+     **********       (* 10개)
+
+     */
+    public void star3() {
+        int width = 10;
+        int length = 5;
+
+        for (int i = 0; i < length; i++) {
+            if (i == 0 || i == length - 1) {
+                for (int j = 0; j < width; j++) {
+                    System.out.print("*");
+                }
+                System.out.println();
+                continue;
+            }
+
+            for (int k = 0; k < width; k++) {
+                if (k == 0 || k == width - 1) {
+                    System.out.print("*");
+                    continue;
+                }
+                System.out.print(" ");
+            }
+            System.out.println();
+        }
+    }
+
+    /*
+
+       1
+      123
+     12345
+    1234567
+   123456789
+    1234567
+     12345
+      123
+       1
+
+     */
+
+    public void star4() {
+        /**
+         *star2번 공백으로 춫력하면 됨아마도
+         */
+
+        int layer = 9;
+        int middleLayerIndex = layer / 2;
+
+
+        //상단 프라미드
+        for (int i = middleLayerIndex; i >= 0; i--) {
+            int blankCount = 0;
+            for (int j = i; j > 0; j--) {
+                System.out.print(" ");
+                blankCount++;
+            }
+
+            int numberCount = layer - (blankCount * 2);
+            int startNumber = 1;
+            for (int k = 0; k < numberCount; k++) {
+                System.out.print(startNumber);
+                startNumber++;
+            }
+            System.out.println();
+        }
+
+        //하단 피라미드
+        for (int i = 0; i < middleLayerIndex; i++) {
+            int blankCount = 0;
+            for (int j = 0; j < i + 1; j++) {
+                System.out.print(" ");
+                blankCount++;
+            }
+
+            int numberCount = layer - (blankCount * 2);
+            int startNumber = 1;
+            for (int k = 0; k < numberCount; k++) {
+                System.out.print(startNumber);
+                startNumber++;
+            }
+            System.out.println();
+        }
+    }
+
+    /*
+     *
+     *  *
+     *      *
+     *  *
+     *
+     */
+
+    public void star5() {
+        /**
+         * 가장 작은 홀수, 가장 큰 홀수만
+         */
+        int layer = 5;
+        int middleLayerIndex = layer / 2;
+
+
+        //상단 프라미드
+        for (int i = middleLayerIndex; i >= 0; i--) {
+            int blankCount = 0;
+            for (int j = i; j > 0; j--) {
+                System.out.print(" ");
+                blankCount++;
+            }
+
+            int numberCount = layer - (blankCount * 2);
+            for (int k = 0; k < numberCount; k++) {
+                if (k == 0 || k == numberCount - 1) {
+                    System.out.print("*");
+                    continue;
+                }
+                System.out.print(" ");
+            }
+            System.out.println();
+        }
+
+        //하단 피라미드
+        for (int i = 0; i < middleLayerIndex; i++) {
+            int blankCount = 0;
+            for (int j = 0; j < i + 1; j++) {
+                System.out.print(" ");
+                blankCount++;
+            }
+
+            int numberCount = layer - (blankCount * 2);
+            for (int k = 0; k < numberCount; k++) {
+                if (k == 0 || k == numberCount - 1) {
+                    System.out.print("*");
+                    continue;
+                }
+                System.out.print(" ");
+            }
+            System.out.println();
+        }
+    }
+
+
 }
