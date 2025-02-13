@@ -1,5 +1,6 @@
 package com.podoseee.practice.run;
 
+import com.podoseee.practice.controller.ConditionPractice;
 import com.podoseee.practice.controller.LoopPractice;
 
 public class Application {
@@ -16,8 +17,17 @@ public class Application {
         //l.practice9();
         //l.practice10();
         //l.practice11();
-        l.practice12();
+        //l.practice12();
         //l.practice13();
         //l.practice14();
+
+        ConditionPractice p = new ConditionPractice();
+
+        //p.practice5();
+        //p.practice6();
+        //p.practice7();
+        //p.practice8();
+        p.practice9();
+        //p.menuView();
     }
 }
