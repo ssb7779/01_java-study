@@ -179,9 +179,40 @@ public class Function {
 
     public void diceGame() {
         Scanner sc = new Scanner(System.in);
-        int dice1 = (int)(Math.random() * 6 + 1);
-        int dice2 = (int)(Math.random() * 6 + 1);
 
+        while (true) {
+
+            // 랜덤 주사위 생성
+            int dice1 = (int)(Math.random() * 6 + 1);
+            int dice2 = (int)(Math.random() * 6 + 1);
+            int sumDice = dice1 + dice2;
+
+            // 정답 입력
+            System.out.print("주사위 두 개의 합을 맞춰보세요(2~12입력) : ");
+            int answer = sc.nextInt();
+            sc.nextLine();
+
+            // 정답 검증
+            if (sumDice == answer) {
+
+                System.out.println("정답입니다.");
+                System.out.println("주사위의 합 : " + sumDice);
+
+                // 정답 맞추고 재확인 문
+                System.out.print("계속하시겠습니까?(y/n) : ");
+                char cont = sc.nextLine().charAt(0);
+                switch (cont) {
+                    case 'n', 'N':
+                        System.out.println("게임을 종료합니다.");
+                        return;
+                    case 'y', 'Y':
+                        System.out.println("게임을 계속 진행합니다.");
+                }
+
+            } else {
+                System.out.println("틀렸습니다.");
+            }
+        }
 
 
 

@@ -14,8 +14,8 @@ public class Application {
 //        f.printScore();
 //        f.printStarNumber();
 //        f.sumRandom();
-        f.exceptGugu();
-
+//        f.exceptGugu();
+        f.diceGame();
     }
 
 }
