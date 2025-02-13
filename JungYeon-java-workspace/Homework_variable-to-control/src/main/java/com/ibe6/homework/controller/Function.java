@@ -62,4 +62,78 @@ public class Function {
 //
         System.out.print(min + "부터 " + max + "까지 정수들의 합: " + sum);
     }
+
+    public void printProfile() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("이름: ");
+        String name = sc.nextLine();
+        System.out.print("나이: ");
+        int age = sc.nextInt();
+        sc.nextLine();
+        System.out.print("성별: ");
+        String gender = sc.nextLine();
+        System.out.print("성격: ");
+        String ps = sc.nextLine();
+
+        System.out.println("이름: " + name);
+        System.out.println("나이: " + age);
+        System.out.println("성별: " + gender);
+        System.out.println("성격: " + ps);
+
+
+
+
+    }
+
+    public void printScore() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("이름: ");
+        String name = sc.nextLine();
+        System.out.print("학년: ");
+        int grade = sc.nextInt();
+        System.out.print("반: ");
+        int cl = sc.nextInt();
+        System.out.print("번: ");
+        int num = sc.nextInt();
+        System.out.print("성별(M/F): ");
+        sc.nextLine();
+        char gender = sc.nextLine().charAt(0);
+        System.out.print("성적: ");
+        double score = sc.nextDouble();
+
+        String result = "";
+
+        if (gender == 'M') {
+            result = "남학생";
+        } else if (gender == 'F') {
+            result = "여학생";
+        } else {
+            System.out.println("잘못 입력하셨습니다.");
+        }
+
+            String point = "";
+
+        if (score >= 90) {
+            point = "A";
+        } else if (score >= 80) {
+            point = "B";
+        } else if (score >= 70) {
+            point = "C";
+        } else if (score >= 60) {
+            point = "D";
+        } else {
+            point = "F";
+        }
+        System.out.print(grade + "학년 " + cl + "반 " + num + "번 " + result + " " + name + "의 점수는 " + score + "점이고" + " " + point + "학점입니다.");
+
+    }
+
+    public void printStarNumber() {
+
+
+
+    }
+
+
 }
+

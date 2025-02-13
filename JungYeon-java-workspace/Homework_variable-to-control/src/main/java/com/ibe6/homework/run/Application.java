@@ -7,7 +7,10 @@ public class Application {
 
         Function fc = new Function();
 //        fc.calculator();
-        fc.totalCalculator();
+//        fc.totalCalculator();
+//        fc.printProfile();
+//        fc.printScore();
+        fc.printStarNumber();
 
     }
 }
