@@ -12,8 +12,7 @@ public class Menu {
     public void displayMenu() {
         String menuPrintout = "%d. %s\n";
 
-        boolean isEnd = false;
-        while (!isEnd) {
+        while (true) {
             System.out.println();
             System.out.printf(menuPrintout, 1, "간단 계산기");
             System.out.printf(menuPrintout, 2, "작은 수에서 큰 수까지 합계");
@@ -28,6 +27,9 @@ public class Menu {
             System.out.print("메뉴 번호 : ");
             int functionNum = sc.nextInt();
 
+            if(functionNum == 9){
+                break;
+            }
             switch (functionNum) {
                 case 1:
                     function.calculator();
@@ -52,9 +54,6 @@ public class Menu {
                     break;
                 case 8:
                     function.diceGame();
-                    break;
-                case 9:
-                    isEnd = true;
                     break;
                 default:
                     System.out.println("잘못 입력하셨습니다. 다시 입력해주세요.\n");
