@@ -1,4 +1,4 @@
-package com.inyong.section02.encapsulation.problem3.abstraction;
+package com.inyong.section02.abstraction;
 
 public class Car {
 

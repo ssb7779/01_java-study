@@ -56,7 +56,6 @@ public class UserDTO {
 
     }
 
-
     /*
 
     Java Bean   0
