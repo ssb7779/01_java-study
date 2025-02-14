@@ -15,7 +15,7 @@ public class Application {
          */
         UserDTO user1 = new UserDTO();
         user1.setId("user01"); // this.id = "user01"
-        user1.setPwd("pwd01"); // this.pwd = "pass01"
+        //user1.setPwd("pwd01"); // this.pwd = "pass01"
         user1.setName("홍길동"); // this.name = "홍길동"
         System.out.println(user1.getInformation());
         
@@ -29,7 +29,7 @@ public class Application {
                     따라서 선택적으로 원하는 필드에만 값을 담고자할 경우
                     경우의 수 별로 매개변수 생성자를 만들어야됨
          */
-        UserDTO user2 = new UserDTO("user02", "pass02", "김말똥" );
+        UserDTO user2 = new UserDTO("user02", "pass02", "김말똥");
         System.out.println(user2.getInformation());
 
         // ex) 비밀번호 변경 요청
@@ -64,6 +64,47 @@ public class Application {
             각 객체의 정보 출력.
        */
 
-    }
+        CosmeticDTO cos1 = new CosmeticDTO();
+        cos1.setName("젠틀토닝로션");
+        cos1.setPrice(23000);
+        cos1.setBrand("아벤느");
+        cos1.setCategory("스킨케어");
+        cos1.setDiscount(false);
 
+        System.out.println(cos1.getInformation());
+
+        System.out.println("==============================");
+
+        // 1. 빵 객체 생성 (기본생성자+setter)
+        BreadDTO br1 = new BreadDTO();
+        br1.setBreadName("소금빵");
+        br1.setPrice(2000);
+
+        System.out.println(br1.getInformation());
+
+        // 2. 빵집 객체 생성 (기본생성자+setter)
+        BakeryDTO bk1 = new BakeryDTO();
+        bk1.setBakeryName("파리바게뜨");
+        bk1.setAddress("삼성동");
+        System.out.println(bk1.getInformation()); // 오류발생 : NullPointerException
+
+        // 3. 빵집 객체 생성
+        BakeryDTO bk2 = new BakeryDTO();
+        bk2.setBakeryName("뚜레주르");
+        bk2.setAddress("마곡동");
+        //bk2.setBread(br1); // 이미 생성해둔 Bread 객체 전달
+        bk2.setBread(new BreadDTO("크로와상", 4000));
+        System.out.println(bk2.getInformation());
+
+        /*
+        2500원짜리 튀김소보로를 판매하는 성심당(대전시) 빵집 만들기 => bk3
+
+        빵집정보출력
+        성심당에서 판매하는 빵정보만 출력
+        */
+
+        BakeryDTO bk3 = new BakeryDTO("성심당", "대전시", new BreadDTO("튀김소보로", 2500));
+        System.out.println(bk3.getInformation());
+        System.out.println("판매하는빵: " + bk3.getBread().getBreadName()); // 주소값을 갖고오니, .getBreadName()으로 적기
+    }
 }
