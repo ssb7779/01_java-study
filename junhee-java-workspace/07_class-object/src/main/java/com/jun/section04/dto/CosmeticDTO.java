@@ -14,14 +14,14 @@ public class CosmeticDTO {
 
     public CosmeticDTO(String productName, int price, String brand,
                        String cateogry, boolean isDiscounted){
-        this.productName = productName;
+        this.productName = productName; // this는 대입
         this.price = price;
         this.brand = brand;
         this.category = cateogry;
         this.isDiscounted = isDiscounted;
 
     }
-
+    // 순서 상관없음
     public String getProductName(){
         return productName;
     }
@@ -46,7 +46,7 @@ public class CosmeticDTO {
     public void setCategory(String category){
         this.category=category;
     }
-    public boolean getIsDiscounted(){
+    public boolean getIsDiscounted(){ // getter는 is를 붙여야함
         return isDiscounted;
     }
     public void setIsDiscounted(boolean isDiscounted){
@@ -55,10 +55,10 @@ public class CosmeticDTO {
     }
     public String getInformation(){
         return  "화장품명: " + productName + "\n" +
-                "가격: " + price + "\n" +
+                "가격: " + price + "원" + "\n" +
                 "브랜드: " + brand + "\n" +
                 "카테고리: " + category + "\n" +
-                "할인여부: " + (isDiscounted ? "할인함": "할인안함");
+                "할인여부: " + (isDiscounted ? "할인함": "할인안함" );
     }
 
 
