@@ -126,7 +126,7 @@ public class Function {
         int num = sc.nextInt();
 
         for(int i = 0; i < num; i++){
-            i=i; for()
+
         }
 
 
