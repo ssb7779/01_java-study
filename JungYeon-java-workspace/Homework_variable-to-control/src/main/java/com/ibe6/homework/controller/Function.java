@@ -8,7 +8,7 @@ public class Function {
         연산문자는 char변수에 저장하시오.
         연산문자가 +이면 두 정수의 합 계산, -이면 두 정수의 차 계산,
         x 또는 X이면 두 정수의 곱, /이면 두 정수의 나누기 몫 계산 후 출력하시오.
-        단, /이면서 나누는 수(두 번째 수)가 0이면 “0으로 나눌 수 없습니다.” 출력하고
+        단, /이면서 나누는 수(두 번째 수)가 0이면 "0으로 나눌 수 없습니다." 출력하고
         결과 값은 0으로 처리하시오.
          */
         Scanner sc = new Scanner(System.in);
@@ -111,7 +111,7 @@ public class Function {
             System.out.println("잘못 입력하셨습니다.");
         }
 
-            String point = "";
+        String point = "";
 
         if (score >= 90) {
             point = "A";
@@ -129,11 +129,48 @@ public class Function {
     }
 
     public void printStarNumber() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("정수: ");
+        int num = sc.nextInt();
+        if(num < 0){
+            System.out.println("양수가 아닙니다.");
+        }
 
-
+        for(int i=0; i<num; i++){
+            for(int j=0; j<num; j++){
+                if(i == j) {
+                    System.out.print(num);
+                }else
+                    System.out.print("*");
+            }
+            System.out.println();
+        }
 
     }
 
+    public void sumRandom() {
+        int random = (int) (Math.random() * 100 + 1);
+        int sum = 0;
+        for(int i=1; i<=random; i++) {
+            sum += i;
+        }
+        System.out.println("1부터" + random + "까지의 합: " + sum);
+    }
+
+    public void exceptGugu() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("정수: ");
+        int num = sc.nextInt();
+        if(num < 0){
+            int sum = 0;
+            for(int i=1; i<=num; i++){
+                for(int j=1; j<=num; j++) {
+                    if(i % num == 0) {
+                    }sum += i;
+                }
+                System.out.print(sum + " ");
+            }
+        }
+    }
 
 }
-

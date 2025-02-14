@@ -7,7 +7,7 @@ public class CosmeticDTO {
     private int price;
     private String brand;
     private String category;
-    private boolean isDiscount;
+    private boolean Discount;
 
     public CosmeticDTO(){}
 
@@ -16,7 +16,7 @@ public class CosmeticDTO {
         this.price = price;
         this.brand = brand;
         this.category = category;
-        this.isDiscount = isDiscount;
+        this.Discount = isDiscount;
     }
 
     public void setName(String name){
@@ -32,7 +32,7 @@ public class CosmeticDTO {
         this.category = category;
     }
     public void setDiscount(boolean isDiscount){
-        this.isDiscount = isDiscount;
+        this.Discount = isDiscount;
     }
 
 
@@ -49,10 +49,12 @@ public class CosmeticDTO {
         return category;
     }
     public boolean isDiscount(){
-        return isDiscount;
+        return Discount;
     }
 
     public String getInformation(){
-        return "name: " + name + ", price: " + price + ", brand: " + brand + ", category: " + category + ", discount: " + (isDiscount? true : false);
+        return "name: " + name + ", price: " + price + ", brand: "
+                + brand + ", category: " + category + ", discount: "
+                + Discount;
     }
 }
