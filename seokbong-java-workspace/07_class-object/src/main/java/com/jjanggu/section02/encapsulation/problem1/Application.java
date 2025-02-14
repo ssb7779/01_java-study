@@ -1,4 +1,4 @@
-package com.jjanggu.scetion02.encapsulation.problem1;
+package com.jjanggu.section02.encapsulation.problem1;
 
 public class Application {
     public static void main(String[] args) {

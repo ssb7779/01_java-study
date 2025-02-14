@@ -1,4 +1,4 @@
-package com.jjanggu.scetion02.encapsulation.problem3;
+package com.jjanggu.section02.encapsulation.problem3;
 
 public class Monster_Good {
 
