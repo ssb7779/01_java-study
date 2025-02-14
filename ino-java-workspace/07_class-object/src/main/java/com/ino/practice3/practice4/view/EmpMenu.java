@@ -51,39 +51,17 @@ public class EmpMenu {
     }
 
     public void modEmployee(Employee emp) {
-
         while(true) {
             System.out.println("==== 사원 정보 수정 메뉴 ====\n1. 이름 변경\n2. 급여 변경\n3. 부서 변경\n4. 직급 변경\n0. 이전 메뉴로)";
             int num = sc.nextInt();
             sc.nextLine();
             switch (num) {
-                case 0: return emp;
-                case 1: employee = inputEmployee(); break;
-                case 2: modEmployee(employee); break;
-                case 3: employee = null; break;
-                case 4: employee.getInformation(); break;
+                case 0: return;
+                case 1: emp.setEmpName(sc.nextLine()); break;
+                case 2: emp.setSalary(sc.nextInt()); sc.nextLine(); break;
+                case 3: emp.setDept(sc.nextLine()); break;
+                case 4: emp.setJob(sc.nextLine()); break;
             }
         }
-        System.out.print("empName: ");
-        String empName = sc.nextLine();
-        System.out.print("dept: ");
-        String dept = sc.nextLine();
-        System.out.print("job: ");
-        String job = sc.nextLine();
-        System.out.print("age: ");
-        int age = sc.nextInt();
-        sc.nextLine();
-        System.out.print("gender: ");
-        char gender = sc.nextLine().charAt(0);
-        System.out.print("salary: ");
-        int salary = sc.nextInt();
-        System.out.print("bonusPoint: ");
-        double bonusPoint = sc.nextInt();
-        sc.nextLine();
-        System.out.print("phone: ");
-        String phone = sc.nextLine();
-        System.out.print("address: ");
-        String address = sc.nextLine();
-        Employee em = new Employee(empName, dept, job, age, gender, salary, bonusPoint, phone, address);
     }
 }
