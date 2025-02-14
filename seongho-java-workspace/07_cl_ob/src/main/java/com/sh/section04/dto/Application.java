@@ -58,6 +58,30 @@ public class Application {
 
         CosmeticDTO cdto2 = new CosmeticDTO("라이너","13000","눈",true);
         System.out.println(cdto2.getIF());
+
+
+        System.out.println("========================");
+        Bdto br1 = new Bdto("초코빵",1000);
+        System.out.println(br1.toString());
+
+        Bkdto br2 = new Bkdto();
+        br2.setBkName("김성호빵집");
+        br2.setBkAddr("집앞");
+        br2.setBread(br1);
+        System.out.println(br2.toString());
+
+        Bkdto br3 = new Bkdto();
+        br3.setBkName("김성호빵집2호점");
+        br3.setBkAddr("집뒤");
+        br3.setBread(br1);
+        System.out.println(br3.toString());
+
+        Bkdto br4 = new Bkdto("성심당","대전시",new Bdto("튀김소보로",2500));
+        System.out.println(br4.toString());
+        System.out.println("파는빵"+ br4.getBread().toString());
     }
+    //2500원짜리 튀김 소보로를 판매하는 성심당 대전 빵집 만들기 br4
+    //빵집정보 출력 성심당에서 판매하는 빵정보만 출력
+
 
 }

@@ -13,33 +13,22 @@ public CosmeticDTO(){}
     this.kat=kat;
     this.dc=dc;
     }
-    public String getname(){
-    return name;
-    }
+    public String getname(){return name;}
 
-    public void setName(String name)  {
-    this.name=name;
-    }
-    public String getpri(){
-    return pri;
-    }
-    public void setpri(String pri){
-    this.pri=pri;
-    }
-    public String getkat(){
-    return kat;
-    }
-    public void setkat(String kat){
-    this.kat = kat;
-    }
+    public void setName(String name){this.name=name;}
 
-    public boolean isDc() {
-        return dc;
-    }
+    public String getpri(){return pri;}
 
-    public void setDc(boolean dc) {
-        this.dc = dc;
-    }
+    public void setpri(String pri){this.pri=pri;}
+
+    public String getkat(){return kat;    }
+
+    public void setkat(String kat){this.kat = kat;    }
+
+    public boolean isDc() {return dc;    }
+
+    public void setDc(boolean dc) {this.dc = dc;}
+
     public String getIF(){
         return "name: "+name+ ", pri: "+pri+", kat: "+kat+", dc: "+dc;
     }
