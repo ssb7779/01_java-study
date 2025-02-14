@@ -34,7 +34,7 @@ public class Function {
                 result = num1 / num2;
                 break;
         }
-        System.out.printf("%d %c %d = %d", num1, op, num2, result);
+        System.out.printf("%d %c %d = %d\n", num1, op, num2, result);
 
     } // calc end
 
@@ -53,7 +53,7 @@ public class Function {
         for (int i = min; i <= max; i++){
             sum += i;
         }
-        System.out.printf("%d부터 %d까지 정수들의 합 : %d", min, max, sum);
+        System.out.printf("%d부터 %d까지 정수들의 합 : %d\n", min, max, sum);
 
     } // tcal end
 
@@ -72,7 +72,7 @@ public class Function {
         System.out.print("성격 : ");
         String mbti = sc.nextLine();
 
-        System.out.printf("이름 : %s\n나이 : %d\n성별 : %s\n성격 : %s", name, age, gender, mbti);
+        System.out.printf("이름 : %s\n나이 : %d\n성별 : %s\n성격 : %s\n", name, age, gender, mbti);
 
     } // profile end
 
@@ -122,7 +122,7 @@ public class Function {
         } else {
             fScore = 'F';
         }
-        System.out.printf("%d학년 %d반 %d번 %c학생 %s의 점수는 %.2f점이고 %c학점 입니다."
+        System.out.printf("%d학년 %d반 %d번 %c학생 %s의 점수는 %.2f점이고 %c학점 입니다.\n"
                 , grade, clRoom, clNum, sex, name, score, fScore);
 
     } //pScore end
@@ -160,7 +160,7 @@ public class Function {
         for (int i = 1; i <= random; i++) {
             sum += i;
         }
-        System.out.printf("1부터 %d까지의 합 : %d", random, sum);
+        System.out.printf("1부터 %d까지의 합 : %d\n", random, sum);
 
     } // sumRandom end
 
@@ -198,21 +198,31 @@ public class Function {
                 System.out.println("정답입니다.");
                 System.out.println("주사위의 합 : " + sumDice);
 
-                // 정답 맞추고 재확인 문
-                System.out.print("계속하시겠습니까?(y/n) : ");
-                char cont = sc.nextLine().charAt(0);
-                switch (cont) {
-                    case 'n', 'N':
-                        System.out.println("게임을 종료합니다.");
-                        return;
-                    case 'y', 'Y':
-                        System.out.println("게임을 계속 진행합니다.");
+
+                while (true) {
+                    // 정답 맞추고 재확인 문
+                    System.out.print("계속하시겠습니까?(y/n) : ");
+                    char cont = sc.nextLine().charAt(0);
+
+                    switch (cont) {
+                        case 'n', 'N':
+                            System.out.println("게임을 종료합니다.");
+                            return;
+                        case 'y', 'Y':
+                            System.out.println("게임을 계속 진행합니다.");
+                            break;
+                        default:
+                            System.out.println("다시 입력해주세요.");
+                            continue;
+                    }
+                    break;
                 }
 
             } else {
                 System.out.println("틀렸습니다.");
             }
-        }
+
+        } // while true
 
 
 
