@@ -189,6 +189,7 @@ public class ConditionPractice {
 
         if (mark != '+' && mark != '-' && mark != '*' && mark != '/') {
             System.out.println("잘못 입력하셨습니다. 프로그램을 종료합니다.");
+            // return 추가 혹은 switch defalut로 이동
         }
         switch (mark) {
             case '+':
@@ -239,6 +240,13 @@ public class ConditionPractice {
         System.out.println("과제 점수(30) :" + workScorePer);
         System.out.println("출석 점수(20) :" + attendancePerScore);
         System.out.println("총점: " + sum);
+
+        /* 02.10 Review
+         조건문 분리해서 작성하는 쪽이 더 좋았을 듯
+         최대값을 초과한 값을 입력했을 때에 대한 검증 미흡
+         */
+
+        /*
         if ((sum >= 70) && attendancePer >= 70 ) {
             System.out.println("PASS");
         }else{
@@ -251,6 +259,38 @@ public class ConditionPractice {
             else{
                 System.out.printf("FAIL [점수 미달](총점 %.1f)", sum);
             }
+        }
+
+         */
+
+        // 합격 case
+        if ((sum >= 70 && attendancePer >= 70)){
+            System.out.println("PASS");
+            return;
+        }
+
+        // 불합격 case
+        // 점수와 출석 둘다 미달인 경우
+        if(sum<= 70 && attendance < 14){
+                System.out.printf("FAIL [점수 미달](총점 %.1f) \n", sum);
+                System.out.printf("FAIL [출석 횟수 부족](%d/20)", attendance);
+                return;
+        }
+
+        // 출석 검증
+        if (attendance < 14){
+            System.out.printf("FAIL [출석 횟수 부족](%d/20)", attendance);
+        } else if (attendance > 20){
+            System.out.println("최대 출석 횟수는 20회입니다. 프로그램을 다시 실행하세요.");
+            return;
+        }
+
+        // 점수 검증
+        if (sum <= 70){
+            System.out.printf("FAIL [점수 미달](총점 %.1f)", sum);
+        } else if (sum > 100){
+            System.out.println("점수가 잘못 입력되었습니다. 프로그램을 다시 실행하세요.");
+            return;
         }
     }
 

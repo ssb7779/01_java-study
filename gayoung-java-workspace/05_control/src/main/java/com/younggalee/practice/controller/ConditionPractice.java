@@ -56,7 +56,7 @@ public class ConditionPractice {
         System.out.println();
 
         int totalScore = scoreKo + scoreMth + scoreEn;
-        double avg = totalScore / 3.0;
+        double avg = totalScore / 3.0; //*************
 
         if (avg >= 60) {
             if (scoreKo >= 40 && scoreMth >= 40 && scoreEn >= 40) {
@@ -111,6 +111,19 @@ public class ConditionPractice {
         } else {
             System.out.println("로그인 실패. 아이디가 틀렸습니다.");
         }
+
+        /*
+        if (id.equals("rkduddl1717") && pw.equals("1717")) {
+            // 통과
+        } else if (id.equals("rkduddl1717")){
+            // 아이디만 통과
+        } else if (pw.equals("1717")){
+            // 비번만 통과
+        } else {
+            // 모두 x
+        }
+        ********** 2중 for문 없이 가능 (if 조건 불만족 시, 이후 실행 되니까)
+         */
     }
 
     public void practice6() {
@@ -166,11 +179,12 @@ public class ConditionPractice {
 
         System.out.print("연산자를 입력(+,-,*,/,%) : ");
         String operator = sc.nextLine();
-
+        // double result = " ";
         if (num1 > 0 && num2 > 0) {
 
             switch (operator) {
                 case "+":
+                    // result = num1 + num2;
                     System.out.printf("%d %s %d = ", num1, operator, num2);
                     System.out.println(num1 + num2);
                     break;
@@ -192,8 +206,9 @@ public class ConditionPractice {
                     break;
                 default:
                     System.out.println("연산자를 잘못입력하셨습니다. 프로그램을 종료합니다.");
-
             }
+            // System.out.println(System.out.printf("%d %s %d = %f", num1, operator, num2, result);
+            //이런 식으로 하면 중복 코드 피할 수 있음
         } else {
             System.out.println("잘못 입력하셨습니다. 양수가 아닙니다.");
         }
@@ -211,18 +226,19 @@ public class ConditionPractice {
         int scoreAttend = sc.nextInt();
         String result = "";
 
-        double totalScore = scoreM * 0.2 + scoreF * 0.3 + scoreAssign * 0.3 + scoreAttend * 0.2;
+        double totalScore = scoreM * 0.2 + scoreF * 0.3 + scoreAssign * 0.3 + scoreAttend * 0.2; // 출석점수는 20점 만점이라서 0.2 안곱해도 된다고 함.
 
         System.out.println("===========결과==========");
 
-        if (totalScore >= 70) {
+        if (totalScore >= 70) {   // if조건을 fail일 경우로 두면 더 중복 코드 최소화로 만들 수 있음.
+            // 직관적으로 작성하지말고 효율적으로 작성해보기
             result = "PASS";
         } else {
             result = "FAIL";
             System.out.printf("%s [점수 미달] (총점 %.1f)\n", result, totalScore);
         }
 
-        if (scoreAttend >= 20 * 0.7) {
+        if (scoreAttend >= 20 * 0.7) {  // 여기도 마찬가지
             result = "PASS";
         } else {
             result = "FAIL";
@@ -251,9 +267,7 @@ public class ConditionPractice {
         System.out.println();
 
         switch (index) {
-            case 1:
-                practice1();
-                break;
+            case 1: practice1(); break; // 한줄로 만듭시다!!******
             case 2:
                 practice2();
                 break;

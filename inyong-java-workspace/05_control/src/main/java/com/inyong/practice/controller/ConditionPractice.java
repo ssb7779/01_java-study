@@ -6,6 +6,7 @@ public class ConditionPractice {
     public void practice1() {
         Scanner sc = new Scanner(System.in);
         int num = sc.nextInt();
+        System.out.println("동작할 시스템 번호를 입력해 주세요");
 
         switch (num) {
             case 1:
@@ -37,7 +38,7 @@ public class ConditionPractice {
             System.out.println("양수만 입력해 주세요");
         }
 
-        System.out.println("num");
+        System.out.println(num);
 
     }
 
@@ -63,6 +64,7 @@ public class ConditionPractice {
     public void practice4() {
         Scanner sc = new Scanner(System.in);
         int month = sc.nextInt();
+        System.out.println("확인하고자 하는 달을 입력하세요");
 
         switch (month) {
             case 1, 2, 12:
@@ -186,7 +188,7 @@ public class ConditionPractice {
         int finalScore = sc.nextInt();
         double finalRate = finalScore * 0.3;
         System.out.println(finalRate);
-        ;
+
         System.out.println("과제점수");
         int assignmentScore = sc.nextInt();
         double assignmentRate = assignmentScore * 0.3;
@@ -211,6 +213,45 @@ public class ConditionPractice {
         } else if (totalScore >= 70) {
             System.out.printf("%.1f \n %.1f \n %.1f \n %.1f \n %.1f \n Pass ", midtermRate, finalRate, assignmentRate, attendanceRate, totalScore);
         }
+    }
+
+    public void practice10() {
+        System.out.println("문제 번호를 입력하세요");
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+
+        switch (num) {
+            case 1:
+                practice1();
+                break;
+            case 2:
+                practice2();
+                break;
+            case 3:
+                practice3();
+                break;
+            case 4:
+                practice4();
+                break;
+            case 5:
+                practice5();
+                break;
+            case 6:
+                practice6();
+                break;
+            case 7:
+                practice7();
+                break;
+            case 8:
+                practice8();
+                break;
+            case 9:
+                practice9();
+                break;
+            default:
+                System.out.println("잘못입력했습니다.");
+        }
+
     }
 
 }
