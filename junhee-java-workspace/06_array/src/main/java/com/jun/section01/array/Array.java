@@ -1,5 +1,6 @@
 package com.jun.section01.array;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Array {
@@ -462,6 +463,34 @@ public class Array {
         // 향상된 for문 내의 변수 타입은 배열 요소 타입으로 작성하면됨
 
     }
+    public void remind(){
+
+        int[]arr=new int[3];
+
+        arr[0] = 10;
+        arr[1] = 20;
+        arr[2] = 30;
+
+        System.out.println();
+
+        //일반 for문
+        for(int i=0; i<arr.length; i++){
+            System.out.println(i + ": " + arr[i]);
+        }
+
+        // 향상된 for문
+        int index = 0;
+        for (int a : arr) { // num = arr[0] => arr[1] => arr[2] => ... => arr[마지막]
+            System.out.println(index++ + ": " + a);
+            // 향상된 for문 내의 변수 타입은 배열 요소 타입으로 작성하면됨
+        }
+
+        System.out.println("배열요소들 :" + Arrays.toString(arr)); //배열요소들을 알고싶을때
+
+
+
+
+    }
 
     public void homework() {
         /*
@@ -476,6 +505,8 @@ public class Array {
             4. char배열의 각 인덱스에 담긴 문자값들을 하나의 문자열로 합쳐서 변수(String result)에 기록하기
             5. 해당 문자열 변수 결과값 출력
          */
+
+
     }
 }
 

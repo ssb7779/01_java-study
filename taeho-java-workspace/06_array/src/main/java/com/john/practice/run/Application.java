@@ -18,5 +18,10 @@ public class Application {
 //        ap.practice10();
 //        ap.practice11();
 //        ap.slackQuiz();
+//        ap.practice12();
+//        ap.practice13();
+//        ap.practice14();
+//        ap.practice15();
     }
+
 }

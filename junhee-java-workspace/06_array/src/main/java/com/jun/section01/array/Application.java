@@ -14,5 +14,6 @@ public class Application {
 //        a.testArrayExample4();
 //        a.testArrayFault();
 //        a.testEnhancedFor();
+        a.remind();
     }
 }
