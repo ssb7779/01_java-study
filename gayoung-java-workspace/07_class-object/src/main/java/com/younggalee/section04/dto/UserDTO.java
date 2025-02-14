@@ -17,7 +17,7 @@ public class UserDTO {
     반환자료형 없음주의
      */
 
-    public UserDTO(){
+    public UserDTO(){ // 외부에서 기본 생성자를 사용할 일이 있을 수 있는데 매개변수 생성자를 만들면 jvm이 기본 생성자를 자동으로 만들어주지 않기 때문에 습관적으로 만들기를 추천
     }
 
     public UserDTO(String id, String pwd, String name){
@@ -39,21 +39,10 @@ public class UserDTO {
         return id;
     }
 
-    public void setPwd(String pwd) {
-        this.pwd = pwd;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getPwd() {
-        return pwd;
-    }
-
-    public String getName() {
-        return name;
-    }
+    public void setPwd(String pwd) { this.pwd = pwd; }
+    public void setName(String name) {this.name = name;}
+    public String getPwd() {return pwd;}
+    public String getName() {return name;}
 
     //해당 객체의 모든 필드값 확인용
     public String getInformation(){
