@@ -3,7 +3,7 @@ package com.podoseee.homework.controller;
 import java.util.Scanner;
 
 public class Function {
-    Scanner sc = new Scanner(System.in);
+    Scanner sc = new Scanner(System.in); // 모든 곳에 적용되게 먼저 선언해두자
     //1.
     public void calculator(){
         System.out.print("첫 번째 정수 : ");
@@ -45,13 +45,128 @@ public class Function {
     }
 
     //2.
-        /*public void totalCalculator(){
-                Scanner sc = new Scanner(System.in);
-
+        public void totalCalculator(){
                 System.out.print("첫 번째 정수 : ");
                 int a = sc.nextInt();
                 System.out.print("두 번째 정수 : ");
                 int b = sc.nextInt();
 
-        }*/
+                int result = 0;
+
+                // 처음 쓴 오류코드 : a+b가 됨
+                /*if(a>b){
+                    for(int i=0; i<=a; i++){ // i=0이 아니라 b라고 써야함
+                        result = b + i;
+                    }
+                }else{
+                    for(int i=0; i<=a; i++){
+                        result = b + i;
+                    }
+                }
+            System.out.println(result);*/
+            
+                //Math.min을 쓰자!
+                int min = Math.min(a, b);
+                int max = Math.max(a, b);
+                
+                for(int i=min; i<=max; i++){
+                    result += i; 
+                }
+
+                System.out.printf("%d부터 %d까지의 정수들의 합 : %d", min, max, result);
+        }
+
+        //3.
+            public void printProfile(){ // 변수를 다른 사람이 알아보기 쉽게 설정하는 연습하자
+                System.out.print("이름 : ");
+                String a = sc.nextLine();
+                System.out.print("나이 : ");
+                String b = sc.nextLine();
+                System.out.print("성별 : ");
+                String c = sc.nextLine();
+                System.out.print("성격 : ");
+                String d = sc.nextLine();
+
+                System.out.println("이름 : " + a);
+                System.out.println("나이 : " + b);
+                System.out.println("성별 : " + c);
+                System.out.println("성격 : " + d);
+            }
+
+        //4.
+            public void printScore(){
+                System.out.print("이름 : ");
+                String a = sc.nextLine();
+
+                System.out.print("학년 : ");
+                int b = sc.nextInt();
+
+                System.out.print("반 : ");
+                int c = sc.nextInt();
+
+                System.out.print("번 : ");
+                int d = sc.nextInt();
+
+                System.out.print("성별(M/F) : ");
+                char e = sc.next().charAt(0);
+
+                String gender = (e == 'M') ? "남" : "여";
+
+                System.out.print("성적 : ");
+                double f = sc.nextDouble();
+
+                char g = 0;
+                if (f >= 90){
+                    g = 'A';
+                } else if (f >= 80){
+                    g = 'B';
+                } else if (f >= 70){
+                    g = 'C';
+                } else if (f >= 60){
+                    g = 'D';
+                } else if (f < 60){
+                    g = 'F';
+                }
+                System.out.printf("%d학년 %d반 %d번 %s학생 %s의 점수는 %.2f점이고 %c학점입니다.", b, c, d, gender, a, f, g);
+            }
+
+            //5.
+            public void printStarNumber(){
+                System.out.print("정수 : ");
+                int a = sc.nextInt();
+
+                if(a > 0){
+                    for(int i=1; i<=a; i++) { //이중for문 쓰기
+                        for(int j=1; j<i; j++) {
+                            System.out.print("*");
+                        }
+                        System.out.println(i);
+                    }
+                }else{
+                    System.out.println("양수가 아닙니다.");
+                }
+            }
+
+            //6.
+            public void sumRandom(){ // random함수 쓰기
+                int start = 1;
+                int randomCount = (int)(Math.random()*100 + start);
+
+                int sum = 0;
+                for(int i=start; i<=randomCount; i++){
+                    sum += i;
+                }
+                System.out.printf("%d부터 %d까지의 합 : %d", start, randomCount, sum);
+            }
+
+            //7.
+            public void exceptGugu(){
+                System.out.print("정수 : ");
+                int a = sc.nextInt();
+            }
+
+            //8.
+            public void diceGame(){
+
+            }
 }

@@ -29,11 +29,11 @@ public class Menu {
 
             switch(number){
                 case 1: function.calculator(); break;
-                //case 2: function.totalCalculator(); break;
-                //case 3: function.printProfile(); break;
-                //case 4: function.printScore(); break;
-                //case 5: function.printStarNumber(); break;
-                //case 6: function.sumRandom(); break;
+                case 2: function.totalCalculator(); break;
+                case 3: function.printProfile(); break;
+                case 4: function.printScore(); break;
+                case 5: function.printStarNumber(); break;
+                case 6: function.sumRandom(); break;
                 //case 7: function.exceptGugu(); break;
                 //case 8: function.diceGame(); break;
                 default:
