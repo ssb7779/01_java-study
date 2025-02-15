@@ -96,4 +96,16 @@ public class Employee {
     public void setAddress(String address) {
         this.address = address;
     }
+
+    public void getInformation(){
+        System.out.println("이름: " + getEmpName() + "\n"
+        + "부서: " + getDept() + "\n"
+        + "직급: " + getJob() + "\n"
+        + "나이: " + getAge() + "\n"
+        + "성별: " + getGender() + "\n"
+        + "급여: " + getSalary() + "\n"
+        + "보너스 포인트: " + getBonusPoint() + "\n"
+        + "전화번호: " + getPhone() + "\n"
+        + "주소: " + getAddress());
+    }
 }
