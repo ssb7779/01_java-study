@@ -1,7 +1,6 @@
 package com.kyungbae.section01.array;
 
-import javax.sound.midi.Soundbank;
-import java.sql.SQLOutput;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Array {
@@ -375,6 +374,29 @@ public class Array {
 
     } // tEF end
 
+    public void  remind(){
+
+        int[] arr;
+        arr = new int[3];
+
+        arr[0] = 10;
+        arr[1] = 20;
+        arr[2] = 30;
+
+        for (int i = 0; i < arr.length; i++){
+            System.out.println(i + " : " + arr[i]);
+        }
+
+        int index = 0;
+        for (int i : arr){
+            System.out.println(index + " : " + i);
+        }
+
+        System.out.println("배열요소들 : " + Arrays.toString(arr)); // 배열 요소 표출 [arr[0], arr[1], ... arr[n]]
+
+
+    } // remind end
+
     public void homework(){
         /*
     실습.
@@ -403,10 +425,15 @@ public class Array {
         }
 
         // 하나의 문자열로 합
-        String result = "";
+        /*
+        String result = ""; // null; 로 초기화 시 null 뒤에 글자가 이어짐
         for (char j : word){
             result += j;
         }
+         */
+
+        // String.valueOf (문자열화 시키고자 하는 값) : 전달 값을 문자열로 만듬
+        String result = String.valueOf(word);
 
         // 출력
         System.out.println(result);
