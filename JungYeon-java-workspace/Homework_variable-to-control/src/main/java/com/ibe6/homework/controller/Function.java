@@ -52,15 +52,14 @@ public class Function {
 
         int max = Math.max(num1, num2);
         int min = Math.min(num1, num2);
-        System.out.println(max);
-        //전위연산자 후위연산자
+
         int sum = 0;
 //
         for (int i = min; i <= max; i++) {
             sum += i;
         }
 //
-        System.out.print(min + "부터 " + max + "까지 정수들의 합: " + sum);
+        System.out.println(min + "부터 " + max + "까지 정수들의 합: " + sum);
     }
 
     public void printProfile() {
@@ -70,7 +69,7 @@ public class Function {
         System.out.print("나이: ");
         int age = sc.nextInt();
         sc.nextLine();
-        System.out.print("성별: ");
+        System.out.print("성별(여자/남자): ");
         String gender = sc.nextLine();
         System.out.print("성격: ");
         String ps = sc.nextLine();
@@ -134,18 +133,18 @@ public class Function {
         int num = sc.nextInt();
         if(num < 0){
             System.out.println("양수가 아닙니다.");
+            return;
         }
 
         for(int i=0; i<num; i++){
             for(int j=0; j<num; j++){
                 if(i == j) {
-                    System.out.print(num);
+                    System.out.print(j + 1);
                 }else
                     System.out.print("*");
             }
             System.out.println();
         }
-
     }
 
     public void sumRandom() {
@@ -160,17 +159,60 @@ public class Function {
     public void exceptGugu() {
         Scanner sc = new Scanner(System.in);
         System.out.print("정수: ");
-        int num = sc.nextInt();
-        if(num < 0){
-            int sum = 0;
-            for(int i=1; i<=num; i++){
-                for(int j=1; j<=num; j++) {
-                    if(i % num == 0) {
-                    }sum += i;
+        int dan = sc.nextInt();
+        if (dan > 0) {
+            for (int j = 1; j <= 9; j++) {
+                if (j % dan == 0) {
+                    continue;
                 }
-                System.out.print(sum + " ");
+                System.out.println(dan + " * " + j + " = " + (dan * j));
             }
         }
     }
 
+    public void diceGame() {
+        /*
+        두 개의 주사위가 만들어낼 수 있는 모든 경우의 수를 랜덤으로 정하고
+        랜덤으로 정해진 두 주사위 눈의 합이 입력된 수와 같은 경우 “맞췄습니다“ 출력,
+        입력 값과 다르면 “틀렸습니다“ 출력하여 맞출 때까지 반복하시오.
+        값을 맞추면 “계속 하시겠습니까? (y/n) : “가 출력되고
+        ‘y’ 또는 ‘Y’ 입력 시 새로운 랜덤 수가 정해지고 처음부터 다시 시작되도록 하시오.
+        만일 ‘n’ 또는 ‘N’ 입력 시 종료되도록 하시오.
+         */
+
+        Scanner sc = new Scanner(System.in);
+        while (true) {
+            System.out.print("주사위 두 개의 합을 맞춰보세요(2~12입력): ");
+            int num = sc.nextInt();
+            sc.nextLine();
+            int random = (int) (Math.random() * 12 + 2);
+            if (num <= 12 && num >= 2) {
+                if (random != num) {
+                    System.out.println("틀렸습니다.");
+                    System.out.println();
+                } else {
+                    System.out.println("맞췄습니다");
+                    System.out.println("주사위의 합: " + random);
+
+                    while (true) {
+                        System.out.println("계속 하시겠습니까?(y/n)");
+                        char answer = sc.nextLine().charAt(0);
+                        if (answer == 'y' || answer == 'Y') {
+                            break;
+                        } else if (answer == 'n' || answer == 'N') {
+                            System.out.println("종료합니다.");
+                            return;
+                        } else {
+                            System.out.println("잘못 입력하셨습니다.");
+                        }
+                    }
+                }
+            } else {
+                System.out.println("2부터 12까지의 숫자만 입력해주세요.");
+            }
+        }
+
+    }
 }
+
+
