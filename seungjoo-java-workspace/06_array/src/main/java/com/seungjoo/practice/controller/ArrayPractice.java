@@ -1,6 +1,7 @@
 package com.seungjoo.practice.controller;
 
 import java.sql.SQLOutput;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class ArrayPractice {
@@ -192,6 +193,109 @@ public class ArrayPractice {
             System.out.print(k);
         }
     }
+    public void practice12() {
+        int k = 0;
+        int[] arr = new int[10];
+
+        int num1 = (int) (Math.random() * 10 + 1);
+        arr[k++] = num1;
+
+        while(k < arr.length) {
+            int num = (int) (Math.random() * 10 + 1);
+            boolean isDuplicate = false;
+
+            for (int i = 0; i < k; i++) {
+                if (arr[i] == num) {
+                    isDuplicate = true;
+                    break;
+                }
+            }
+
+            if (!isDuplicate) {
+                arr[k++] = num;
+            }
+        }
+
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+    }
+
+
+
+
+    public void practice13() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("배열의 크기를 입력하세요:");
+        int num = sc.nextInt();
+        sc.nextLine();
+        String[] arr = new String[num];
+        System.out.println("1번째 문자열:");
+        String str1 = sc.nextLine();
+        System.out.println("2번째 문자열:");
+        String str2 = sc.nextLine();
+        System.out.println("3번째 문자열:");
+        int k = num;
+        String str3 = sc.nextLine();
+        arr[0] = str1;
+        arr[1] = str2;
+        arr[2] = str3;
+        while(true) {
+            System.out.println("더 값을 입력하시겠습니까?(Y/N):");
+            String str4 = sc.nextLine();
+            if(str4.equals("y")) {
+                System.out.println("더 입력하고 싶은 개수:");
+                int num1 = sc.nextInt();
+                sc.nextLine();
+                arr = Arrays.copyOf(arr, arr.length+num1 );
+                for (int i = 1; i <= num1; i++) {
+                    System.out.println(k + 1 + "번쨰 문자열:");
+                    String str5 = sc.nextLine();
+                    arr[k] = str5;
+                    k++;
+                }
+
+            }else if(str4.equals("n")){
+                System.out.println(Arrays.toString(arr));
+                break;
+            }
+
+
+        }
+
+
+    }
+    public void practice14() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("월: ");
+        int month = sc.nextInt();
+
+        String[] seasons = {"겨울", "봄", "여름", "가을"};
+
+        System.out.println(seasons[month/3]);}
+
+    public void practice15() {
+
+        int[] a = {10, 20, 30, 0, 0, 0};
+        int[] b = {40, 50, 60};
+        System.arraycopy(b, 0,a,3,3);
+
+        for(int i = 0; i < a.length; i++){
+            System.out.print(a[i] + " ");
+        }
+        System.out.println();
+
+    }
+
+
+
+
+
+
+
+
+    }
 
 
 
@@ -203,6 +307,4 @@ public class ArrayPractice {
 
 
 
-
-}
 
