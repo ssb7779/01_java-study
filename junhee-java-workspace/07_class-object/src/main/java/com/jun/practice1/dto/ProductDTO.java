@@ -44,7 +44,14 @@ public class ProductDTO {
     public void setTax(double tax) {
         this.tax = tax;
     }
+
+    public int getPrTax(){
+        return (int) (price + (price*tax));
+    }
     public String getInformation(){
         return  productId + " " + productName + " " + productArea + " " + price + " " + tax;
     }
+
+
+
 }
