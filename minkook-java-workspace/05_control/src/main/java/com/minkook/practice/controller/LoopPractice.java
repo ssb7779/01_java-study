@@ -1,5 +1,6 @@
 package com.minkook.practice.controller;
 
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class LoopPractice {
@@ -327,12 +328,56 @@ public class LoopPractice {
     }
 
     public void star4() {
-        for(int i = 0; i < 5; i++) {
-            System.out.println();
-            for(int j = 0; j < 5; j++){
-                System.out.print((j+1));
-
+        //위쪽 삼각형
+        for(int i = 1; i <= 5; i++) {
+            for(int j = 1; j <= 5 - i; j++) {
+                System.out.print(" ");
             }
+            for(int k = 1; k <= 2 * i - 1; k++) {
+                System.out.print(k);
+            }
+            System.out.println();
+
         }
+        //아래쪽 삼각형
+        for (int i = 4; i >= 1; i--) {
+            for (int j = 1; j <= 5 - i; j++) {
+                System.out.print(" ");
+            }
+            for (int k = 1; k <= 2 * i - 1; k++) {
+                System.out.print(k);
+            }
+            System.out.println();
+        }
+
+    }
+
+    public void star5() {
+        //위쪽 삼각형
+        for(int i = 1; i <= 3; i++) {
+            for(int j = 1; j <= 4 - i; j++) {
+                System.out.print(" ");
+            }
+            for (int k = 1; k <= 2 * i - 1; k++) {
+                if (k == 1 || k == 2 * i - 1) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+
+        }
+        //아래쪽 삼각형
+        for (int i = 2; i >= 1; i--) {
+            for (int j = 1; j <= 4 - i; j++) {
+                System.out.print(" ");
+            }
+            for (int k = 1; k <= 2 * i - 1; k++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
     }
 }

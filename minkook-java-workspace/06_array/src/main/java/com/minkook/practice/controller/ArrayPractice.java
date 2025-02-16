@@ -1,6 +1,6 @@
 package com.minkook.practice.controller;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class ArrayPractice {
     public void practice1(){
@@ -194,12 +194,47 @@ public class ArrayPractice {
     public void practice12() {
         Scanner sc = new Scanner(System.in);
         int[] arr = new int[10];
+        Set<Integer> set = new HashSet<>();
 
-
-        for(int i = 0; i < arr.length; i++){
-            arr[i] = (int)(Math.random() * 10 +1);
+        while(true){
+            for(int i = 0; i < arr.length; i++) {
+                arr[i] = (int) (Math.random() * 10 + 1);
+                set.add(arr[i]);
+            }
+            if(set.size() == arr.length) {
+                break;
+            }
         }
-        int[] temp = arr;
+        // Set을 List로 변환
+        List<Integer> list = new ArrayList<>(set);
+
+        // List의 요소를 무작위로 섞음
+        Collections.shuffle(list);
+
+        for (int num : list) {
+            System.out.print(num + " ");
+        }
+
+    }
+
+    public void practice12_1() {
+        int[] arr = new int[10];
+        Random rd = new Random();
+
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = i + 1;
+        }
+
+        for (int i = arr.length - 1; i > 0; i--) {
+            int j = rd.nextInt(i+1);
+            int temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+        }
+
+        for (int num : arr) {
+            System.out.print(num + " ");
+        }
 
     }
 }
