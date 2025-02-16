@@ -6,18 +6,18 @@ public class CosmeticDTO {
     private int price;
     private String brand;
     private String category;
-    private boolean isDiscount;
+    private boolean discount;
 
     //기본생성자
     public CosmeticDTO(){ }
 
     //매개변수생성자
-    public CosmeticDTO(String name, int price, String brand, String category, boolean isDiscount) {
+    public CosmeticDTO(String name, int price, String brand, String category, boolean discount) {
         this.name = name;
         this.price = price;
         this.brand = brand;
         this.category = category;
-        this.isDiscount = isDiscount;
+        this.discount = discount;
     }
 
     public void setName(String name){
@@ -32,12 +32,13 @@ public class CosmeticDTO {
     public void setCategory(String category){
         this.category = category;
     }
-    public void setIsDiscount(boolean isDiscount){
-        this.isDiscount = isDiscount;
+    public void setIsDiscount(boolean discount){
+        this.discount = discount;
     }
+    public boolean isDiscout(){ return discount; }
 
     public String getInformation(){
-        return name + " " + price + " " + brand + " " + category + " " + isDiscount;
+        return name + " " + price + " " + brand + " " + category + " " + discount;
     }
 
 

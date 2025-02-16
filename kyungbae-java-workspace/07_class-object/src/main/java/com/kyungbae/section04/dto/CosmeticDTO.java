@@ -57,7 +57,7 @@ public class CosmeticDTO {
         return category;
     }
 
-    public boolean getDiscount(){
+    public boolean isDiscount(){
         return isDiscount;
     }
 
