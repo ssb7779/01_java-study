@@ -1,5 +1,6 @@
 package com.jjanggu.section01.array;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Array {
@@ -454,6 +455,18 @@ public class Array {
 
     }
 
+    public void remind() {
+        //향상된 for문
+        int[] arr = {10,20,30,40,50};
+
+        int index = 0;
+        for(int a : arr){
+            System.out.println(index++ + " : " + a);
+        }
+
+        System.out.println("배열요소들 : " + Arrays.toString(arr));
+    }
+
 
 
     public void homework() {
@@ -472,9 +485,9 @@ public class Array {
 
         for(int i = 0; i < str.length(); i++) {
             arr[i] = str.charAt(i);
-
         }
 
+        // String.valueOf(문자열화 시키고자하는 값) : 전달값을 가지고 문자열로 만들어 변환
 
         for(int i = 0; i < str.length(); i++) {
             System.out.print((char)(arr[i]+1));

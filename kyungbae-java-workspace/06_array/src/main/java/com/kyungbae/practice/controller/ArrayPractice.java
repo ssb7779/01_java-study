@@ -1,5 +1,6 @@
 package com.kyungbae.practice.controller;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class ArrayPractice {
@@ -228,6 +229,38 @@ public class ArrayPractice {
         }
 
     } // p11 end
+
+    public void practice12() {
+
+        int[] arr = new int[10];
+        // 배열에 랜덤 값 입력
+        for (int i = 0; i < arr.length; ) {
+            arr[i] = (int)(Math.random() * 10 + 1);
+            // 중복검사
+            for (int j = 0; j < i;) {
+                if (arr[i] != arr[j]) {// 중복이 아니면 다음 스탭
+                    j++;
+                } else { // 중복이면
+                    i--;
+                    break;
+                }
+                if (j == i) { // 중복검사를 끝까지 통과하면
+                    break;
+                }
+
+            }
+            i++;
+        }
+        // 값 출력
+        for (int i : arr) {
+            System.out.print(i + " ");
+        }
+//        System.out.println(Arrays.toString(arr));
+
+
+
+    } // p12 end
+
 
 
 

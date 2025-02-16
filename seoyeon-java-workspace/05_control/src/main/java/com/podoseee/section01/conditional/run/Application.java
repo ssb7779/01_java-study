@@ -2,7 +2,6 @@ package com.podoseee.section01.conditional.run;
 
 import com.podoseee.section01.conditional.controller.If;
 import com.podoseee.section01.conditional.controller.Switch;
-import com.podoseee.section01.conditional.controller.ConditionPractice;
 
 public class Application {
     public static void main(String[] args){
@@ -43,12 +42,5 @@ public class Application {
         // s.testBasicSwitch();
         // s.testSwitchExample1();
         // s.testSwitchExample2();
-
-            // ConditionPractice 클래스의 practice1 메소드 호출
-        ConditionPractice p = new ConditionPractice();
-        //p.practice1();
-        //p.practice2();
-        //p.practice3();
-        //p.practice4();
     }
 }
