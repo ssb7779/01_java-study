@@ -79,5 +79,32 @@ public class Application {
         CosmeticDTO cosm2 = new CosmeticDTO("팬라이너", 15000, "클리오", "스킨케어", false);
         System.out.println(cosm2.getInformation());
 
+        BreadDTO bread = new BreadDTO();
+        bread.setBreadName("소금빵");
+        bread.setPrice(2500);
+        System.out.println(bread.getInformation());
+
+        BakeryDTO bakery = new BakeryDTO();
+        bakery.setBakeryName("파리바게트");
+        bakery.setAddress("노원구 동일로 227길");
+        bakery.setBread(bread); // 생성해둔 bread 객체 전달
+        //또는 생성가능
+        bakery.setBread(new BreadDTO("크로와상", 3300)); //************
+
+        System.out.println(bakery.getInformation());
+
+        BakeryDTO sungsim = new BakeryDTO();
+        sungsim.setBakeryName("성심당");
+        sungsim.setAddress("대전시");
+        sungsim.setBread(new BreadDTO("튀김소보로", 2500));
+
+        System.out.println(sungsim.getInformation());
+        System.out.println("판매하는 빵: " + sungsim.getBread().getInformation()); // *********
+
+
+//        BreadDTO bread = new BreadDTO("소금빵",2500);
+//        BakeryDTO bakery = new BakeryDTO("파리바게트", "노원구 동일로 227길");
+
+
     }
 }

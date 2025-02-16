@@ -1,5 +1,6 @@
 package com.kyungbae.practice.controller;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class ArrayPractice {
@@ -228,6 +229,89 @@ public class ArrayPractice {
         }
 
     } // p11 end
+
+    public void practice12() {
+
+        int[] arr = new int[10];
+        // 배열에 랜덤 값 입력
+        for (int i = 0; i < arr.length; ) {
+            arr[i] = (int)(Math.random() * 10 + 1);
+            // 중복검사
+            for (int j = 0; j < i;) {
+                if (arr[i] != arr[j]) {// 중복이 아니면 다음 스탭
+                    j++;
+                } else { // 중복이면
+                    i--;
+                    break;
+                }
+                if (j == i) { // 중복검사를 끝까지 통과하면
+                    break;
+                }
+
+            }
+            i++;
+        }
+        // 값 출력
+        for (int i : arr) {
+            System.out.print(i + " ");
+        }
+//        System.out.println(Arrays.toString(arr));
+
+    } // p12 end
+
+    public void practice13() {
+        Scanner sc = new Scanner(System.in);
+
+        // 오리지날 배열 생성
+        System.out.print("배열의 크기를 입력하세요 : ");
+        int originArr = sc.nextInt();
+        sc.nextLine();
+        String[] arr = new String[originArr];
+
+        //배열 카운트
+        int count1 = 1;
+        int count2 = 0;
+        // 배열에 문자열 넣기
+        for (int i=0; i<arr.length; i++) {
+            System.out.print(count1++ + "번째 문자열 : ");
+            arr[count2++] = sc.nextLine();
+        }
+
+
+        while (true) {
+            // 추가 입력 구문
+            System.out.print("더 값을 입력하시겠습니까?(Y/N) : ");
+            char redo = sc.nextLine().charAt(0);
+
+            // 종료
+            if (redo == 'n' || redo == 'N') {
+                System.out.println(Arrays.toString(arr));
+                return;
+
+                // 배열 추가
+            } else if (redo == 'y' || redo == 'Y') {
+
+                System.out.print("더 입력하고 싶은 개수 : ");
+                int exArr = sc.nextInt();
+                sc.nextLine();
+                // 배열 길이 늘려서 생성 후 복사
+                int sum = arr.length + exArr;
+                String[] arr2 = Arrays.copyOf(arr , sum);
+
+                for (int i=arr.length; i<arr2.length; i++) {
+                    System.out.print(count1++ + "번째 문자열 : ");
+                    arr2[count2++] = sc.nextLine();
+                }
+
+                // 배열 주소값 이동
+                arr = arr2;
+
+            }
+        } // 추가 Array 반복
+
+
+    } // p13 end
+
 
 
 

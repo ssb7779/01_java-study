@@ -1,18 +1,14 @@
 package com.kyungbae.homework.run;
 
-import com.kyungbae.homework.controoler.Function;
+import com.kyungbae.homework.view.Menu;
 
 public class Application {
 
     public static void main(String[] args) {
 
-        Function f = new Function();
+        Menu m = new Menu();
 
-//        f.calculator();
-//        f.totalCalculator();
-//        f.printProfile();
-//        f.printScore();
-        f.printStarNumber();
+        m.displayMenu();
 
     }
 
