@@ -44,13 +44,10 @@ public class UserDTO {
     public String getName(){
         return name;
     }
-
     public void setName(String name) {
         this.name = name;
     }
 
     // 해당 객체의 모든 필드값 확인용
-    public String getInformation(){
-        return "id: " + id + " pwd: " + pwd + " name: " + name;
-    }
+    public String getInformation(){ return "id: " + id + " pwd: " + pwd + " name: " + name; }
 }
