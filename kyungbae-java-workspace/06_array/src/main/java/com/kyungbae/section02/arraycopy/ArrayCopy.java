@@ -65,7 +65,7 @@ public class ArrayCopy {
     public void testDeepArrayCopy3(){
         // 깊은복사 3.
         /*
-            Arras.copyOf() 활용
+            Arrays.copyOf() 활용
             Arrays.copyOf(원본배열, 복사할길이);
          */
         int[] origin = {1,2,3,4,5};
