@@ -1,15 +1,28 @@
 package com.kyungbae.section04.dto;
 
-import java.sql.SQLOutput;
-
 public class Application {
 
     public static void main(String[] args) {
 
+
+        // default constructor 이용
+        /*
+            장점
+              - 어떤 field에 어떤 값이 대입될 지 명확하게 볼 수 있음
+              - 선택적으로 원하는 field에만 값을 담을 수 있음
+            단점
+              - method를 여러번 호출해야 돼서 불편함
+         */
+        UserDTO user2 = new UserDTO();
+        user2.setId("user2");
+        user2.setPwd("pass2");
+        user2.setName("둘리");
+        System.out.println(user2.getInformation());
+
         // parameter constructor 이용
         /*
             장점
-              - 메소드를 여러번 호출할 필요 없이 생성 구문만으로 field값을 초기화 할 수 있음
+              - method를 여러번 호출할 필요 없이 생성 구문만으로 field값을 초기화 할 수 있음
             단점
               - 전달값이 어떤 field에 대입되는지 명확하게 확인하기 어려움
               - 정해져있는 parameter에 맞는 값만을 전달해야됨
@@ -18,21 +31,6 @@ public class Application {
          */
         UserDTO user1 = new UserDTO("user1", "pass1", "길동홍");
         System.out.println(user1.getInformation());
-
-        // default constructor 이용
-        /*
-            장점
-              - 어떤 field에 어떤 값이 대입될 지 명확하게 볼 수 있음
-              - 선택적으로 원하는 field에만 값을 담을 수 있음
-            단점
-              - 메소드를 여러번 호출해야 돼서 불편함
-         */
-        UserDTO user2 = new UserDTO();
-        user2.setId("user2");
-        user2.setPwd("pass2");
-        user2.setName("둘리");
-        System.out.println(user2.getInformation());
-
         /*
             parameter constructor 사용하더라도
             setter / getter 를 생성해야 하는 이유
@@ -81,6 +79,60 @@ public class Application {
 
         CosmeticDTO pd2 = new CosmeticDTO("펜라이너", 15000, "클리오", "아이메이크업", true);
         System.out.println(pd2.getInformation());
+
+
+        System.out.println("=========================");
+
+        // default constructor
+        // 빵
+        BreadDTO bread = new BreadDTO();
+        bread.setName("소금빵");
+        bread.setPrice(3500);
+        System.out.println(bread.getInformation());
+
+        //빵집
+        BakeryDTO bakery = new BakeryDTO();
+        bakery.setName("나폴레옹");
+        bakery.setAddress("혜화동");
+        System.out.println(bakery.getInformation());
+
+        System.out.println("------------------------");
+
+        // parameter constructor
+        //빵
+        BreadDTO bread1 = new BreadDTO("공갈빵", 3000);
+        System.out.println(bread1.getInformation());
+
+
+
+        //빵집
+        BakeryDTO bakery1 = new BakeryDTO("성심당", "대전", bread);
+        System.out.println(bakery1.getInformation());
+
+        bakery1.setBread(new BreadDTO("크로와상", 4000));
+
+        System.out.println(bakery1.getInformation());
+
+        /*
+            2500원짜리 튀김소보로를 판매하는 성심당 대전역점 빵집 만들기 => bk3
+
+            빵집정보출력
+            성심당에서 판매하는 빵 정보만 출력
+         */
+        System.out.println("===============================");
+
+        BreadDTO bread2 = new BreadDTO("튀김소보로", 2500);
+
+        BakeryDTO bk3 = new BakeryDTO();
+        bk3.setName("성심당 대전역점");
+        bk3.setAddress("대전시");
+        bk3.setBread(bread2);
+
+        System.out.println("빵집 : " +bk3.getName() + ", 위치 : " + bk3.getAddress());
+        System.out.println("판매하는 빵 : " + bk3.getBread().getName() + ", 가격 : " + bk3.getBread().getPrice() + "원");
+        System.out.println(bk3.getInformation());
+        System.out.println(bk3.getBread().getInformation());
+//        System.out.println(bk3.getInformation());
 
     } // main end
 

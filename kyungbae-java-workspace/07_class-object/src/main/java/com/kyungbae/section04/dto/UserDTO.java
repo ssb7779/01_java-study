@@ -14,7 +14,9 @@ public class UserDTO {
     /*
         # constructor
         default constructor 는 필수
-        parameter constructor 는 통상적으로 모든 필드를 초기화해주는 생성자로 작성
+            ( constructor 가 비어있을경우 default constructor는 JVM에서 자동으로 생성해주지만
+            parameter constructor 을 언제 작성할 지 몰라 필수적으로 작성해준다.)
+        parameter constructor 는 통상적으로 모든 field를 초기화해주는 constructor로 작성
      */
 
     // default constructor 작성
