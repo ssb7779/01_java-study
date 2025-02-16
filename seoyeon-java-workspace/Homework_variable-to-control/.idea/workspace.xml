@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="066c4f23-452d-4cad-8531-95858b7aebe8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../07_class-object/src/main/java/com/podoseee/section05/finalkeyword/FinalKeyword.java" beforeDir="false" afterPath="$PROJECT_DIR$/../07_class-object/src/main/java/com/podoseee/section05/finalkeyword/FinalKeyword.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../07_class-object/src/main/java/com/podoseee/section05/singleton/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/../07_class-object/src/main/java/com/podoseee/section05/singleton/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../07_class-object/src/main/java/com/podoseee/section05/statickeyword/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/../07_class-object/src/main/java/com/podoseee/section05/statickeyword/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../07_class-object/src/main/java/com/podoseee/section05/statickeyword/StaticKeyword.java" beforeDir="false" afterPath="$PROJECT_DIR$/../07_class-object/src/main/java/com/podoseee/section05/statickeyword/StaticKeyword.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../07_class-object/src/main/java/com/podoseee/section05/variable/KindsOfVariable.java" beforeDir="false" afterPath="$PROJECT_DIR$/../07_class-object/src/main/java/com/podoseee/section05/variable/KindsOfVariable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../07_class-object/src/main/java/com/podoseee/section06/method/ParameterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../07_class-object/src/main/java/com/podoseee/section06/method/ParameterTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/podoseee/homework/controller/Function.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/podoseee/homework/controller/Function.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/podoseee/homework/view/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/podoseee/homework/view/Menu.java" afterDir="false" />
@@ -90,7 +95,8 @@
       <option name="presentableId" value="Default" />
       <updated>1739522723268</updated>
       <workItem from="1739522725870" duration="323000" />
-      <workItem from="1739625676703" duration="3800000" />
+      <workItem from="1739625676703" duration="3831000" />
+      <workItem from="1739694218901" duration="3040000" />
     </task>
     <servers />
   </component>

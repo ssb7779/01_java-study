@@ -162,11 +162,50 @@ public class Function {
             //7.
             public void exceptGugu(){
                 System.out.print("정수 : ");
-                int a = sc.nextInt();
+                int dan = sc.nextInt();
+
+                if(dan<=0){
+                    return;
+                }
+
+                for(int i=0; i<=9; i++) {
+                    if(i % dan != 0){
+                        System.out.printf("%d * %d = %d\n", dan, i, (dan*i));
+                    }
+
+                }
             }
 
             //8.
             public void diceGame(){
+                while(true){
+                    int diceNumber = 2; // 주사위 두 개
+                    int diceTotal = 0; // 합 초기화
 
+                    for (int i=0; i<diceNumber; i++){
+                        diceTotal += (int)(Math.random()*6+1);
+                    }
+
+
+                    while(true){
+                        System.out.print("주사위 두 개의 합을 맞춰보세요.(2~12입력) : ");
+                        int sum= sc.nextInt();
+
+                        if(sum == diceTotal){
+                            System.out.println("정답입니다.");
+                            break;
+                        } else{
+                            System.out.println("틀렸습니다.");
+                        }
+                        System.out.println("주사위의 합 : " + diceTotal);
+                        System.out.print("계속 하시겠습니까?(y/n) : ");
+                        sc.nextLine();
+                        char continueChar = sc.nextLine().toUpperCase().charAt(0);
+
+                        if(continueChar == 'N'){
+                            return;
+                        }
+                    }
+                }
             }
 }

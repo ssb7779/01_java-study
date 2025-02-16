@@ -34,14 +34,12 @@ public class Menu {
                 case 4: function.printScore(); break;
                 case 5: function.printStarNumber(); break;
                 case 6: function.sumRandom(); break;
-                //case 7: function.exceptGugu(); break;
-                //case 8: function.diceGame(); break;
+                case 7: function.exceptGugu(); break;
+                case 8: function.diceGame(); break;
+                case 9:
+                    System.out.println("종료합니다."); return;
                 default:
                     System.out.println("잘못입력하셨습니다. 다시 입력해주세요.\n");
-            }
-            if(number == 9){
-                System.out.println("종료합니다.");
-                return;
             }
         }
     }
