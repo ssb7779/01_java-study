@@ -1,19 +1,18 @@
 package com.sotogito.practice3.controller;
 
 public class Function {
+
     public void printLottoNumbers() {
         int count = 6;
 
         for (int i = 0; i < count; i++) {
-            System.out.println(
-                    (int) (Math.random() * 45 + 1)
-            );
+            System.out.print((int) (Math.random() * 45 + 1) + " ");
         }
     }
 
     public void outputChar(int num, char c) {
         for (int i = 0; i < num; i++) {
-            System.out.println('c');
+            System.out.print(c + " ");
         }
     }
 
