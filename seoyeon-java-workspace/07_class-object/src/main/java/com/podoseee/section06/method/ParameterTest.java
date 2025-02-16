@@ -8,6 +8,11 @@ public class ParameterTest {
 
     /*
         ## 매개변수로 작성 가능한 자료형 ##
+        1. 기본 자료형
+        2. 기본 자료형 배열
+        3. 클래스 자료형
+        4. 클래스 자료형 배열
+        5. 가변인자
      */
 
     public void testPrimitiveTypeParam(int num){
