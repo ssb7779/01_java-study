@@ -1,7 +1,6 @@
 package com.inyong.section07.objectarray.run;
 
 import com.inyong.section07.dto.Book;
-
 import java.util.Scanner;
 
 public class Application2 {
