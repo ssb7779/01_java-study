@@ -19,7 +19,7 @@ public class ProductManager {
 					0. 프로그램 종료
 				*/
         while (true) {
-            System.out.println("===== 제품 관리 메뉴 =====");
+            System.out.println("\n===== 제품 관리 메뉴 =====");
             System.out.println("1. 제품 정보 추가");
             System.out.println("2. 제품 전체 조회");
             System.out.println("3. 제품 정보 수정");
@@ -44,13 +44,18 @@ public class ProductManager {
                     }
                     break;
                 case 3:
-                    productUpdate();
+                    if (count == 0) {
+                        System.out.println("제품이 하나도 등록되지 않았습니다. 먼저 제품을 등록해주시기 바랍니다.");
+                    } else {
+                        productUpdate();
+                    }
                     break;
                 case 0:
-                    break;
+                    System.out.println("프로그램을 종료합니다.");
+                    return;
                 default:
-                    break;
-
+                    System.out.println("잘못된 입력값입니다. 프로그램을 종료합니다.");
+                    return;
             }
         }
     }
@@ -69,6 +74,7 @@ public class ProductManager {
         int productPrice = sc.nextInt();
         System.out.print("세금비율을 입력하세요: ");
         double productTax = sc.nextDouble();
+        sc.nextLine();
 
         products[count] = new Product(productId, productName, productPrice, productTax);
         count++;
@@ -80,6 +86,7 @@ public class ProductManager {
         for (Product product : products) {
             if (product != null) {
                 System.out.println(product.getInformation());
+                System.out.println("===========================");
             }
         }
     }
@@ -91,9 +98,31 @@ public class ProductManager {
         // 현재 보유하고있는 제품들 중에 해당 수정할 제품을 찾아서
         // 사용자가 입력한 제품명, 가격, 세금으로 필드 값을 변경하시오.
 
-        System.out.print("변경하려고 하는 제품번호를 입력하세요: ");
-        int productId = sc.nextInt();
-        sc.nextLine();
+        System.out.print("변경하려고 하는 제품명을 입력하세요: ");
+        String productName = sc.nextLine();
+        for (Product product : products) {
+            if (product.getName().equals(productName)) {
+                System.out.print("변경할 제품명을 입력하세요: ");
+                String newProductName = sc.nextLine();
+                product.setName(newProductName);
+
+                System.out.print("변경할 제품가격을 입력하세요: ");
+                int newProductPrice = sc.nextInt();
+                sc.nextLine();
+                product.setPrice(newProductPrice);
+
+                System.out.print("변경할 제품의 세금을 입력하세요: ");
+                double newProductTax = sc.nextDouble();
+                sc.nextLine();
+                product.setTax(newProductTax);
+                break;
+            }
+            else {
+                System.out.println("입력한 제품을 찾을 수 없습니다. 이전 메뉴로 돌아갑니다");
+                mainMenu();
+            }
+        }
+        
     }
 
     // 그 밖에 검색 기능 같은 것도 넣어보시오!

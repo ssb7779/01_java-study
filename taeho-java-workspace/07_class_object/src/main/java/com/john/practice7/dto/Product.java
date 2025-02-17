@@ -48,6 +48,9 @@ public class Product {
     }
 
     public String getInformation() {
-        return pid + ", " + pName + ", " + price + ", " + tax;
+        return "제품번호: " + pid + "\n"
+                + "제품명: " + pName + "\n"
+                + "제품 가격: " + price + "\n"
+                + "제품 세율: " + tax;
     }
 }
