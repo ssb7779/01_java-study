@@ -2,11 +2,11 @@ package com.john.practice8.mvc.controller;
 
 import com.john.practice8.mvc.dto.Member;
 
-public class MemberController{
+public class MemberController {
 
-    public static final int SIZE = 10;			  // 최대 회원 수 상수필드로 10 초기화
-    private int memberCount;			            // 현재 회원 수 필드
-    private Member[] mem = new Member[SIZE];	// 회원들의 정보를 담는 객체 배열
+    public static final int SIZE = 10;              // 최대 회원 수 상수필드로 10 초기화
+    private int memberCount;                        // 현재 회원 수 필드
+    private Member[] mem = new Member[SIZE];    // 회원들의 정보를 담는 객체 배열
 
     // 초기화 블럭을 이용하여 회원 5명 정도 초기화, memberCount 수 5 초기화 (복사해 갈 것)
     // * 초기화 블록 : 필드에 초기값을 세팅하기 위해 사용 (주로 테스트할 때 사용함)
@@ -26,15 +26,15 @@ public class MemberController{
     }
 
     public Member[] getMem() {
-        return null;
         // mem 주소 값 리턴
+        return mem;
     }
 
     public Member checkId(String userId) {
         // mem 에서 매개변수로 전달받은 userId와 동일한 아이디를 가지고 있는 회원을 m에 대입
         // m 리턴
-        Member m = null; 	// 아이디로 검색된 결과를 담을 변수 초기화
-        for (int i = 0; i < mem.length; i++) {
+        Member m = null;    // 아이디로 검색된 결과를 담을 변수 초기화
+        for (int i = 0; i < memberCount; i++) {
             if (mem[i].getUserId().equals(userId)) {
                 m = mem[i];
             }
@@ -50,7 +50,7 @@ public class MemberController{
     }
 
     public Member searchMember(int menu, String search) {
-        Member searchMember = null; 		// 검색된 회원 정보를 담을 변수 초기화
+        Member searchMember = null;        // 검색된 회원 정보를 담을 변수 초기화
 
         // 매개변수로 전달받은 search 문자열을 menu 번호에 따라
 
@@ -59,26 +59,14 @@ public class MemberController{
         // 3 인 경우 이메일로 검색 후 결과를 searchMember에 대입하고
 
         // searchMember 주소 값 리턴
-        if (menu == 1) {
-            for (int i = 0; i < mem.length; i++) {
-                if (mem[i].getUserId().equals(search)) {
-                    searchMember = mem[i];
-                }
-            }
-        } else if (menu == 2) {
-            for (int i = 0; i < mem.length; i++) {
-                if (mem[i].getName().equals(search)) {
-                    searchMember = mem[i];
-                }
-            }
-        } else if (menu == 3) {
-            for (int i = 0; i < mem.length; i++) {
-                if (mem[i].getEmail().equals(search)) {
-                    searchMember = mem[i];
-                }
+        for (int i = 0; i < memberCount; i++) {
+            if ((menu == 1 && mem[i].getUserId().equals(search)) ||
+                    (menu == 2 && mem[i].getName().equals(search)) ||
+                    (menu == 3 && mem[i].getEmail().equals(search))) {
+                return mem[i];
             }
         }
-        return searchMember;
+        return null;
     }
 
     public void updateMember(Member m, int menu, String update) {
@@ -87,15 +75,32 @@ public class MemberController{
         // 1 인 경우 setter 메소드를 이용하여 m의 비밀번호를 update 문자열로 변경
         // 2 인 경우 setter 메소드를 이용하여 m의 이름을 update 문자열로 변경
         // 3 인 경우 setter 메소드를 이용하여 m의 이메일을 update 문자열로 변경
+        if (menu == 1) {
+            m.setUserPwd(update);
+        } else if (menu == 2) {
+            m.setName(update);
+        } else {
+            m.setEmail(update);
+        }
     }
 
     public void deleteMember(String userId) {
-
         // 매개변수로 전달받은 userId가 mem에 존재하는 경우 해당 회원 삭제 후
         // 다음 인덱스 객체들의 정보를 한 칸씩 앞으로 이동 시킴
         // 실행 시 NullPointerException 발생할 수 있음 -> 왜 그런지 생각해보고 해결하시오
 
         // memberCount 1 감소
-    }
 
+        for (int i = 0; i < memberCount; i++) {
+            if (mem[i].getUserId().equals(userId)) {
+                for (int j = i; j < memberCount - 1; j++) {
+                    mem[j] = mem[j + 1];
+                }
+                mem[--memberCount] = null;
+                System.out.println("회원의 정보가 삭제되었습니다.");
+                return;
+            }
+        }
+        System.out.println("삭제할 회원이 존재하지 않습니다.");
+    }
 }

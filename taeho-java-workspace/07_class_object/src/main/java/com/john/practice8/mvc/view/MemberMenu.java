@@ -52,8 +52,10 @@ public class MemberMenu {
                     printAllMember();
                     break;
                 case 0:
+                    System.out.println("프로그램을 종료합니다");
                     return;
-
+                default:
+                    System.out.println("잘못된 입력값입니다. 다시 입력하세요");
             }
         }
     }
@@ -75,7 +77,8 @@ public class MemberMenu {
         //      “성공적으로 회원 등록이 되었습니다.” 출력
 
         // 1. 현재 등록된 멤버 수 조회
-        if (mc.getMemberCount() >= 10) {
+        if (mc.getMemberCount() >= MemberController.SIZE) {
+            System.out.println("회원수 초과로 등록이 불가능합니다.");
             return;
         }
 
@@ -83,25 +86,26 @@ public class MemberMenu {
         String memberId = sc.nextLine();
 
         // 2. 중복 ID 조회
-        if (mc.checkId(memberId).getUserId().equals(memberId)) {
+        if (mc.checkId(memberId) != null) {
             System.out.println("동일한 아이디가 존재합니다. 회원등록 실패");
-        } else {
-            System.out.print("비밀번호를 입력하세요: ");
-            String memberPwd = sc.nextLine();
-            System.out.print("이름을 입력하세요: ");
-            String memberName = sc.nextLine();
-            System.out.print("나이를 입력하세요: ");
-            int memberAge = sc.nextInt();
-            sc.nextLine();
-            System.out.print("성별을 입력하세요: ");
-            char memberGender = sc.nextLine().charAt(0);
-            System.out.print("이메일을 입력하세요: ");
-            String memberEmail = sc.nextLine();
-
-            Member member = new Member(memberId, memberPwd, memberName, memberAge, memberGender, memberEmail);
-            mc.insertMember(member);
-            System.out.println("성공적으로 회원 등록이 되었습니다.");
+            return;
         }
+        System.out.print("비밀번호를 입력하세요: ");
+        String memberPwd = sc.nextLine();
+        System.out.print("이름을 입력하세요: ");
+        String memberName = sc.nextLine();
+        System.out.print("나이를 입력하세요: ");
+        int memberAge = sc.nextInt();
+        sc.nextLine();
+        System.out.print("성별을 입력하세요: ");
+        char memberGender = sc.nextLine().charAt(0);
+        System.out.print("이메일을 입력하세요: ");
+        String memberEmail = sc.nextLine();
+
+        Member member = new Member(memberId, memberPwd, memberName, memberAge, memberGender, memberEmail);
+        mc.insertMember(member);
+        System.out.println("성공적으로 회원 등록이 되었습니다.");
+
     }
 
     public void searchMember() {
@@ -127,6 +131,7 @@ public class MemberMenu {
             System.out.println("2. 이름으로 검색하기");
             System.out.println("3. 이메일로 검색하기");
             System.out.println("0.  이전 메뉴로");
+            System.out.print("메뉴 선택 >> ");
             int choice = sc.nextInt();
             sc.nextLine();
             switch (choice) {
@@ -139,6 +144,9 @@ public class MemberMenu {
                 case 3:
                     System.out.print("검색할 이메일을 입력하세요: ");
                     break;
+                case 0:
+                    return;
+
             }
             String str = sc.nextLine();
             Member member = mc.searchMember(choice, str);
@@ -180,24 +188,20 @@ public class MemberMenu {
             System.out.print("메뉴 션택 : ");
             int menu = sc.nextInt();
             sc.nextLine();
-            int flag = 0;
-            switch (menu) {
-                case 1:
-                    break;
-                case 2:
-                    break;
-                case 3:
-                    break;
-                case 0:
-                    return;
+
+            if (menu == 0) {
+                return;
             }
+
             System.out.print("변경할 회원 아이디를 입력하세요: ");
-            String memberId = sc.nextLine();
-            if (mc.checkId(memberId) == null) {
+            String userId = sc.nextLine();
+            Member m = mc.checkId(userId);
+
+            if (m == null) {
                 System.out.println("변경할 회원이 존재하지 않습니다.");
+                return;
             } else {
-                Member m = m.getInformation(mc.checkId(memberId));
-                System.out.println(mc.getMem());
+                System.out.println("유저의 이전 정보: " + m.getInformation());
                 System.out.print("변경할 값: ");
                 String update = sc.nextLine();
                 mc.updateMember(m, menu, update);
@@ -205,7 +209,6 @@ public class MemberMenu {
             }
         }
     }
-
 
     public void deleteMember() {
 
@@ -225,12 +228,14 @@ public class MemberMenu {
             System.out.println("삭제할 회원이 존재하지 않습니다.");
         } else {
             System.out.println("기존 회원 정보");
-            System.out.println(m);
+            System.out.println(m.getInformation());
             System.out.println("정말 삭제하시겠습니까? (y/n) : ");
             char choice = sc.nextLine().charAt(0);
             if (choice == 'y' || choice == 'Y') {
                 mc.deleteMember(userId);
                 System.out.println("회원의 정보가 삭제되었습니다.");
+            } else {
+                System.out.println("잘못된 입력값입니다. 회원이 삭제되지 않았습니다.");
             }
         }
     }
@@ -238,5 +243,12 @@ public class MemberMenu {
     public void printAllMember() {
         // MemberController의 getMem() 메소드 호출 	>> 결과 값 (mem : Member[])
         // 반복문을 통해 결과 값 안의 존재하는 회원들 정보 출력
+        Member[] members = mc.getMem();
+
+        for (Member m : members) {
+            if (m != null) {
+                System.out.println(m.getInformation());
+            }
+        }
     }
 }
