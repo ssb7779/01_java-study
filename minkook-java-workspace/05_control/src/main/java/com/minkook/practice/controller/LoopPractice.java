@@ -1,5 +1,6 @@
 package com.minkook.practice.controller;
 
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class LoopPractice {
@@ -225,25 +226,25 @@ public class LoopPractice {
             int n2 = sc.nextInt();
             int res = 0;
 
-            if(op.equals("/") && n2 == 0){
+            if(op.charAt(0) == '/' && n2 == 0){
                 System.out.println("0으로 나눌 수 없습니다. 다시 입력해주세요.");
-                practice12();
+                continue;
             }
 
-            switch (op){
-                case "+":
+            switch (op.charAt(0)){
+                case '+':
                     res = n1 + n2;
                     break;
-                case "-":
+                case '-':
                     res = n1 - n2;
                     break;
-                case "*":
+                case '*':
                     res = n1 * n2;
                     break;
-                case "/":
+                case '/':
                     res = n1 / n2;
                     break;
-                case "%":
+                case '%':
                     res = n1 % n2;
                     break;
 
@@ -282,6 +283,101 @@ public class LoopPractice {
             System.out.println();
         }
         System.out.println("총 모금횟수: " + i);
-        
+
+    }
+
+    public void star1() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("정수 입력: ");
+        int num = sc.nextInt();
+
+        for(int i = num; i >= 1; i--) {
+            System.out.println();
+            for(int j = i; j <= num; j++){
+                System.out.print("*");
+            }
+        }
+    }
+
+    public void star2() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("정수 입력: ");
+        int num = sc.nextInt();
+
+        for(int i = 1; i <= num; i++) {
+            System.out.println();
+            for(int j = num; j >= i; j--){
+                System.out.print("*");
+            }
+        }
+    }
+
+    public void star3() {
+        for(int i = 0; i < 5; i++) {
+            System.out.println();
+            for(int j = 0; j < 10; j++){
+                if(i == 0 || j == 0){
+                    System.out.print("*");
+                }else if(i == 4 || j == 0){
+                    System.out.print("*");
+                }else if(j == 9){
+                    System.out.print("        *");
+                }
+            }
+        }
+    }
+
+    public void star4() {
+        //위쪽 삼각형
+        for(int i = 1; i <= 5; i++) {
+            for(int j = 1; j <= 5 - i; j++) {
+                System.out.print(" ");
+            }
+            for(int k = 1; k <= 2 * i - 1; k++) {
+                System.out.print(k);
+            }
+            System.out.println();
+
+        }
+        //아래쪽 삼각형
+        for (int i = 4; i >= 1; i--) {
+            for (int j = 1; j <= 5 - i; j++) {
+                System.out.print(" ");
+            }
+            for (int k = 1; k <= 2 * i - 1; k++) {
+                System.out.print(k);
+            }
+            System.out.println();
+        }
+
+    }
+
+    public void star5() {
+        //위쪽 삼각형
+        for(int i = 1; i <= 3; i++) {
+            for(int j = 1; j <= 4 - i; j++) {
+                System.out.print(" ");
+            }
+            for (int k = 1; k <= 2 * i - 1; k++) {
+                if (k == 1 || k == 2 * i - 1) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+
+        }
+        //아래쪽 삼각형
+        for (int i = 2; i >= 1; i--) {
+            for (int j = 1; j <= 4 - i; j++) {
+                System.out.print(" ");
+            }
+            for (int k = 1; k <= 2 * i - 1; k++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
     }
 }

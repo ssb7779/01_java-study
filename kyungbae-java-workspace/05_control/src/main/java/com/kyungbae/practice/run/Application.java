@@ -33,7 +33,7 @@ public class Application {
 //        l.practice10();
 //        l.practice11();
 //        l.practice11_1();
-//        l.practice12();
+        l.practice12();
 //        l.practice13();
 //        l.practice14();
 
@@ -41,7 +41,7 @@ public class Application {
 //        l.star2();
 //        l.star3();
 //        l.star4();
-        l.star5();
+//        l.star5();
 
     } // main end
 
