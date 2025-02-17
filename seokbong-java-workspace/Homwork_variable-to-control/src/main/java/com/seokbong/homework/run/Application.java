@@ -1,6 +1,7 @@
-package com.seokbong.homework.view;
+package com.seokbong.homework.run;
 
 import com.seokbong.homework.controller.Function;
+import com.seokbong.homework.view.Menu;
 
 public class Application {
     public static void main(String[] args) {
@@ -13,7 +14,12 @@ public class Application {
 //        f.sumRandom();
 //        f.exceptGugu();
 //        f.diceGame();
-        f.displayMenu();
+        Menu menu = new Menu();
+        menu.displayMenu();
 
     }
+
+
+
+
 }
