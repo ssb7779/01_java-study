@@ -2,7 +2,7 @@ package com.kyungbae.practice1.run;
 
 import com.kyungbae.practice1.dto.ProductDTO;
 
-public class Application {
+public class Application1 {
     public static void main(String[] args) {
 
         ProductDTO pd1 = new ProductDTO("ssgnote", "갤럭시노트9", "경기도 수원", 960000, 10.0);
@@ -34,6 +34,7 @@ public class Application {
         System.out.println("부가세 포함 가격 = " + (int)(pd2.getPrice() + (pd2.getPrice() * pd2.getTax())) + "원");
         System.out.println("상품명 = " + pd3.getProductName());
         System.out.println("부가세 포함 가격 = " + (int)(pd2.getPrice() + (pd2.getPrice() * pd2.getTax())) + "원");
+
 
     }
 }
