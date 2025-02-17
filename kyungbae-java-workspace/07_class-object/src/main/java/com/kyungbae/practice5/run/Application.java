@@ -1,8 +1,7 @@
 package com.kyungbae.practice5.run;
 
+import com.kyungbae.practice5.controller.Function;
 import com.kyungbae.practice5.dto.Employee;
-
-import java.util.Arrays;
 
 public class Application {
     public static void main(String[] args) {
@@ -16,14 +15,21 @@ public class Application {
         }
 
         System.out.println("=================================================================");
-        Employee[] empCopy = emp.clone();
+        Function f = new Function();
+        Employee[] empCopy = f.deepDeepCopy(emp); // 최종
+
+//        Employee[] empCopy = emp.clone();
+//
+//        Employee[] empCopy = new Employee[emp.length];
+//        for (int i = 0; i < emp.length; i++) {
+////            empCopy[i] = Arrays.copyOf(emp[i], emp[i].length);
+//            empCopy[i] = emp[i];
+//        }
 //        for (int i = 0; i < emp.length; i++) {
 //            for (int j = 0; j < emp.length; j++) {
 //                emp[i] = empCopy[i];
 //            }
 //        }
-
-
 
         emp[0].setEmpName("김말똥");
         emp[0].setDept("영업부");
@@ -41,13 +47,28 @@ public class Application {
         emp[1].setBonusPoint(0.3);
 
         for (int i = 0; i < emp.length; i++) {
-
 //            if (!((empCopy[i].getInformation()).equals(emp[i].getInformation()))) {
-            if (empCopy[i].getInformation().equals(emp[i].getInformation())) {
+            if (!(empCopy[i].getInformation().equals(emp[i].getInformation()))) {
                 System.out.printf("emp[%d] : %s\n", i, emp[i].getInformation());
             }
         }
         empCopy = null;
+
+        System.out.println("=================================================================");
+        int[] income = new int[emp.length];
+        for (int i = 0; i < emp.length; i++) {
+            income[i] = (int)((emp[i].getSalary() + (emp[i].getSalary() * emp[i].getBonusPoint())) * 12);
+            System.out.printf("%s의 연봉 : %d원\n", emp[i].getEmpName(), income[i]);
+        }
+
+        System.out.println("=================================================================");
+
+        int sumIncome = 0;
+        for (int i = 0; i < emp.length; i++) {
+            sumIncome += income[i];
+        }
+        System.out.println("직원들의 연봉의 평균 : " + (sumIncome / emp.length) + '원');
+
 
     }
 }
