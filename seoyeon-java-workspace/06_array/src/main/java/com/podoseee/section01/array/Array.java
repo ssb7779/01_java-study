@@ -1,5 +1,6 @@
 package com.podoseee.section01.array;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Array {
@@ -461,6 +462,68 @@ public class Array {
         }
         // 향상된 for문 내의 변수 타입은 배열 요소 타입으로 작성하면됨
 
+    }
+
+    public void remind(){
+
+        int arr[] = new int[3];
+
+        arr[0] = 10;
+        arr[1] = 20;
+        arr[2] = 30;
+
+        System.out.println(arr);
+
+        // 일반 for 문
+        for(int i=0; i<arr.length; i++){
+            System.out.println(i + ": " + arr[i]);
+        }
+
+        // 향상된 for 문
+        int index = 0;
+        for(int a : arr) {
+            System.out.println(index++ + ": " + a);
+        }
+        System.out.println("배열요소들 : " + Arrays.toString(arr));
+    }
+
+    public void homework(){
+        /*
+            실습.
+            사용자에게 문자열 하나를 입력받아
+            해당 문자열의 각 문자마다 +1이 진행된 문자열을 얻고 싶다.
+            ex) "AAP" => "BBQ"    / "GDKKN" => "HELLO"
+
+            1. 사용자에게 문자열 입력받기
+            2. 입력된 문자열의 각 인덱스 문자의 +1 된 문자를 기록할 char배열 생성하기
+            3. 생성한 배열의 각 인덱스 자리에 문자+1 값 대입
+            4. char배열의 각 인덱스에 담긴 문자값들을 하나의 문자열로 합쳐서 변수(String result)에 기록하기
+            5. 해당 문자열 변수 결과값 출력
+         */
+
+        Scanner sc = new Scanner(System.in);
+        System.out.print("아무 문자열이나 입력하시오 : ");
+        String str = sc.nextLine();
+
+        char[] arr = new char[str.length()];
+        for(int i=0; i<arr.length; i++){
+            arr[i] = (char)(str.charAt(i) + 1);
+        }
+
+        /*
+        //String result = null; // null 뒤에 연이어짐
+        String result = "";
+        for(int i=0; i<arr.length; i++){
+            result += arr[i];
+        }
+
+        System.out.println(result);
+        */
+
+        // String.valueOf(문자열화시키고자하는값) : 전달값을 가지고 문자열로 만들어 반환
+        String result = String.valueOf(arr);
+
+        System.out.println(result);
     }
 }
 

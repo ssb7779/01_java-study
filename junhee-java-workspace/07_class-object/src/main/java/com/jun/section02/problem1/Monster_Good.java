@@ -1,4 +1,4 @@
-package com.jun.section02.problem1;
+package com.jun.section02.emcapsulat.problem1;
 
 public class Monster_Good {
 

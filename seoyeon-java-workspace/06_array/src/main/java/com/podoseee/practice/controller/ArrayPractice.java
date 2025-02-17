@@ -1,18 +1,79 @@
 package com.podoseee.practice.controller;
 
-public class ArrayPractice {
-    public void homework(){
-        /*
-            실습.
-            사용자에게 문자열 하나를 입력받아
-            해당 문자열의 각 문자마다 +1이 진행된 문자열을 얻고 싶다.
-            ex) "AAP" => "BBQ"    / "GDKKN" => "HELLO"
+import java.util.Scanner;
 
-            1. 사용자에게 문자열 입력받기
-            2. 입력된 문자열의 각 인덱스 문자의 +1 된 문자를 기록할 char배열 생성하기
-            3. 생성한 배열의 각 인덱스 자리에 문자+1 값 대입
-            4. char배열의 각 인덱스에 담긴 문자값들을 하나의 문자열로 합쳐서 변수(String result)에 기록하기
-            5. 해당 문자열 변수 결과값 출력
-         */
-    }
+public class ArrayPractice {
+        public void practice1(){
+            int[] arr = new int[10];
+            for(int i=0; i<arr.length; i++){
+                arr[i] = i+1;
+            }
+            for(int i=0; i<arr.length; i++){
+                System.out.print(arr[i] + " ");
+            }
+        }
+
+        public void practice2(){
+            int[] arr = new int[10];
+            for(int i=0; i<arr.length; i++){
+                arr[i] = arr.length- i;
+            }
+            for(int i=0; i<arr.length; i++){
+                System.out.print(arr[i] + " ");
+            }
+
+        }
+
+        public void practice3(){
+            Scanner sc = new Scanner(System.in);
+            System.out.print("양의 정수 : ");
+            int a = sc.nextInt();
+            int[] arr = new int[a];
+
+            for(int i=0; i<arr.length; i++){
+                arr[i] = i+1;
+            }
+            for(int i=0; i<arr.length; i++){
+                System.out.print(arr[i] + " ");
+            }
+        }
+
+        public void practice4(){
+            String[] arr = new String[5];
+
+            arr[0] = "사과";
+            arr[1] = "귤";
+            arr[2] = "포도";
+            arr[3] = "복숭아";
+            arr[4] = "참외";
+
+            //String[] arr = { "사과", "귤", "포도", "복숭아", "참외" };
+            System.out.println(arr[1]);
+        }
+
+        public void practice5(){
+            Scanner sc = new Scanner(System.in);
+
+            System.out.print("문자열 : ");
+            String str = sc.nextLine();
+
+            System.out.print("문자 : ");
+            char ch = sc.nextLine().charAt(0);
+
+            char[] arr = new char[str.length()];
+
+            for(int i=0; i<arr.length; i++){
+                arr[i] = str.charAt(i);
+            }
+
+            int count = 0;
+
+            for(int i=0; i<arr.length; i++){
+                if(arr[i] == ch){
+                    count++;
+                }
+            }
+
+            System.out.println(ch + "개수 : " + count);
+        }
 }
