@@ -8,7 +8,7 @@ public class Application {
         ProductDTO pd1 = new ProductDTO("ssgnote9", "갤럭시노트9","경기도 수원", 960000, 10.0);
         System.out.println(pd1.getInformation1());
 
-        ProductDTO pd2 = new ProductDTO("lgnote5", "LG스마트폰5", "경기도 평택", 7800000, 0.7);
+        ProductDTO pd2 = new ProductDTO("lgnote5", "LG스마트폰5", "경기도 평택", 780000, 0.7);
         System.out.println(pd2.getInformation1());
 
         ProductDTO pd3 = new ProductDTO("ktsnote3", "KT스마트폰3", "서울시 강남", 250000, 0.3);
@@ -25,10 +25,15 @@ public class Application {
 
         System.out.println("=========================================================");
 
-        System.out.println();
-
-
-
+        System.out.println("상품명 = " + pd1.getProductId());
+        System.out.println("부가세 포함 가격 = " + (int)(ProductDTO.getStaticPrice()+ProductDTO.getStaticPrice()*ProductDTO.getStaticTax()) + "원");
+        System.out.println("상품명 = " + pd1.getProductId());
+        System.out.println("부가세 포함 가격 = " + (int)(ProductDTO.getStaticPrice()+ProductDTO.getStaticPrice()*ProductDTO.getStaticTax()) + "원");
+        System.out.println("상품명 = " + pd1.getProductId());
+        System.out.println("부가세 포함 가격 = " + (int)(ProductDTO.getStaticPrice()+ProductDTO.getStaticPrice()*ProductDTO.getStaticTax()) + "원");
 
     }
+
+
+
 }
