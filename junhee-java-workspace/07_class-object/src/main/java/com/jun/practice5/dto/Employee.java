@@ -7,13 +7,18 @@ public class Employee {
     private String dept;
     private String job;
     private int age;
-    private char gander;
+    private char gender;
     private int salary;
     private double bonusPoint;
     private String phone;
     private String address;
 
     public Employee(){}
+
+   public Employee(int empNo, String empName,  int age, char gender, String phone, String address ){
+this(empNo, empName,)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+   }
+    this()
 
     public Employee(int empNo, String empName, String dept
             , String job, int age, char gander, int salary
@@ -23,7 +28,7 @@ public class Employee {
         this.dept = dept;
         this.job = job;
         this.age = age;
-        this.gander = gander;
+        this.gender = gander;
         this.salary = salary;
         this.bonusPoint = bonusPoint;
         this.phone = phone;
@@ -51,7 +56,7 @@ public class Employee {
     }
 
     public void setGander(char gander) {
-        this.gander = gander;
+        this.gender = gander;
     }
 
     public void setSalary(int salary) {
@@ -91,7 +96,7 @@ public class Employee {
     }
 
     public char getGander() {
-        return gander;
+        return gender;
     }
 
     public int getSalary() {
@@ -110,7 +115,7 @@ public class Employee {
         return address;
     }
     public String getInformation(){
-        return empNo +", "+ empName +", "+ dept +", "+ job +", "+ age +", "+ gander +", "+ salary
+        return empNo +", "+ empName +", "+ dept +", "+ job +", "+ age +", "+ gender +", "+ salary
                 +", "+ bonusPoint +", "+ phone +", "+ address;
     }
 }
