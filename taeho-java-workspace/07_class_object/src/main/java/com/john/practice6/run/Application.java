@@ -55,7 +55,9 @@ public class Application {
 
         for (Student student : students) {
             if (student != null) {
+                double avg = (double) (student.getKor() + student.getEng() + student.getMath()) / 3;
                 System.out.println(student.getInformation());
+                System.out.printf("학생의 평균 점수 : %.1f점\n",avg);
                 System.out.println("======================");
             }
         }
