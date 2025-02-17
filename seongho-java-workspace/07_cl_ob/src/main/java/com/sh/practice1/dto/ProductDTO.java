@@ -64,4 +64,5 @@ public class ProductDTO {
                 ", tax=" + tax +
                 '}';
     }
+
 }
