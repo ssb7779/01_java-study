@@ -52,7 +52,7 @@ public class EmpMenu {
 
     public void modEmployee(Employee emp) {
         while(true) {
-            System.out.println("==== 사원 정보 수정 메뉴 ====\n1. 이름 변경\n2. 급여 변경\n3. 부서 변경\n4. 직급 변경\n0. 이전 메뉴로)";
+            System.out.println("==== 사원 정보 수정 메뉴 ====\n1. 이름 변경\n2. 급여 변경\n3. 부서 변경\n4. 직급 변경\n0. 이전 메뉴로)");
             int num = sc.nextInt();
             sc.nextLine();
             switch (num) {
