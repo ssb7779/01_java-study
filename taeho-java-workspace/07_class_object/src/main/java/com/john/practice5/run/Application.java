@@ -55,13 +55,15 @@ public class Application {
 
         System.out.println("================================================");
 
+        double resultSalary = 0;
+
         for (Employee employee : emp) {
-            System.out.println(employee.getSalary());
-            System.out.println(employee.getSalary() * employee.getBonusPoint());
-            System.out.println(employee.getSalary() + (employee.getSalary() * employee.getBonusPoint()));
-            System.out.println((employee.getSalary() + (employee.getSalary() * employee.getBonusPoint())) * 12);
-            double resultSalary = (employee.getSalary() + (employee.getSalary() * employee.getBonusPoint()) * 12);
-            System.out.println(employee.getEmpName() + "의 연봉 : " + resultSalary + "원");
+            int salary = employee.getSalary();
+            double bonusPoint = employee.getBonusPoint();
+            resultSalary = (salary + (salary * bonusPoint)) * 12;
+            System.out.printf("%s의 연봉 : %.0f원\n", employee.getEmpName(), resultSalary);
         }
+        System.out.println("================================================");
+        System.out.printf("직원들의 평균 연봉 : %.0f원\n", (resultSalary / 3));
     }
 }
