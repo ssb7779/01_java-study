@@ -8,6 +8,12 @@ public class Application {
 //        f.calculator();
 //        f.totalCalculator();
 //        f.printProfile();
-        f.printScore();
+//        f.printScore();
+//        f.printStarNumber();
+//        f.sumRandom();
+//        f.exceptGugu();
+//        f.diceGame();
+        f.displayMenu();
+
     }
 }
