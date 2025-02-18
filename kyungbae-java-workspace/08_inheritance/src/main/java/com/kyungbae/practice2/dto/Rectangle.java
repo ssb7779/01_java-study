@@ -13,6 +13,12 @@ public class Rectangle extends Point{
         this.height = height;
     }
 
+    public void draw(){
+        super.draw();
+        System.out.println("면적 : " + width * height);
+        System.out.println("둘레 : " + (width + height) * 2);
+    }
+
     public int getWidth() {
         return width;
     }
