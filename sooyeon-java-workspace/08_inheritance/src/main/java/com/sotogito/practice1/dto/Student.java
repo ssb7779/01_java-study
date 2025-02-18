@@ -38,5 +38,5 @@ public class Student extends Person {
                 ", major='" + major + '\'' +
                 '}';
     }
-    
+
 }
