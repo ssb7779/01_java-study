@@ -27,5 +27,61 @@ public class Application {
             >> 상속은 IS-A관계로 구분되는 경우에만 사용해야함. (cf has-a)
         */
 
+        Car car = new Car();
+        car.soundHorn();
+        car.run();
+        car.soundHorn();
+        car.stop();
+        car.soundHorn();
+
+        System.out.println("=========================");
+
+        /*
+            소방차는 자동차임(IS-A관계성립) 하지만 모든 자동차는 소방차가 아님
+            >> 자식클래스 is a 부모클래스
+            >> 자식클래스 extend 부모클래스
+            >> 자식클래서 -----|> 부모클래스
+         */
+
+        FireCar fireCar = new FireCar();
+        /*
+        부모클래스 생성자 호출이 먼저됨 ******************
+        Car 클래스의 기본 생성자 호출됨
+        FireCar 클래스 기본 생성자 호출됨
+         */
+
+//        fireCar.soundHorn();
+        fireCar.run();
+//        fireCar.soundHorn();
+        fireCar.stop();    // 오버라이딩 X : 부모메소드 호출됨
+//        fireCar.soundHorn(); // 오버라이딩 O : 자식메소드만 수행됨
+        //  Car 클래스에 있는 모든 메소드를 전부 사용할 수 있음
+        fireCar.sprayWater();
+
+        System.out.println("=========================");
+        RacingCar racingCar = new RacingCar();
+        racingCar.soundHorn();
+        racingCar.run();
+        racingCar.soundHorn();
+        racingCar.stop();
+        racingCar.soundHorn();
+        /*
+        레이싱카는 경적소리가 필요하지 않지만
+        Car를 상속 받았기 때문에 어쩔 수 없이 경적소리가 추가됨
+         >> 상속으로 인해 불필요한 기능이 추가됨(단점)
+         */
+
+        /*
+            ## 상속 특징 ##
+            1. 클래스와 클래스 간에 있어서 다중 상속 불가
+              (즉, 부모클래스를 여러개 둘 수 없음)
+            2. 자식 클래스 타입으로 객체 생성시 부모 새성자가 항상 먼저 호출됨
+             (즉, 부모 객체가 내부적으로 먼저 생성)
+            3. 부모클래스에 있는 메소드를 자식 클래스에서 재정의할 수 있음 (오버라이딩)
+            4. 모든 클래스들은 Object 클래스를 상속 받고 있음 (Object 클래스는 최상위 클래스)
+               > 즉, 모든 클래스들은 object의 하위 클래스이며, object의 멤버를 사용할 수 있다.
+               + 오버라이딩을 통해 재정의도 가능
+         */
+
     }
 }
