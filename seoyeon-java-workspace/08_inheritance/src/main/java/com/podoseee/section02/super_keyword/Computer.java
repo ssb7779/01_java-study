@@ -18,6 +18,10 @@ public class Computer extends Product {
 
         /*
             ## super ##
+            1. 부모 인스턴스 참조값(주소값)을 가지고 있는 레퍼런스 변수
+            2. 자식 클래스 내의 모든 생성자와 메소드에서 사용 가능
+            3. super. 을 이용해서 부모 멤버에 접근 가능
+               단, private 멤버는 접근 불가 (protected는 가능)
          */
         /*private 멤버여서 직접 접근 불가
         super.code = code;
@@ -36,6 +40,10 @@ public class Computer extends Product {
 
         /*
             ## super() ##
+            1. 부모클래스에 정의되어있는 생성자를 호출하는 구문
+            2. 매개변수의 타입, 개수, 순서가 일치하는 부모 생성자 호출됨
+            3. 모든 클래스의 생성자에는 맨 첫줄에 직접 명시하지 않아도 super() 구문이 자동으로 추가됨 (컴파일러 역할)
+            4. 다른 생성자를 호출하는 구문은 첫 문장으로 작성해야됨
 
          */
 

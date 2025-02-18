@@ -2,6 +2,12 @@ package com.podoseee.section01.extend;
 
 /*
         ## extends ##
+    1. 상속 관계 표현에 사용되는 키워드
+    2. 자식클래스 정의시 "자식클래스 extends 부모클래스"
+    3. 부모클래스를 확장하는 개념
+       => 부모 클래스에 정의되어있는 멤버(필드, 메소드)를 자신의 것처럼 사용 가능
+          + 자신만의 멤버도 작성 가능
+    4. 단, 아무리 상속 관계여도 부모의 private 멤버는 접근 불가
  */
 public class FireCar extends Car {
     public FireCar(){
