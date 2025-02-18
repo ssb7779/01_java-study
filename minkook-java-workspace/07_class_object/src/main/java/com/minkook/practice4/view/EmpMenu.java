@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public class EmpMenu{
     Employee emp  = new Employee();
+    Scanner sc = new Scanner(System.in);
     // 메뉴 화면 출력 --> 반복 실행 처리
 				/*
 					===== 사원 정보 관리 프로그램 =====
@@ -19,7 +20,6 @@ public class EmpMenu{
     public void mainMenu() {
 
         while(true){
-            Scanner sc = new Scanner(System.in);
             System.out.println("===== 사원 정보 관리 프로그램 =====");
             System.out.println("1. 새 사원 정보 입력");
             System.out.println("2. 사원 정보 수정");
@@ -29,7 +29,6 @@ public class EmpMenu{
             System.out.print("메뉴 번호 선택: ");
             int menuNum = sc.nextInt();
             sc.nextLine();
-
             if(menuNum == 0) {
                 return;
             }
@@ -110,7 +109,6 @@ public class EmpMenu{
         // 각 번호에 맞춰 변경할 값을 입력 받고 setter 메소드를 이용하여
         // 전달받은 emp 객체 정보 수정되도록 작업
         while(true){
-            Scanner sc = new Scanner(System.in);
             System.out.println("==== 사원 정보 수정 메뉴 ====");
             System.out.println("1. 이름 변경");
             System.out.println("2. 급여 변경");
