@@ -10,16 +10,14 @@ public class Application1 {
 
         System.out.println("book1: " + book1/*.toString()*/);
         System.out.println("book1.toString(): " + book1.toString());
-        System.out.println("book2: " + book2/*.toString()*/);
+
+        System.out.println("book2: " + book2);
         System.out.println("book2.toString(): " + book2.toString());
-        
+
         /*
             toString()을 직접 호출하지 않고 레퍼런스 변수 제시만 해도 결과는 동일
             왜? : 레퍼런스변수 출력시 자동으로 .toString() 메소드가 호출됨
          */
-
-
-
 
     }
 }
