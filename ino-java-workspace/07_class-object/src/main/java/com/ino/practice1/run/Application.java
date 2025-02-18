@@ -4,10 +4,11 @@ import com.ino.practice1.dto.ProductDTO;
 
 public class Application {
     public static void main(String[] args) {
-        ProductDTO prod1 = new ProductDTO("i1", "ino", "paju", 200, 2.0);
-        System.out.println(prod1.getInformation());
-        prod1.setPrice(3000);
-        System.out.println(prod1.getInformation());
-        System.out.println(prod1.getPrice() * (100 + prod1.getTax()) / 100);
+        ProductDTO[] prodArr = {
+                new ProductDTO("ssgnote9" , "갤럭시노트9" ,"경기도 수원" ,960000,10.0),
+                new ProductDTO("lgxnote5","LG스마트폰5", "경기도 평택",780000,0.7),
+                new ProductDTO("ktsnote3","KT스마트폰3", "서울시 강남", 250000,0.3) };
+        System.out.println(prodArr[0].getInformation());
+        System.out.println(prodArr[0].getPrice() * (100 + prodArr[0].getTax()) / 100);
     }
 }
