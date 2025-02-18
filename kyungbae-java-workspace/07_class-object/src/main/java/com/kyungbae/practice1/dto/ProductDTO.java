@@ -59,7 +59,7 @@ public class ProductDTO {
     }
 
     public String getInformation(){
-        return productId + productName + productArea + price + tax;
+        return productId + "\t" + productName + "\t" + productArea + "\t" + price + "\t" + tax;
     }
 
 }
