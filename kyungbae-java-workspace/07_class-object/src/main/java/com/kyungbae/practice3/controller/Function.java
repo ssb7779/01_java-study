@@ -11,7 +11,11 @@ public class Function {
 
         for (int i=0; i<lotto.length; i++) {
             lotto[i] = (int)(Math.random() * 45 + 1);
-            System.out.printf("%d 번째 번호 : %d\n",(i+1), lotto[i]);
+//            System.out.printf("%d 번째 번호 : %d\n",(i+1), lotto[i]);
+        }
+        System.out.print("랜덤 값 : ");
+        for (int i = 0; i < lotto.length; i++) {
+            System.out.print(lotto[i] + " ");
         }
 
     }
@@ -32,8 +36,20 @@ public class Function {
         char ranCh = (char)ranNum;
         return ranCh;
     }
-//    public String mySubstring(String str, int index1, int index2){
-//
-//    }
+
+
+    public String mySubstring(String str, int index1, int index2){
+        if(str != null && !str.equals("")) {
+
+            String result = "";
+
+            result = str.substring(index1, index2);
+
+            return result;
+
+        }else {
+            return null;
+        }
+    }
 
 }
