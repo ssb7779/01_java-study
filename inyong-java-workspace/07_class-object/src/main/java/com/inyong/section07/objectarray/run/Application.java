@@ -1,10 +1,8 @@
 package com.inyong.section07.objectarray.run;
-
 import com.inyong.section07.dto.Car;
 
 public class Application {
     public static void main(String[] args) {
-
 
         Car car1 = new Car("911", "포르쉐", 300);
         Car car2 = new Car("아벤", "람보르", 350);
