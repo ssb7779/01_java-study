@@ -30,10 +30,10 @@ public abstract class Animal {
 
     @Override
     public String toString() {
-        return "Animal{" +
-                "저의 이름은='" + name + '\'' +
-                ", 종류는= " + kinds + '\'' +
-                '}';
+        return
+                "저의 이름은 " + name +
+                ", 종류는 " + kinds +
+                        "입니다. ";
     }
 
 
