@@ -155,9 +155,17 @@ public class MemberMenu {
 
     public void printAllMember() {
         for(Member member : mc.getMem()){
-            if(member != null){
-                System.out.println(member.getInformation());
-            }
+            System.out.println(member.getInformation());
+
+
+//            if(member == null){  //FIXME null뒤에는 데이터가 없기 때문에 return으로 끝내는 게 좋을 거 같다./ 문제 : 여전히 null처리해야함
+//                return;
+//            }
+//            System.out.println(member.getInformation());
+
+//            if(member !=null){ //FIXME 비효율적
+//                System.out.println(member.getInformation());
+//            }
         }
     }
 

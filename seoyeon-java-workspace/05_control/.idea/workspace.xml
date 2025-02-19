@@ -49,7 +49,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/dev/workspaces/01_java-study/seoyeon-java-workspace/06_array&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/dev/workspaces/seoyeon-java-workspace/06_array&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -146,6 +146,8 @@
       <workItem from="1739349965675" duration="467000" />
       <workItem from="1739362675994" duration="1000" />
       <workItem from="1739362797298" duration="226000" />
+      <workItem from="1739884924724" duration="897000" />
+      <workItem from="1739887001751" duration="302000" />
     </task>
     <servers />
   </component>
