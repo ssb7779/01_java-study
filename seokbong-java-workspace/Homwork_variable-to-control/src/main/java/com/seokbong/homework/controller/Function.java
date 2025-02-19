@@ -125,10 +125,76 @@ public class Function {
         System.out.println("정수 : ");
         int num = sc.nextInt();
 
-        for(int i = 0; i < num; i++){
-            i=i; for()
+        if(num < 0 ){
+            System.out.println("양수가 아닙니다.");
+        }else  for(int i = 1; i < num+1; i++){
+            for (int  j = 1; j <= i; j++){
+                if(i == j){
+                    System.out.print(i);
+                }else{
+                    System.out.print("*");
+                }
+            }
+            System.out.println();
         }
 
 
+
+
     }
+
+    public void sumRandom(){
+
+        int n  = (int)(Math.random()*10+1);
+        int sum =0;
+
+        for(int  i = 0; i <= n; i++){
+            sum += i;
+        }
+        System.out.printf("1부터 %d까지의 합 : %d", n, sum);
+    }
+
+    public void exceptGugu() {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("정수 : ");
+        int num = sc.nextInt();
+        int su = 0;
+
+        for(int i = 1; i < 10; i++ ){
+            su = num * i;
+            System.out.println(num + " * " + i + " = " + su);
+        }
+    }
+
+    public void diceGame(){
+        Scanner sc = new Scanner(System.in);
+
+        int num1 = (int)(Math.random() * 6 + 1);
+        int num2 = (int)(Math.random() * 6 + 1);
+        int result = num1 + num2;
+
+        while(true){
+            System.out.println("주사위 두 개의 합을 맞춰보세요(2~12입력) : ");
+            int sum = sc.nextInt();
+            sc.nextLine();
+
+            if(result == sum){
+                System.out.println("정답입니다.");
+                System.out.println("주사위의 합 : " + sum);
+                System.out.println("계속하시겠습니까?(y/n)");
+                char ch = sc.nextLine().charAt(0);
+                if(ch == 'n' || ch == 'N'){
+                    System.out.println("종료합니다.");
+                    break;
+                }else if(ch == 'y' || ch == 'Y'){
+                }
+
+            }else {
+                System.out.println("틀렸습니다.");
+            }
+        }
+    }
+
+
 }
