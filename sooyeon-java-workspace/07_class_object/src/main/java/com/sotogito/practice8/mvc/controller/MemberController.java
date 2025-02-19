@@ -24,7 +24,8 @@ public class MemberController {
     }
 
     public Member[] getMem() {
-        return mem;
+       // return mem;
+        return Arrays.copyOf(mem, memberCount); //fixme 현재 가지고있는 크기만큼 배열을 새로 생성해서 반환 - null을 막음
     }
 
     public Member checkId(String userId) {
@@ -74,17 +75,17 @@ public class MemberController {
     }
 
     public void deleteMember(String userId) {
-        Member member = checkId(userId);
-        if (member == null) {
-            System.out.println("존재하지 않는 멤버입니다.");
-            return;
-        }
+//        Member member = checkId(userId); //FIXME MemberMenu에서 이부분 이미 검증하고 넘김
+//        if (member == null) {
+//            System.out.println("존재하지 않는 멤버입니다.");
+//            return;
+//        }
 
         Member[] members = new Member[SIZE];
         int checkCount = memberCount;
         int count = 0;
         for (int i = 0; i < checkCount; i++) {
-            if (mem[i].getUserId().equals(member.getUserId())) {
+            if (mem[i].getUserId().equals(userId)) {
                 memberCount--;
                 continue;
             }
