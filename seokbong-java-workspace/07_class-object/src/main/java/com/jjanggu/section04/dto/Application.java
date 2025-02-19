@@ -78,6 +78,44 @@ public class Application {
         CosmeticDTO cos2 = new CosmeticDTO("펜라이너", 15000, "클리오", "아이메이크업", true); // this.id="user02", this.pwd="pass02", this.name="김말똥"
         System.out.println(cos2.getInformation());
 
+        System.out.println("================================================================");
+
+        // 1. 빵 객체 생성(기본생성자+setter)
+        BreadDTO br1 = new BreadDTO();
+        br1.setBreadName("소금빵");
+        br1.setBreadPrice(2000);
+
+        System.out.println(br1.getInformation());
+        System.out.println();
+
+        // 2. 빵집 객체 생성(기본생성지+setter)
+        BakeryDTO bk1 = new BakeryDTO();
+        bk1.setBakeryName("파리바게뜨");
+        bk1.setBakeryAddr("삼성동");
+        System.out.println(bk1.getInformation());
+
+        // 3. 빵집 객체 생성
+        BakeryDTO bk2 = new BakeryDTO();
+        bk2.setBakeryName("뚜레주르");
+        bk2.setBakeryAddr("마곡동");
+//        bk2.setBread(br1); // 이미 생성해둔 Bread 객체 전달
+        bk2.setBread(new BreadDTO("크로와상" , 4000));
+        System.out.println(bk2.getInformation());
+
+        System.out.println("=================================");
+
+        /*
+            2500원짜리 튀김소보로를 판매하는 성심당(대전시) 빵집 만들기 => bk3
+
+            빵집정보출력
+            성심당에서 판매하는 빵정보만 출력
+         */
+
+        BakeryDTO bk3 = new BakeryDTO("성심당", "대전시" , new BreadDTO("튀김소보로" , 2500));
+        System.out.println(bk3.getInformation());
+        System.out.println("판매하는빵: " + bk3.getBread().getInformation());
+
+
     }
 
 }

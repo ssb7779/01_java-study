@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4aa0bf68-e149-4ce1-9960-164974a046d8" name="Changes" comment="feature : 기능 제목 3" />
+    <list default="true" id="4aa0bf68-e149-4ce1-9960-164974a046d8" name="Changes" comment="feature : 기능 제목 3">
+      <change afterPath="$PROJECT_DIR$/inyong-java-workspace/07_class-object/src/main/java/com/inyong/practice1/dto/ProductDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inyong-java-workspace/07_class-object/src/main/java/com/inyong/practice1/run/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inyong-java-workspace/07_class-object/src/main/java/com/inyong/section07/objectarray/run/section07/dto/Book.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inyong-java-workspace/07_class-object/src/main/java/com/inyong/section07/objectarray/run/section07/dto/Car.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inyong-java-workspace/07_class-object/src/main/java/com/inyong/section07/objectarray/run/section07/objectarray/run/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inyong-java-workspace/07_class-object/src/main/java/com/inyong/section07/objectarray/run/section07/objectarray/run/Application2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inyong-java-workspace/07_class-object/src/main/java/com/inyong/section07/objectarray/run/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/inyong-java-workspace/07_class-object/src/main/java/com/inyong/section07/objectarray/run/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inyong-java-workspace/07_class-object/src/main/java/com/inyong/section07/objectarray/run/Application2.java" beforeDir="false" afterPath="$PROJECT_DIR$/inyong-java-workspace/07_class-object/src/main/java/com/inyong/section07/objectarray/run/Application2.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,18 +29,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "iysh321"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;iysh321&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/iysh321/01_java-study.git",
-    "accountId": "94c23ab5-d327-4c35-a28e-66b4b30944db"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/iysh321/01_java-study.git&quot;,
+    &quot;accountId&quot;: &quot;94c23ab5-d327-4c35-a28e-66b4b30944db&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -40,22 +49,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/in-yong/dev/workspaces/01_java-study",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/in-yong/dev/workspaces/01_java-study&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Application1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.inyong.section03.scanner.Application1" />
@@ -97,6 +106,7 @@
       <workItem from="1738564094521" duration="50000" />
       <workItem from="1738890600392" duration="98000" />
       <workItem from="1739500161740" duration="29000" />
+      <workItem from="1739762214684" duration="29000" />
     </task>
     <task id="LOCAL-00001" summary="feature : 기능 제목 1">
       <option name="closed" value="true" />
