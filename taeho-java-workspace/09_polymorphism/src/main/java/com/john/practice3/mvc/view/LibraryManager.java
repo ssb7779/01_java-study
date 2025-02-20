@@ -5,7 +5,7 @@ import com.john.practice3.mvc.dto.Book;
 import com.john.practice3.mvc.dto.CookBook;
 import com.john.practice3.mvc.dto.Member;
 
-public class LibraryManager{
+public class LibraryManager {
 
     private Member mem = null;
     private Book[] bList = new Book[5];
@@ -42,12 +42,16 @@ public class LibraryManager{
         // 검색결과의 도서목록에 담기 	        HINT : count 이용
 
         // 해당 검색결과의 도서목록 주소 값 리턴
-        return null;
+        Book[] books = new Book[5];
+        for (int i = 0; i < 5; i++) {
+            if (bList[i].getTitle().contains(keyword)) {
+                books[i] = bList[i];
+            }
+        }
+        return books;
     }
 
     public int rentBook(int index) {
-        int result = 0;
-
         // 전달 받은 index의 bList 객체가 실제 AniBook 객체를 참조하고 있고
         // 해당 만화책의 제한 나이와 회원의 나이를 비교하여 회원 나이가 적을 경우
         // result를 1로 초기화		  나이 제한으로 대여 불가하다는 의미
@@ -58,6 +62,19 @@ public class LibraryManager{
         // result를 2로 초기화  성공적으로 대여 완료, 요리학원 쿠폰이 발급됐다는 의미
 
         // result 값 리턴
+        int result = 0;
+
+        if (bList[index] instanceof AniBook){
+            result = (((AniBook) bList[index]).getAccessAge() > mem.getAge()) ? 1 : 0;
+        }
+        if (bList[index] instanceof CookBook){
+            result = ((CookBook)bList[index]).isCoupon() ? 2 : 0;
+        }
+
+        if(result == 2){
+            mem.updateCouponCount();
+        }
+
         return result;
     }
 

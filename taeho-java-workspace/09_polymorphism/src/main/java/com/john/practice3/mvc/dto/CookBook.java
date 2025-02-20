@@ -11,6 +11,10 @@ public class CookBook extends Book {
         this.coupon = coupon;
     }
 
+    public boolean isCoupon() {
+        return coupon;
+    }
+
     @Override
     public String toString() {
         //0번도서 : 백종원의 집밥 / 백종원 / tvN / true

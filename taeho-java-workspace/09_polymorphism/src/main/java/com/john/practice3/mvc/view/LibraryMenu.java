@@ -23,15 +23,15 @@ public class LibraryMenu {
 					0. 프로그램 종료하기
 				*/
 
-//        System.out.print("이름을 입력하세요: ");
-//        String name = sc.nextLine();
-//        System.out.print("나이를 입력하세요: ");
-//        int age = sc.nextInt();
-//        sc.nextLine();
-//        System.out.print("성별을 입력하세요: ");
-//        char gender = sc.nextLine().charAt(0);
-//        Member member = new Member(name, age, gender);
-//        lm.insertMember(member);
+        System.out.print("이름을 입력하세요: ");
+        String name = sc.nextLine();
+        System.out.print("나이를 입력하세요: ");
+        int age = sc.nextInt();
+        sc.nextLine();
+        System.out.print("성별을 입력하세요: ");
+        char gender = sc.nextLine().charAt(0);
+        Member member = new Member(name, age, gender);
+        lm.insertMember(member);
 
 
         while (true) {
@@ -47,11 +47,20 @@ public class LibraryMenu {
 
             switch (choice) {
                 case 1:
-//                    member = lm.myPage();
-//                    System.out.println(member);
+                    member = lm.myPage();
+                    System.out.println(member);
                     break;
                 case 2:
                     selectAll();
+                    break;
+                case 3:
+                    searchBook();
+                    break;
+                case 4:
+                    rentBook();
+                    break;
+                case 0:
+                    return;
             }
         }
     }
@@ -65,9 +74,9 @@ public class LibraryMenu {
         // ex) 0번도서 : 백종원의 집밥 / 백종원 / tvN / true
         Book[] bList = lm.selectAll();
 
-        for(int i = 0; i < bList.length; i++) {
+        for (int i = 0; i < bList.length; i++) {
             //0번도서 : 백종원의 집밥 / 백종원 / tvN / true
-            System.out.println(i+"번도서 : " + bList[i].toString());
+            System.out.println(i + "번도서 : " + bList[i].toString());
         }
     }
 
@@ -78,6 +87,14 @@ public class LibraryMenu {
         // => Book[] searchList = lm.searchBook(keyword);
 
         // for each문(향상된 for문)을 이용하여 검색 결과의 도서 목록 출력
+        System.out.print("검색할 제목을 입력하세요: ");
+        String bookName = sc.nextLine();
+        Book[] searchList = lm.searchBook(bookName);
+        for (Book b : searchList) {
+            if (b != null) {
+                System.out.println(b.toString());
+            }
+        }
     }
 
     public void rentBook() {
@@ -91,5 +108,22 @@ public class LibraryMenu {
         // 1일 경우   “나이 제한으로 대여 불가능입니다.” 출력
         // 2일 경우   “성공적으로 대여되었습니다. 요리학원 쿠폰이 발급되었습니다.
         //             마이페이지를 통해 확인하세요” 출력
+        Book[] bList = lm.selectAll();
+        for (int i = 0; i < bList.length; i++) {
+            //0번도서 : 백종원의 집밥 / 백종원 / tvN / true
+            System.out.println(i + "번도서 : " + bList[i].toString());
+        }
+
+        System.out.print("대여할 도서 번호 선택 : ");
+        int bookId = sc.nextInt();
+        sc.nextLine();
+        int rentIdx = lm.rentBook(bookId);
+        if (rentIdx == 0) {
+            System.out.println("성공적으로 대여되었습니다.");
+        } else if (rentIdx == 1) {
+            System.out.println("나이 제한으로 대여 불가능입니다.");
+        } else {
+            System.out.println("성공적으로 대여되었습니다. 요리학원 쿠폰이 발급되었습니다. 마이페이지를 통해 확인하세요");
+        }
     }
 }

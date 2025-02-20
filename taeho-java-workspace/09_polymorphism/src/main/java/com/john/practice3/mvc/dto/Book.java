@@ -14,6 +14,10 @@ public class Book {
         this.publisher = publisher;
     }
 
+    public String getTitle() {
+        return title;
+    }
+
     @Override
     public String toString() {
         //0번도서 : 백종원의 집밥 / 백종원 / tvN / true

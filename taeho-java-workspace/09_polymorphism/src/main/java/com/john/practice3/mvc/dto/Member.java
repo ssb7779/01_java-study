@@ -15,6 +15,14 @@ public class Member {
         this.gender = gender;
     }
 
+    public int getAge() {
+        return age;
+    }
+
+    public void updateCouponCount() {
+        this.couponCount++;
+    }
+
     @Override
     public String toString() {
         return "Member{" +

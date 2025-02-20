@@ -11,6 +11,10 @@ public class AniBook extends Book {
         this.accessAge = accessAge;
     }
 
+    public int getAccessAge() {
+        return accessAge;
+    }
+
     @Override
     public String toString() {
         //0번도서 : 백종원의 집밥 / 백종원 / tvN / true
