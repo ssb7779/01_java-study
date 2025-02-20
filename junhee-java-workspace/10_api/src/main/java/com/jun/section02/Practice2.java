@@ -22,31 +22,30 @@ public class Practice2 {
 // 가게마다의 정보를 기록할 수 있도록 Shop 이라는 dto 클래스 만들기
 // 각 가게에 대한 정보는 Shop 객체로, 그리고 이런 Shop객체들을 최종적으로 Shop[]에 기록될 수 있도록
 
-        String[] shopArr = shopCsv.split(",");
-        System.out.println("각 가게별 정보 : " + shopArr.length);
+        // 문자열을 줄 단위로 나누기
+        String[] shopEntries = shopCsv.split("\n");
+        Shop_dto[] shops = new Shop_dto[shopEntries.length];
 
-        for( String sArr : shopArr){
-            System.out.println(sArr);
+        // 각 줄을 파싱하여 Shop_dto 객체 생성
+        for (int i = 0; i < shopEntries.length; i++) {
+            String[] details = shopEntries[i].split(",");
+            int num = Integer.parseInt(details[0]);
+            String name = details[1];
+            String address = details[2];
+            String phoneNum = details[3];
+            String category = details[4];
+            String baseDate = details[5];
+
+            shops[i] = new Shop_dto(num, name, address, phoneNum, category, baseDate);
         }
 
-        Shop_dto[] shop = new Shop_dto[10];
-        shop[0] = new Shop_dto(1, "맘스쿡", "광주광역시 동구 동계천로143", "062-233-1233", "향토맛집", "2022-01-11");
-        shop[1] = new Shop_dto(2, "옛날밥상", "광주광역시 남구 용대로119번길 6", "062-653-7337", "향토맛집", "2022-01-11");
-        shop[2] = new Shop_dto(3, "숭정떡갈비", "광주광역시 광산구 광산로29번길 1", "062-944-1439", "향토맛집", "2022-01-11");
-        shop[3] = new Shop_dto(4, "홍춘이", "광주광역시 북구 무등로180번길 9-18", "062-521-7733", "향토맛집", "2022-01-11");
-        shop[4] = new Shop_dto(5, "종가집떡갈비", "광주광역시 광산구 상무대로 226", "062-943-8282", "향토맛집", "2022-01-11");
-        shop[5] = new Shop_dto(6, "광신보리밥", "광주광역시 북구 두리봉길 2-1(두암동)", "062-264-1811", "향토맛집", "2022-01-11");
-        shop[6] = new Shop_dto(7, "조선옥", "주광역시 남구 효덕로 103", "062-654-3322", "한상맛집", "2022-01-11");
-        shop[7] = new Shop_dto(8, "송원회관", "광주광역시 북구 경양로135번길 29(신안동)", "062-529-3250", "한상맛집", "2022-01-11");
-        shop[8] = new Shop_dto(9, "만선당어부의밥상", "광주광역시 광산구 수완로11번길 3", "062-955-5595", "한상맛집", "2022-01-11");
-        shop[9] = new Shop_dto(10, "백년미가(유촌점)", "광주광역시 서구 유덕로28번길 18", "062-946-3392", "한상맛집", "2022-01-11");
-
-        for(Shop_dto arr : shop){
-            System.out.println(arr);
+        // 결과 출력
+        for (Shop_dto shop : shops) {
+            System.out.println(shop);
         }
-
-
-
-
     }
 }
+
+
+
+
