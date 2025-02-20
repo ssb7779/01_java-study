@@ -67,5 +67,47 @@ public class Application1 {
 
         System.out.println("startsWith(user) : " + email.startsWith("user"));
         System.out.println("startsWith(admin) : " + email.startsWith("admin"));
+
+        System.out.println("endsWith(.com) : " + email.endsWith(".com"));
+        System.out.println("endsWith(.kr) : " + email.endsWith(".kr"));
+
+        System.out.println("contains(@) : " + email.contains("@"));
+
+        // * replace(CharSequence, CharSequence) : 첫번째 인자 문자열을 찾아 두번째 문자열로 변환시킨 새 문자열 반환
+        String ip = "192.168.0.202";
+        System.out.println("replace() : " + ip.replace(".", "_"));
+
+        // * trim() : 문자열의 앞과 뒤의 공백을 제거한 새로운 문자열 반환
+        String content = "\n  안녕하세요. 캥거루입니다. \n";
+        System.out.println("trim() : #" + content.trim() + "#");
+
+        // * isEmpty() : 문자열이 빈문자열("")일 경우 true 반환
+        // * isBlank() : 문자열이 빈문자열("") 또는 공백문자열("  ")일 경우 true 반환 (자바 11 추가된 기능)
+        System.out.println("".isEmpty());
+        System.out.println(" ".isEmpty());
+
+        System.out.println("".isBlank());
+        System.out.println(" ".isBlank());
+        System.out.println("  ".isBlank());
+
+        // * split(String) : 인자로 전달된 문자열을 기준으로 분리시켜 String[]에 담아 반환
+        // * static join(CharSequence, CharSequence...)
+        //      : 인자로 전달된 String[] 배열의 요소들을 특정 구분자와 함께 하나의 문자열로 연결시켜 반환
+
+        String lectures = "Java,MySQL,MyBatis,Front,Spring";
+
+        String[] lecArr = lectures.split(","); // {"Java", "MySQL", "MyBatis", "Front", "Spring"}
+        System.out.println("분리된 문자열의 개수: " + lecArr.length);
+        for(String lec : lecArr){
+            System.out.println(lec);
+        }
+
+        String newStr = String.join("-", lecArr); // "Java-MySQL-MyBatis-Front-Spring"
+        System.out.println(newStr);
+
+        // * toCharArray() : 문자열의 각 문자들을 char[]에 담아 반환
+        char[] charArr = newStr.toCharArray(); // {'J', 'a', 'v', 'a', '-', ...}
+        System.out.println("char[] 길이: " + charArr.length);
+        System.out.println("1번 인덱스: " + charArr[1]);
     }
 }
