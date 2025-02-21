@@ -3,6 +3,7 @@ package com.podoseee.section04.date_calendar_time;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 
 public class Application4 {
     public static void main(String[] args) {
@@ -41,7 +42,9 @@ public class Application4 {
         LocalDateTime dateTime2 = LocalDateTime.of(2024, 6, 11, 13, 0, 15);
         System.out.println(dateTime2);
 
-
-        
+        // java.time.DateTimeFormatter
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy년 MM월 dd일 E요일 HH(hh)시 mm분 ss초");
+        String nowStr = dtf.format(dateTime1);
+        System.out.println(nowStr);
     }
 }
