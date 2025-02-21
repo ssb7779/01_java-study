@@ -40,6 +40,9 @@ public class Application3 {
 
         /*
             ## 문자열 리터럴 ##
+            1. 문자열 리터럴은 String Constant Pool(상수풀) 영역에 저장됨
+            2. String Constant Pool 에는 이전 문자열리터럴과 동일한 문자열리터럴이 발생될 경우
+               기존의 문자열리터럴을 재사용함 (즉, 싱글톤(단일인스턴스) 처럼 관리)
          */
     }
 }

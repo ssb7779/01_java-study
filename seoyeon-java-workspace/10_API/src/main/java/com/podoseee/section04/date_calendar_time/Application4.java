@@ -9,6 +9,12 @@ public class Application4 {
     public static void main(String[] args) {
         /*
             ## java.time.LocalDate|LocalTime|LocalDateTime ##
+            1. JDK 1.8 이상부터 사용 가능한 클래스
+            2. Date, Calendar을 보완한 클래스
+            3. 날짜만, 시간만, 둘다의 정보를 가질 수 있음
+            4. 객체 생성 불가
+               => static now() : 현재 날짜 및 시간 정보를 가져옴
+               => static of()  : 특정 날짜 및 시간 정보를 세팅 가능
          */
 
         LocalDate date1 = LocalDate.now();

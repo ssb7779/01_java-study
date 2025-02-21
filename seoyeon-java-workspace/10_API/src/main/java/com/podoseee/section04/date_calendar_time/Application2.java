@@ -7,7 +7,11 @@ import java.util.GregorianCalendar;
 public class Application2 {
     public static void main(String[] args) {
         /*
-            ## java.util.Calendar ##
+             ## java.util.Calendar ##
+            1. JDK 1.1 에 Date 클래스의 대안으로 나옴
+            2. 날짜 및 시간에 대한 값 기록 가능
+            3. 추상클래스 => 객체 생성 불가
+               국가별, 시간대별로 구체화시켜둔 하위 클래스들로 생성해서 사용 (다형성)
          */
         //Calendar today = new Calendar();
 

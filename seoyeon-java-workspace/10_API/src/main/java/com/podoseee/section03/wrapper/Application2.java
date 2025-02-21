@@ -5,6 +5,8 @@ public class Application2 { // 중요
         /*
             ## 문자열 => 기본자료형 ##
             문자열 값을 기본자료형으로 변경 (파싱)
+
+            Wrapper클래스.parseXXX(문자열) => 기본자료형 반환
          */
 
         byte b = Byte.parseByte("1");       // 1

@@ -8,6 +8,18 @@ public class Application3 {
     public static void main(String[] args) {
         /*
             ## java.text.SimpleDateFormat ##
+            1. 날짜 및 시간 정보를 내가 원하는 형식의 문자열로 변환시켜주는 클래스
+            2. 작성가능 포맷
+               ㄴ y : 년
+               ㄴ M : 월
+               ㄴ d : 일
+               ㄴ E : 요일
+               ㄴ h/H : 시간
+               ㄴ m : 분
+               ㄴ s : 초
+
+               SimpleDateFormat sdf = new SimpleDateFormat("반영시키고자하는형식(포맷)");
+               sdf.format(java.util.Date객체) : String
          */
 
         // java.util.Date 객체 생성 후 반영
