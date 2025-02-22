@@ -8,10 +8,8 @@ import com.homework.dto.FoodShop;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.StringTokenizer;
-import java.util.logging.SimpleFormatter;
 
 public class Calculator implements StringCalculator, MathCalculator, DateCalculator {
     private static final String csvStr = "1,맘스쿡,광주광역시 동구 동계천로143,062-233-1233,향토맛집,2022-01-11\n"
@@ -42,21 +40,20 @@ public class Calculator implements StringCalculator, MathCalculator, DateCalcula
 
     @Override
     public int selectTokenCount(String str) {
-        StringTokenizer tokens = new StringTokenizer(str, " ");
-        return tokens.countTokens();
+        return new StringTokenizer(str, " ").countTokens();
     }
 
     @Override
     public String toSpaceUpper(String str) {
         StringBuilder sb = new StringBuilder();
-        String[] tokens = str.split(" ");
 
-        for (String word : tokens) {
+        for (String word : str.split(" ")) {
             word = word.trim();
             if (word.isEmpty()) {
                 continue;
             }
-            sb.append(word.substring(0, 1).toUpperCase() + word.substring(1));
+            sb.append(word.substring(0, 1).toUpperCase())
+                    .append(word.substring(1));
             sb.append(" ");
         }
         return sb.toString();
@@ -65,8 +62,8 @@ public class Calculator implements StringCalculator, MathCalculator, DateCalcula
     @Override
     public FoodShop[] csvFormat() {
         String[] restaurants = csvStr.split("\n");
-
         FoodShop[] result = new FoodShop[restaurants.length];
+
         for (int i = 0; i < restaurants.length; i++) {
             String[] info = restaurants[i].split(",");
 
@@ -114,13 +111,16 @@ public class Calculator implements StringCalculator, MathCalculator, DateCalcula
     @Override
     public Calendar makeCalendar(String year, String month, String date) {
         Calendar calendar = Calendar.getInstance();
-        calendar.set(Integer.parseInt(year), Integer.parseInt(month) - 1, Integer.parseInt(date));
+        calendar.set(Integer.parseInt(year.trim()),
+                Integer.parseInt(month.trim()) - 1,
+                Integer.parseInt(date.trim()));
+
         return calendar;
     }
 
     @Override
     public void printFormat(Calendar calc) {
-        System.out.println(DateCalculator.NOW_DATE_FORMAT.format(calc.getTime()));
+        System.out.println(DateCalculator.DATE_FORMAT.format(calc.getTime()));
     }
 
     @Override
@@ -134,8 +134,8 @@ public class Calculator implements StringCalculator, MathCalculator, DateCalcula
         int minYear = Math.min(startYear, endYear);
         int maxYear = Math.max(startYear, endYear);
 
-        while (minYear <= maxYear) {
-            total += isLeapYear(minYear++) ? 366L : 365L;
+        for (int i = minYear; i <= maxYear; i++) {
+            total += isLeapYear(i) ? 366L : 365L;
         }
         return total;
     }

@@ -6,80 +6,80 @@ import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 
 public class FoodShop { // 식당에 대한 정보를 보관하기 위한 vo 클래스
-	
-	private int num; // 순번
-	private String shopName; // 식당명
-	private String address;  // 식당주소
-	private String phoneNumber; // 식당전화번호
-	private String category; // 식당분류(카테고리)
-	private LocalDate registDate; // 식당등록일
-	
-	public FoodShop() {
-		
-	}
 
-	public FoodShop(int num, String shopName, String address, String phoneNumber, String category, LocalDate registDate) {
-		super();
-		this.num = num;
-		this.shopName = shopName;
-		this.address = address;
-		this.phoneNumber = phoneNumber;
-		this.category = category;
-		this.registDate = registDate;
-	}
+    private int num; // 순번
+    private String shopName; // 식당명
+    private String address;  // 식당주소
+    private String phoneNumber; // 식당전화번호
+    private String category; // 식당분류(카테고리)
+    private LocalDate registDate; // 식당등록일
 
-	public String getCategory() {
-		return category;
-	}
+    public FoodShop() {
 
-	public void setCategory(String category) {
-		this.category = category;
-	}
+    }
 
-	public int getNum() {
-		return num;
-	}
+    public FoodShop(int num, String shopName, String address, String phoneNumber, String category, LocalDate registDate) {
+        super();
+        this.num = num;
+        this.shopName = shopName;
+        this.address = address;
+        this.phoneNumber = phoneNumber;
+        this.category = category;
+        this.registDate = registDate;
+    }
 
-	public void setNum(int num) {
-		this.num = num;
-	}
+    public String getCategory() {
+        return category;
+    }
 
-	public String getShopName() {
-		return shopName;
-	}
+    public void setCategory(String category) {
+        this.category = category;
+    }
 
-	public void setShopName(String shopName) {
-		this.shopName = shopName;
-	}
+    public int getNum() {
+        return num;
+    }
 
-	public String getAddress() {
-		return address;
-	}
+    public void setNum(int num) {
+        this.num = num;
+    }
 
-	public void setAddress(String address) {
-		this.address = address;
-	}
+    public String getShopName() {
+        return shopName;
+    }
 
-	public String getPhoneNumber() {
-		return phoneNumber;
-	}
+    public void setShopName(String shopName) {
+        this.shopName = shopName;
+    }
 
-	public void setPhoneNumber(String phoneNumber) {
-		this.phoneNumber = phoneNumber;
-	}
+    public String getAddress() {
+        return address;
+    }
 
-	public LocalDate getRegistDate() {
-		return registDate;
-	}
+    public void setAddress(String address) {
+        this.address = address;
+    }
 
-	public void setRegistDate(LocalDate registDate) {
-		this.registDate = registDate;
-	}
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
 
-	@Override
-	public String toString() {
-		return "FoodShop [num=" + num + ", shopName=" + shopName + ", address=" + address + ", phoneNumber=" + phoneNumber
-				+ ", category=" + category + ", registDate=" + registDate + "]";
-	}
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public LocalDate getRegistDate() {
+        return registDate;
+    }
+
+    public void setRegistDate(LocalDate registDate) {
+        this.registDate = registDate;
+    }
+
+    @Override
+    public String toString() {
+        return "FoodShop [num=" + num + ", shopName=" + shopName + ", address=" + address + ", phoneNumber=" + phoneNumber
+                + ", category=" + category + ", registDate=" + registDate + "]";
+    }
 
 }
