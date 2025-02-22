@@ -28,16 +28,15 @@ public class Calculator implements DateCalculator, MathCalculator, StringCalcula
 
     @Override
     public Calendar makeCalendar(String year, String month, String date) {
-        Calendar calendar = new GregorianCalendar(Integer.parseInt(year), Integer.parseInt(month), Integer.parseInt(date));
+        Calendar calendar = new GregorianCalendar(Integer.parseInt(year), Integer.parseInt(month)-1, Integer.parseInt(date));
         return calendar;
     }
 
     @Override
     public void printFormat(Calendar calc) {
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-        String str = sdf.format(new Date(calc.getTimeInMillis()));
-        System.out.println(str);
-
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd E요일"); // 원하는 형식 지정
+        Date date = calc.getTime(); // Calendar → Date 변환
+        System.out.println(sdf.format(date));
     }
 
     @Override
