@@ -1,11 +1,10 @@
 package com.homework.common;
 
 import java.text.SimpleDateFormat;
-import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 
 public interface DateCalculator {
-	SimpleDateFormat NOW_DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd E요일");
+	SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd E요일");
 
 	/**
 	 * 1. LocalDateTime을 이용하여 현재 날짜 및 시간의 정보를 얻어 출력하는 메소드
