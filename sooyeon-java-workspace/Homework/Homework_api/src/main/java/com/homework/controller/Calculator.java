@@ -83,7 +83,6 @@ public class Calculator implements StringCalculator, MathCalculator, DateCalcula
     }
 
 
-
     @Override
     public int sumString(String num1, String num2) {
         double number1 = Double.parseDouble(num1.trim());
@@ -103,12 +102,13 @@ public class Calculator implements StringCalculator, MathCalculator, DateCalcula
     }
 
 
-
     @Override
     public void printNowDateTime() {
-        System.out.println(LocalDateTime.now().toString().
-                replace("T", " ").
-                substring(0, 19));
+        String now = LocalDateTime.now().toString();
+
+        System.out.println(now
+                .replace("T", " ")
+                .substring(0, now.indexOf(".")));
     }
 
     @Override
