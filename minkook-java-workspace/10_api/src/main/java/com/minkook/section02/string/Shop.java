@@ -1,4 +1,4 @@
-package com.minkook.section02;
+package com.minkook.section02.string;
 
 public class Shop {
     //가게의 번호, 이름, 주소, 전화번호, 카테고리, 등록일
