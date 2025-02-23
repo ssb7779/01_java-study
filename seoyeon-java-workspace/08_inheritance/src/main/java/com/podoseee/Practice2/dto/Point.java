@@ -2,8 +2,8 @@ package com.podoseee.Practice2.dto;
 
 public class Point {
 
-    private int x;
-    private int y;
+    private static int x;
+    private static int y;
 
     public Point(){}
 
@@ -12,7 +12,7 @@ public class Point {
         this.y = y;
     }
 
-    public int getX() {
+    public static int getX() {
         return x;
     }
 
@@ -20,7 +20,7 @@ public class Point {
         this.x = x;
     }
 
-    public int getY() {
+    public static int getY() {
         return y;
     }
 
@@ -34,5 +34,7 @@ public class Point {
                 ", y=" + y;
     }
 
-    public void draw(){}
+    public void draw(){
+        System.out.println("x좌표 : " + getX() + "y좌표 : " + getY());
+    }
 }
