@@ -52,6 +52,9 @@ public class Application2 {
         Calendar cal2 = new GregorianCalendar(2023, Calendar.JUNE, 11);
         Calendar cal3 = new GregorianCalendar(2023, Calendar.JUNE, 11, 15, 30, 20);
 
+        System.out.println("=======");
+        System.out.println(cal2);
+        System.out.println("=======");
         // * Calendar 객체를 Date객체로 변환하기
         Date calTODate = new Date( cal3.getTimeInMillis() );
         System.out.println(calTODate);
