@@ -3,7 +3,7 @@ package com.podoseee.Practice2.dto;
 import static java.lang.Math.PI;
 
 public class Circle extends Point{
-    private int radius;
+    private static int radius;
 
     public Circle(){}
 
@@ -12,7 +12,7 @@ public class Circle extends Point{
         this.radius = radius;
     }
 
-    public int getRadius() {
+    public static int getRadius() {
         return radius;
     }
 
@@ -28,7 +28,7 @@ public class Circle extends Point{
     }
 
     @Override
-    public void draw(){
+    public static void draw(){
         System.out.println("x좌표 : " + getX() + "y좌표 : " + getY());
         System.out.println("면적 : " + PI*getRadius()*getRadius());
         System.out.println("둘레 : " + PI*getRadius()*2);
