@@ -1,4 +1,4 @@
-package com.jjanggu.section02;
+package com.jjanggu.section02.string;
 
 public class Application1 {
     public static void main(String[] args) {

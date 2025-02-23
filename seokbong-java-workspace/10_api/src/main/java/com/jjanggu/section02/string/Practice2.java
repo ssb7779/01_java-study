@@ -1,6 +1,4 @@
-package com.jjanggu.section02;
-
-import java.util.Arrays;
+package com.jjanggu.section02.string;
 
 public class Practice2{
     public static void main(String[] args) {
@@ -26,20 +24,16 @@ public class Practice2{
         // 가게마다의 정보를 기록할 수 있도록 Shop 이라는 dto 클래스 만들기
         // 각 가게에 대한 정보는 Shop 객체로, 그리고 이런 Shop객체들을 최종적으로 Shop[]에 기록될 수 있도록
 
-        String[] arr = shopCsv.split("\n");
-        Shop[] Shop = new Shop[arr.length];
-        for(String s : arr){
-            String[] tmpArr = s.split(",");
-            String shopId = tmpArr[0];
-            String shopName = tmpArr[1];
-            String shopAdd = tmpArr[2];
-            String shopNum = tmpArr[3];
-            String shopCat = tmpArr[4];
-            String shopDate = tmpArr[5];
-            for(int i = 0; i < arr.length; i++) {
-                Shop[i] = new Shop(shopId, shopName, shopAdd, shopNum, shopCat, shopDate);
-            }
+        String[] shops =shopCsv.split("\n"); // 한 줄씩 분할{1,맘스쿡,...2022-01-11", "2,옛날밥상, ...}
+        Shop[] shopArr = new Shop[shops.length];
 
+        for(int i =0; i < shops.length; i++){
+            String[] arr = shops[i].split(","); // {"1", "맘스쿡", ...}
+            shopArr[i] = new Shop(arr[0], arr[1], arr[2], arr[3], arr[4], arr[5]);
+        }
+
+        for(Shop s : shopArr){
+            System.out.println(s);
         }
 
 
