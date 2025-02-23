@@ -1,6 +1,6 @@
 package com.jun.section02;
 
-public class Application {
+public class Application1 {
 
     public static void main(String[] args) {
         // * length() : 문자열의 길이(글자수) 반환
