@@ -1,6 +1,4 @@
-package com.minkook.section02;
-
-import org.w3c.dom.ls.LSOutput;
+package com.minkook.section02.string;
 
 public class Practice1 {
 

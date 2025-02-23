@@ -1,9 +1,9 @@
-package com.minkook.section02;
+package com.minkook.section02.string;
 
 public class Practice2 {
     public static void main(String [] args){
 
-        Shop [] shops = new Shop[10];
+        Shop[] shops = new Shop[10];
         String shopCsv =  "1,맘스쿡,광주광역시 동구 동계천로143,062-233-1233,향토맛집,2022-01-11\n"
                 + "2,옛날밥상,광주광역시 남구 용대로119번길 6,062-653-7337,향토맛집,2022-01-11\n"
                 + "3,송정떡갈비,광주광역시 광산구 광산로29번길 1,062-944-1439,향토맛집,2022-01-11\n"
