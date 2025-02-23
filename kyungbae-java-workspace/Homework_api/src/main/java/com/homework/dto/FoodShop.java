@@ -76,10 +76,15 @@ public class FoodShop { // 식당에 대한 정보를 보관하기 위한 vo 클
 		this.registDate = registDate;
 	}
 
+	public String getFormetDate(){
+		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy년 MM월 dd일");
+		return dtf.format(registDate);
+	}
+
 	@Override
 	public String toString() {
 		return "FoodShop [num=" + num + ", shopName=" + shopName + ", address=" + address + ", phoneNumber=" + phoneNumber
-				+ ", category=" + category + ", registDate=" + registDate + "]";
+				+ ", category=" + category + ", registDate=" + getFormetDate() + "]";
 	}
 
 }

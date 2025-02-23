@@ -2,6 +2,7 @@ package com.homework.view;
 
 
 import com.homework.controller.Calculator;
+import com.homework.dto.FoodShop;
 
 import java.util.Scanner;
 
@@ -50,9 +51,15 @@ public class Menu {
 			if(menu == 1) {
 				
 				System.out.println("\n* 대소문자를 가리지 않고 찾아드립니다 *\n");
-				
-				// 문자열(String타입), 탐색할 문자(char) 형으로 입력받은 후 
+
+				// 문자열(String타입), 탐색할 문자(char) 형으로 입력받은 후
 				// Calculator 클래스의 findCharCount 메소드 호출하면서 전달 후 결과받아 출력하기
+				System.out.print("문자열 : ");
+				String str = sc.nextLine();
+				System.out.print("탐색할 문자 : ");
+				char ch = sc.nextLine().charAt(0);
+
+				System.out.printf("\"%s\" 문자열의 '%c'는 %d개 있습니다.\n", str, ch, calc.findCharCount(str, ch));
 				
 				
 				
@@ -62,7 +69,15 @@ public class Menu {
 				
 				// 문자열(String타입)으로 입력받은 후
 				// Calculator 클래스의 selectTokenCount 메소드 호출하면서 전달 후 결과받아 출력하기 
-				// 이때 공백 포함이 안되어있을 경우 "공백 포함해서 입력하라니깐요." 출력하기 
+				// 이때 공백 포함이 안되어있을 경우 "공백 포함해서 입력하라니깐요." 출력하기
+				System.out.print(">> 입력 : ");
+				String str = sc.nextLine();
+				int result = calc.selectTokenCount(str);
+				if (result == 0) {
+					System.out.println("공백 포함해서 입력하라니깐요.");
+				} else {
+					System.out.println("해당 문자열의 개수는 " + result + "개 입니다.");
+				}
 				
 				
 			}else if(menu == 3) {
@@ -70,7 +85,12 @@ public class Menu {
 				System.out.println("\n* 여러 영단어(소문자)를 공백과 함께 입력해주세요 *\n");
 				
 				// 문자열(String타입)으로 입력받은 후 
-				// Calculator 클래스의 toSpaceUpper 메소드 호출하면서 전달 후 결과받아 출력하기 
+				// Calculator 클래스의 toSpaceUpper 메소드 호출하면서 전달 후 결과받아 출력하기
+				System.out.print(">> 입력 : ");
+				String str = sc.nextLine();
+
+				System.out.println(">> 출력 : " + calc.toSpaceUpper(str));
+
 				
 			}else if(menu == 4) {
 				
@@ -78,6 +98,9 @@ public class Menu {
 				
 				// Calculator 클래스의 csvFormat 메소드 호출하여 결과받고 
 				// 해당 배열안의 모든 FoodShop 객체들을 다 출력하기
+				for (FoodShop arr : calc.csvFormat()) {
+					System.out.println(arr);
+				}
 				
 				
 			}else if(menu == 0) {
