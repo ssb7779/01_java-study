@@ -6,8 +6,14 @@ import com.homework.common.MathCalculator;
 import com.homework.common.StringCalculator;
 import com.homework.dto.FoodShop;
 
+import javax.swing.text.DateFormatter;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.StringTokenizer;
 
 public class Calculator implements DateCalculator, MathCalculator, StringCalculator {
@@ -18,27 +24,51 @@ public class Calculator implements DateCalculator, MathCalculator, StringCalcula
 
     @Override
     public void printNowDateTime() {
-
+        LocalDateTime date = LocalDateTime.now();
+        System.out.println(
+                date.toString().replace("T", "\t")
+                        .substring(0, date.toString().indexOf("."))
+        );
     }
 
     @Override
     public Calendar makeCalendar(String year, String month, String date) {
-        return null;
+        int intYear = Integer.parseInt(year);
+        int intMonth = Integer.parseInt(month);
+        int intDate = Integer.parseInt(date);
+//        LocalDate cal = LocalDate.of(intYear, intMonth, intDate);
+
+        return new GregorianCalendar(intYear, intMonth-1, intDate);
     }
 
     @Override
     public void printFormat(Calendar calc) {
-
+        SimpleDateFormat stf = new SimpleDateFormat("yyyy-MM-dd E요일");
+        Date date = new Date(calc.getTimeInMillis());
+        System.out.println(stf.format(date));
     }
 
     @Override
     public boolean isLeapYear(int year) {
-        return false;
+
+        boolean isLeapYear = false;
+        if ((year % 4 == 0) && (year % 400 != 0) && (year % 100 != 0)){
+            isLeapYear = true;
+        }
+        return isLeapYear;
     }
 
     @Override
     public long leapDate(int startYear, int endYear) {
-        return 0;
+        long sumDays = 0;
+        for (int i = startYear; i <= endYear; i++) {
+            if (isLeapYear(i)) {
+                sumDays += 366;
+            } else {
+                sumDays += 365;
+            }
+        }
+        return sumDays;
     }
 
     @Override

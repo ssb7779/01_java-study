@@ -196,6 +196,7 @@ public class Menu {
 				System.out.println("\n* 현재 시스템 날짜 및 시간 *\n");
 				
 				// Calculator 클래스의 printNowDateTime 메소드 호출하기
+				calc.printNowDateTime();
 				
 			}else if(menu == 2) {
 				
@@ -205,8 +206,15 @@ public class Menu {
 				// Calculator 클래스의 makeCalendar 메소드 호출시 전달하여 결과받기
 				
 				// 위의 결과로 돌려받은 Calendar객체를 Calculator 클래스의 printFormat메소드 호출시 전달하여 실행하기 
-				
-				
+				System.out.print("년도 입력 : ");
+				String year = sc.nextLine();
+				System.out.print("월 입력 : ");
+				String month = sc.nextLine();
+				System.out.print("일 입력 : ");
+				String day = sc.nextLine();
+
+				calc.printFormat(calc.makeCalendar(year, month, day));
+
 			}else if(menu == 3) {
 				
 				System.out.println("\n* 궁금한 년도를 입력해주세요 *\n");
@@ -214,6 +222,16 @@ public class Menu {
 				// 년도(String타입)을 입력받은 후 
 				// Calculator클래스의 isLeapYear 메소드 호출시 전달하여 그에 맞는 결과 출력하기 
 				// 윤년일 경우 "해당 년도는 윤년입니다." 그게아닐 경우 "해당 년도는 평년입니다." 출력하기
+				System.out.print("년도 입력 : ");
+				String yearStr = sc.nextLine();
+
+				int year = Integer.parseInt(yearStr);
+				if (calc.isLeapYear(year)) {
+					System.out.println("해당 년도는 윤년입니다.");
+				} else {
+					System.out.println("해당 년도는 평년입니다.");
+				}
+
 				
 			}else if(menu == 4) {
 				
@@ -222,8 +240,17 @@ public class Menu {
 				// 시작년도, 끝년도(모두 다 String타입)을 입력받은 후 
 				// Calculator 클래스의 leapDate 메소드 호출시 전달하여 결과받아 출력하기
 				// 단, 시작년도를 더 큰 숫자로 썻을 경우 "시작년도를 더 작은 숫자로 써야지.." 출력
-				
-				
+				System.out.print("시작년도 입력 " );
+				int startYear = Integer.parseInt(sc.nextLine());
+				System.out.print("끝 년도 입력 : ");
+				int endYear = Integer.parseInt(sc.nextLine());
+				if (startYear > endYear) {
+					System.out.println("시작년도를 더 작은 숫자로 써야지..");
+				} else {
+					System.out.println(calc.leapDate(startYear, endYear));
+				}
+
+
 			}else if(menu == 0) {
 				
 				System.out.println("\n메인메뉴로 돌아갑니다.");
