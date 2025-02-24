@@ -11,6 +11,12 @@ import java.util.Calendar;
 public class Calculator implements DateCalculator, MathCalculator, StringCalculator {
     @Override
     public void printNowDateTime() {
+        /**
+         * 1. LocalDateTime을 이용하여 현재 날짜 및 시간의 정보를 얻어 출력하는 메소드
+         *    단, "2024-01-04 17:30:05"  과 같은 형식으로 출력될 수 있도록 하시오.
+         *    (toString, replace, substring, indexOf 메소드 모두 사용하여 푸시오)
+         */
+
 
     }
 
