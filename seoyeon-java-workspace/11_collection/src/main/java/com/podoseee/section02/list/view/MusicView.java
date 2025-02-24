@@ -20,7 +20,7 @@ public class MusicView {
             System.out.print("\n1. 신규 곡 추가");
             System.out.print("\n2. 곡 전체 조회");
             System.out.print("\n3. 특정 곡 삭제");
-            System.out.print("\n4. 특정 곡 수정");
+            System.out.print("\n4. 특정 곡 수정"); // 수정할곡명, 수정곡명, 수정가수명 입력받은 후 요청
             System.out.print("\n5. 특정 곡 검색");
             System.out.print("\n0. 프로그램 종료");
             System.out.print("\n>> 메뉴 선택 : ");
