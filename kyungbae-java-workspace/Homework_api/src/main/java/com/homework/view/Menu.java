@@ -132,7 +132,20 @@ public class Menu {
 				System.out.println("\n* 정수, 실수 아무거나 입력해도 됩니다 * \n");
 				
 				// 두 수(String타입)를 입력받은 후
-				// Calculator 클래스의 sumString 메소드 호출시 전달하여 결과받아 출력하기 
+				// Calculator 클래스의 sumString 메소드 호출시 전달하여 결과받아 출력하기
+				System.out.println("합을 구할 숫자 입력");
+				System.out.print("숫자 1 : ");
+				String num1 = sc.nextLine();
+				System.out.print("숫자 2 : ");
+				String num2 = sc.nextLine();
+
+				int result = calc.sumString(num1, num2);
+				if (num1.contains(".") || num2.contains(".")) {
+					System.out.printf("%s + %s = %d(반올림)\n", num1, num2, result);
+				} else {
+					System.out.printf("%s + %s = %d\n", num1, num2, result);
+				}
+
 				
 			}else if(menu == 2) {
 				System.out.println("\n* 정수형으로만 입력해주세요 *\n");
@@ -140,6 +153,17 @@ public class Menu {
 				// 두 수(String타입)을 입력받은 후 
 				// Calculator 클래스의 minusString 메소드 호출시 전달하여 결과받아 출력하기
 				// 단, 두 수 중에 실수형태로 입력됐을 경우 "정수만 입력하라니깐요." 출력
+				System.out.println("차이를 구할 숫자 입력");
+				System.out.print("숫자 1 : ");
+				String num1 = sc.nextLine();
+				System.out.print("숫자 2 : ");
+				String num2 = sc.nextLine();
+				int result = calc.minusString(num1, num2);
+				if (result == -1) {
+					System.out.println("정수만 입력하라니깐요.");
+				} else {
+					System.out.printf("%s와 %s의 차는 %d 입니다.", num1, num2, result);
+				}
 				
 				
 			}else if(menu == 0) {

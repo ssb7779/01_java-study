@@ -43,12 +43,19 @@ public class Calculator implements DateCalculator, MathCalculator, StringCalcula
 
     @Override
     public int sumString(String num1, String num2) {
-        return 0;
+        // 들어온 num1, num2를 int 또는 double로 변경
+        return (int)Math.round(Double.parseDouble(num1) + Double.parseDouble(num2));
     }
 
     @Override
     public int minusString(String num1, String num2) {
-        return 0;
+        int result = 0;
+        if (num1.contains(".") || num2.contains(".")) {
+            result = -1;
+        }else{
+            result = Math.abs(Integer.parseInt(num1) - Integer.parseInt(num2));
+        }
+        return result;
     }
 
     @Override
