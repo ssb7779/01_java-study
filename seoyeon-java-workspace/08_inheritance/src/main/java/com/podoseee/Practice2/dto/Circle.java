@@ -28,7 +28,7 @@ public class Circle extends Point{
     }
 
     public void draw(){
-        System.out.println("x좌표 : " + getX() + "y좌표 : " + getY());
+        System.out.println("(x, y) :"+ "(" + getX() + ", " + getY() + ")");
         System.out.println("면적 : " + PI*getRadius()*getRadius());
         System.out.println("둘레 : " + PI*getRadius()*2);
     }
