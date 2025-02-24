@@ -14,8 +14,7 @@ public interface DateCalculator {
 	
 	/**
 	 * 2. 전달받은 년도,월,일(문자열형태)을 가지고 Calendar객체에 반영시켜 반환하는 메소드
-	 * 
-	 * @param year
+0 	 * @param year
 	 * @param month
 	 * @param date
 	 * @return
