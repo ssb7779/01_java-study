@@ -15,6 +15,9 @@ public class Application2 {
 
         /*
             * Arrays.asList 유의사항
+              fixed-size list 반환함 (길이 변경이 불가능한 리스트)
+              새로운 요소 추가 및 요소 삭제 불가능
+              단, 기존의 요소를 새로운 요소로 변경은 가능
 
          */
         //seasonList.add("사계절"); // UnsupportedOperationException 발생
@@ -36,8 +39,9 @@ public class Application2 {
         System.out.println("hobbyList : " + hobbyList);
 
         /*
-            * List.of 유의사항
-
+             * List.of 유의사항
+              unmodifiable list 반환함 (수정 자체가 불가능한 리스트)
+              새로운 요소 추가, 삭제, 변경 모두 안됨
          */
 
         //hobbyList.add("요리");

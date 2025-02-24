@@ -8,9 +8,13 @@ import java.util.List;
 public class Application1 {
     public static void main(String[] args) {
         /*
-            ## java.util.ArrayList ##
-
-
+             ## java.util.ArrayList ##
+            1. 가장 많이 사용되는 컬렉션
+            2. JDK 1.2 부터 제공
+            3. 선형 자료구조로 내부적으로 배열을 이용하여 요소를 관리
+               따라서 인덱스를 이용하여 배열 요소에 빠르게 접근 가능
+            4. 배열의 단점을 보완하기 위해 만들어짐
+               크기 변경, 요소 추가, 삭제, 정렬 등이 이미 메소드로 구현되어 제공되고 있음
          */
 
         ArrayList alist = new ArrayList();
