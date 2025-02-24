@@ -16,6 +16,7 @@ public class MusicView {
 
         System.out.println("학원에서 작업한 코드");
         System.out.println("집에서올린코드");
+        System.out.println("집에서 올린코드1");
 
         while (true) {
             System.out.println("\n=== 음악 관리 프로그램 ===");
