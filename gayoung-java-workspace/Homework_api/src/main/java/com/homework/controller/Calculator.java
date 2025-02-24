@@ -14,7 +14,7 @@ public class Calculator implements DateCalculator, MathCalculator, StringCalcula
     // StringCalculator, MathCalculator, DateCalculator 인터페이스에 추상메소드로 정의되어있다.
     // 세 인터페이스를 구현하는 클래스로 완성하시오. 즉, implements 하여 해당 각 메소드를 완성하시오.
 
-    // 메뉴 1, 2, 3
+    // 메뉴 1, 2, 3, 4
     // StringCalculator 인터페이스에 있는 메소드 오버라이딩
 
     // 1. 전달받은 문자열로부터 전달된 문자가 대소문자 상관없이 몇 개있는지 반환하는 메소드
@@ -71,8 +71,29 @@ public class Calculator implements DateCalculator, MathCalculator, StringCalcula
             StringTokenizer st = new StringTokenizer(foodStr[i], ",");
             foodShopArr[i] = new FoodShop(Integer.parseInt(st.nextToken()),st.nextToken(),st.nextToken(), st.nextToken(), st.nextToken(), makeCalendar()); //
         }
-
-
         return foodShopArr;
+    }
+
+    // mathGameMenu 인터페이스에 있는 메소드 오버라이딩
+    // 1번 전달받은 두 숫자(문자열형태)의 덧셈 결과를 구해 반환하기
+    // 단, 실수값형태의 문자열일 경우 덧셈 연산 후 반올림해서 반환하기
+    @Override
+    public int sumString(String num1, String num2) {
+        Double numA = Double.parseDouble(num1);
+        Double numB = Double.parseDouble(num2);
+
+        return (int)Math.round(numA - numB);
+    }
+    // 2번 전달받은 두 숫자(문자열형태)의 차(절대값)를 구해 반환하기.
+    // 단, 실수값형태의 문자열일 경우 -1을 바로 반환할 것
+    @Override
+    public int minusString(String num1, String num2) {
+        if (num1.contains(".") || num2.contains(".")){
+            return -1;
+        }
+        int numA = Integer.parseInt(num1);
+        int numB = Integer.parseInt(num2);
+
+        return (int)Math.abs(numA - numB);
     }
 }

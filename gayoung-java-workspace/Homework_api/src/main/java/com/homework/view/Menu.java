@@ -99,10 +99,7 @@ public class Menu {
 			}else {
 				System.out.println("\n다시 메뉴를 선택해주세요.");
 			}
-
-
 		}
-
 	}
 
 	public void mathGameMenu() {
@@ -118,15 +115,30 @@ public class Menu {
 			sc.nextLine();
 
 			if(menu == 1) {
-
-				System.out.println("\n* 정수, 실수 아무거나 입력해도 됩니다 * \n");
-
 				// 두 수(String타입)를 입력받은 후
+				System.out.println("\n* 정수, 실수 아무거나 입력해도 됩니다 * \n");
+				System.out.print("첫번째수 입력 : ");
+				String num1 = sc.nextLine();
+				System.out.print("두번째수 입력 : ");
+				String num2 = sc.nextLine();
+
 				// Calculator 클래스의 sumString 메소드 호출시 전달하여 결과받아 출력하기
+				int result = calc.sumString(num1, num2);
+				System.out.println("\n결과 : " + result);
 
 			}else if(menu == 2) {
 				System.out.println("\n* 정수형으로만 입력해주세요 *\n");
+				System.out.print("첫번째수 입력 : ");
+				String num1 = sc.nextLine();
+				System.out.print("두번째수 입력 : ");
+				String num2 = sc.nextLine();
+				int result = calc.minusString(num1, num2);
 
+				if (result == -1){
+					System.out.println("정수만 입력하라니깐요.");
+				} else {
+					System.out.println(result);
+				}
 				// 두 수(String타입)을 입력받은 후
 				// Calculator 클래스의 minusString 메소드 호출시 전달하여 결과받아 출력하기
 				// 단, 두 수 중에 실수형태로 입력됐을 경우 "정수만 입력하라니깐요." 출력
