@@ -14,6 +14,8 @@ public class MusicView {
     // 메인화면
     public void mainMenu() {
 
+        System.out.println("집에서올린코드");
+
         while (true) {
             System.out.println("\n=== 음악 관리 프로그램 ===");
             System.out.println("1. 신규 곡 추가");
