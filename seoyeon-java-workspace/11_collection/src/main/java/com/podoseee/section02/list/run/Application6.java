@@ -7,6 +7,9 @@ public class Application6 {
 
         /*
             ## java.util.Stack ##
+            1. Vector 클래스를 상속받아 구현
+            2. 선형 메모리 공간에 데이터를 저장하며
+               후입선출(LIFO - Last Input First Out) 방식의 자료구조
          */
 
         Stack<Integer> intStack = new Stack<>();

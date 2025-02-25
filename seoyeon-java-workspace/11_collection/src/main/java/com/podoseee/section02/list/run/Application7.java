@@ -5,8 +5,12 @@ import java.util.Queue;
 
 public class Application7 {
     public static void main(String[] args) {
-        /*
+         /*
             ## java.util.Queue ##
+            1. 선형 메모리 공간에 데이터를 저장하는
+               선입선출(FIFO - First In First Out) 방식의 자료구조
+            2. Queue는 인터페이스므로 생성 불가
+               Queue를 구현하고 있는 LinkedList를 주로 사용함
          */
 
         Queue<String> que = new LinkedList<>();

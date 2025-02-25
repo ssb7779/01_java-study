@@ -8,12 +8,21 @@ import java.util.Set;
 public class Application1 {
     /*
             ## Map 컬렉션 ##
+        1. Collection 인터페이스와는 다른 저장 방식을 가짐
+        2. 키(Key)와 값(Value)을 하나의 쌍으로 저장하는 방식
+        3. 구성요소
+           1) Key   : 값(Value)을 식별해주는 식별자의 역할 (Set 형태로 관리 => 순서유지x, 중복허용x)
+           2) Value : 데이터, 중복 허용됨
+           3) Entry : Key와 Value를 함께 칭함
 
          */
     public static void main(String[] args) {
 
         /*
             ## java.util.HashMap ##
+            1. Map을 구현한 하위 클래스들 중 가장 많이 사용되는 클래스
+            2. JDK 1.2 부터 제공
+            3. 해시 알고리즘을 사용하여 내부적으로 검색 속도가 매우 빠름
 
          */
 
