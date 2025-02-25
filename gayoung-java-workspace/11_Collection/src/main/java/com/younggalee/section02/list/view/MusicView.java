@@ -21,6 +21,9 @@ public class MusicView {
             System.out.println("3. 특정 곡 삭제");
             System.out.println("4. 특정 곡 수정");
             System.out.println("5. 특정 곡 검색");
+            System.out.println("6. 가수명을 통해 곡명 검색");
+            System.out.println("7. 해당 가수명이 포함된 곡 개수 출력");
+            System.out.println("8. 곡 정렬 조회");
             System.out.println("0. 프로그램 종료");
 
             System.out.println(">> 메뉴선택");
@@ -28,11 +31,14 @@ public class MusicView {
             sc.nextLine();
 
             switch(menu){
-                case 1: inputMusic();break;
+                case 1: inputMusic(); break;
                 case 2: selectMusic(); break;
                 case 3: removeMusic(); break;
-                case 4: break;
-                case 5: break;
+                case 4: modifyMusic(); break;
+                case 5: searchMusic(); break;
+                case 6: searchByArtist(); break;
+                case 7: numSelectMusic(); break;
+                case 8: sortMusic(); break;
                 case 0:
                     System.out.println("프로그램 종요");
                 default:
@@ -86,6 +92,78 @@ public class MusicView {
             System.out.println("성공적으로 삭제되었습니다.");
         } else{
             System.out.println("삭제할 곡을 찾지 못했습니다. ");
+        }
+    }
+
+    //곡 수정용 서브화면
+    public void modifyMusic(){
+        System.out.println("\n==========특정 곡 수정==========");
+        System.out.print("수정하고자하는 곡명: ");
+        String title = sc.nextLine();
+        System.out.print("수정 내용 곡명 : ");
+        String upTitle = sc.nextLine();
+        System.out.print("수정 내용 가수명 : ");
+        String upArtist = sc.nextLine();
+
+        int result = mc.updateMusic(title, upTitle, upArtist);
+        if(result > 0){
+            System.out.println("성공적으로 수정되었습니다. ");
+        } else {
+            System.out.println("수정할 곡을 찾지 못했습니다.");
+        }
+
+    }
+
+    // 곡 검색용 서브화면
+    public void searchMusic(){
+        System.out.println("\n ==== 특정 곡 검색 ====");
+        System.out.print("검색할 곡명(키워드도 가능) : ");
+        String keyword = sc.nextLine();
+
+        List<Music> searchList = mc.selectMusicByKeyword(keyword);
+        if(searchList.isEmpty()){
+            System.out.println("검색결과가 없습니다. ");
+        } else {
+            for(Music m : searchList){
+                System.out.println(m);
+            }
+        }
+    }
+    public void searchByArtist(){
+        System.out.println("\n ==== 가수명을 통해 곡명 찾기 ====");
+        System.out.print("검색할 가수명(키워드도 가능) : ");
+        String artist = sc.nextLine();
+        List<Music> artistMusic = mc.searchArtist(artist);
+
+        if(artistMusic.isEmpty()){
+            System.out.println("검색결과가 없습니다. ");
+        } else {
+            for(Music m : artistMusic){
+                System.out.println(m);
+            }
+        }
+    }
+    public void numSelectMusic(){
+        System.out.println("\n ==== 특정 곡 검색 ====");
+        System.out.print("검색할 곡명(키워드도 가능) : ");
+        String title = sc.nextLine();
+        int num = mc.numMusicList(title);
+        System.out.println(num + "개 입니다.");
+    }
+
+    public void sortMusic(){
+        System.out.println("\n====== 곡 정렬 조회 ========");
+        System.out.println("1. 가수명 오름차순");
+        System.out.println("2. 가수명 내림차순");
+        System.out.println("3. 곡명 오름차순");
+        System.out.println("4. 곡명 오름차순");
+        System.out.print(">> 메뉴선택 : ");
+        int menu = sc.nextInt();
+
+        List<Music> list = mc.sortMusic(menu);
+
+        for(Music m : list){
+            System.out.println(m);
         }
     }
 }

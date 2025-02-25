@@ -38,6 +38,7 @@ public class Application2 {
         cal1.set(Calendar.MONTH, Calendar.JULY); // Calendar 에서 월은 0~11로 취급 또는 Calendar.달
         cal1.set(Calendar.DATE,11);
         System.out.println(cal1);
+        System.out.println("===========");
 
         // 방법2. 생성할 때 값 전달하기
         Calendar cal2 = new GregorianCalendar(2023, Calendar.JULY, 11);
