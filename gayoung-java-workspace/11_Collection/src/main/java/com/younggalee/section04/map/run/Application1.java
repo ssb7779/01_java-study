@@ -67,7 +67,7 @@ public class Application1 {
             String key = entry.getKey();
             Object value = entry.getValue();
 
-            System.out.println(key, value);
+//            System.out.println(key, value);
         }
     }
 }
