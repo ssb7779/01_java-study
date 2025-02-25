@@ -36,7 +36,6 @@ public class Music implements Comparable<Music> {
                 '}';
     }
 
-
     @Override
     public int compareTo(Music o) {
         // Collections.sort 메소드 수행시 내부적으로 Music객체간에 비교할 때 호출되는 메소드
@@ -46,16 +45,14 @@ public class Music implements Comparable<Music> {
         // ex) 가수명으로 오름차순 정렬 하도록
         //     => 앞의 Music 가수명이 크고, 뒤의 Music 가수명이 작을 경우
         //     => 순서가 바뀌어질 수 있도록 (양수를 반환시켜야됨)
-
         /*
-        if(this.artist > o.artist) {
+        if(this.artist > o.artist){
             return 양수;
         }else{
             return 음수;
         }
+         */
 
-        return 0;
-        */
-    return artist.compareTo(o.artist); // 문자열의  compareTo : 앞의 문자열이 더 클경우 양수 반환
+        return artist.compareTo(o.artist); // 문자열의 compareTo : 앞의 문자열이 더 클경우 양수 반환
     }
 }
