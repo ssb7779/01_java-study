@@ -34,5 +34,51 @@ public class BookController {
         return bookList;
     }
 
+    public List<Book> searchBook(int menu, String input){
+        List<Book> list = new ArrayList<>();
+        if(menu == 1){
+            for (Book b : bookList) {
+                if (b.getTitle().contains(input)) {
+                    list.add(b);
+                }
+            }
+        } else if (menu == 2) {
+            for(Book b : bookList){
+                if(b.getAuthor().contains(input)){
+                    list.add(b);
+                }
+            }
+        } else if (menu == 3) {
+            for(Book b : bookList){
+                if(b.getTitle().contains(input) || b.getAuthor().contains(input)){
+                    list.add(b);
+                }
+            }
+        }
+        return list;
+    } // searchBook end
+
+    public int deleteBook(String title, String author) {
+        int result = 0;
+//        for (int i = 0; i < bookList.size(); i++) {
+//            if (bookList.get(i).getTitle().equals(title)
+//                    && bookList.get(i).getAuthor().equals(author)) {
+//                bookList.remove(i);
+//                result++;
+//                break;
+//            }
+//
+//        }
+        for (Book b : bookList){
+            if (b.getTitle().equals(title) && b.getAuthor().equals(author)){
+                bookList.remove(b);
+                result++;
+                break;
+            }
+        }
+        return result;
+    }
+
+
 
 }
