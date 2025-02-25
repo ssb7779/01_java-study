@@ -31,7 +31,7 @@ public class Application7 {
         System.out.println(que.peek());
         que.poll();
         System.out.println(que.peek());
-        
+
         String b = que.poll();
         System.out.println(b);
         System.out.println(que);
