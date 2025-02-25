@@ -1,6 +1,6 @@
-package com.pch.section07.objectarray.run;
+package com.pch.section02.objectarray.run;
 
-import com.pch.section07.objectarray.dto.Employee;
+import com.pch.section02.objectarray.dto.Employee;
 
 import java.util.ArrayList;
 import java.util.List;
