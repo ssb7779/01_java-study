@@ -142,6 +142,11 @@ public class BookMenu {
         System.out.println("삭제할 저자명 : ");
         String author = sc.nextLine();
         int result = bc.deleteBook(title, author);
+        if (result == 1) {
+            System.out.println("성공적으로 삭제되었습니다.");
+        } else{
+            System.out.println("삭제할 도서가 존재하지 않습니다.");
+        }
 
     }
 

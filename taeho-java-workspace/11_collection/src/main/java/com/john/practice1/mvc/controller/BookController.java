@@ -84,8 +84,9 @@ public class BookController {
         // 현재 도서들 중 전달된 도서명과 저자명이 일치하는 도서를 찾아 삭제하고
         // 성공여부 값을 1 또는 0으로 반환하기
         for (int i = 0; i < bookList.size(); i++) {
-            if (bookList.get(i).getTitle().toLowerCase().contains(title.toLowerCase())) {
-                if (bookList.get(i).getAuthor().toLowerCase().contains(author.toLowerCase())) {
+            if (bookList.get(i).getTitle().equalsIgnoreCase(title)) {
+                if (bookList.get(i).getAuthor().equals(author.toLowerCase())) {
+                    return 1;
                 }
             }
         }
