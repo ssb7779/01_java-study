@@ -2,7 +2,12 @@ package section03.set.dto;
 
 import java.util.Objects;
 
-public class Student{
+public class Student implements Comparable<Student> {
+    @Override
+    public int compareTo(Student o) {
+        return Integer.compare(this.age, o.age);
+    }
+
     private String name;
     private int age;
     private int score;
