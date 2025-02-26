@@ -32,7 +32,7 @@ public class Application1 {
         stu.put("kor" , 100);
         stu.put("eng", 80);
         stu.put("kor", 60);
-        // 일회용 DYO 같은 느낌
+        // 일회용 DTO 같은 느낌
 
         System.out.println(stu); // 순서유지 안됨 , 키가 중복될 경우 value는 덮어씌워짐
 
@@ -56,9 +56,9 @@ public class Application1 {
 
         // Map 내의 모든 key-value 순회 가능
         // 방법1. keySet() : Map내의 key들만 따로 담기는 Set 반환
-        Set<String> ketset  = stu2.keySet();        // 1) 키들의집함
+        Set<String> ketSet  = stu2.keySet();        // 1) 키들의 집함
 
-        Iterator<String> itKey = ketset.iterator(); // 2) 반복자 담기
+        Iterator<String> itKey = ketSet.iterator(); // 2) 반복자에 담기
 
         while(itKey.hasNext()){                     // 3) 반복문으로 키 도출
 

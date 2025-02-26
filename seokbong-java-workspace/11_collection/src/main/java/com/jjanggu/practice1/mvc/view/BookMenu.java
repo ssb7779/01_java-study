@@ -77,14 +77,19 @@ public class BookMenu {
     }
 
     public void searchBook() {
-        System.out.println("===== 검색 메뉴=====");
-        System.out.println("1. 도서명으로 검색");
-        System.out.println("2. 저자명으로 검색");
-        System.out.println("3. 도서명+저자명으로 검색");
-        System.out.println("0. 뒤로가기");
-        System.out.println(">> 메뉴 번호 선택 : ");
-        int menu = sc.nextInt();
-        sc.nextLine();
+        while(true){
+            System.out.println("===== 검색 메뉴=====");
+            System.out.println("1. 도서명으로 검색");
+            System.out.println("2. 저자명으로 검색");
+            System.out.println("3. 도서명+저자명으로 검색");
+            System.out.println("0. 뒤로가기");
+            System.out.println(">> 메뉴 번호 선택 : ");
+            int menu = sc.nextInt();
+            sc.nextLine();
+            System.out.println("검색할 키워드 : ");
+            String keyword = sc.nextLine();
+        }
+
 
 
 

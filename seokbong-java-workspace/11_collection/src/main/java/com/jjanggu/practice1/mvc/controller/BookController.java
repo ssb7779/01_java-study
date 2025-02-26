@@ -37,8 +37,31 @@ public class BookController {
         return bookList;
     }
 
-    public void searchBook(){
+    public List<Book> searchBook(int menu, String keyword){
+        List<Book> searchList = new ArrayList<>();
 
+         switch(menu){
+             case 1:
+                 for(int i = 0; i < bookList.size(); i++){
+                     if(bookList.get(i).getAuthor().contains(keyword)){
+                         searchList.add( bookList.get(i) );
+                     }
+                 }return searchList;
+             case 2:
+                 for(int i = 0; i < bookList.size(); i++){
+                     if(bookList.get(i).getAuthor().contains(keyword)){
+                         searchList.add( bookList.get(i) );
+                     }
+                 }return searchList;
+             case 3:
+                 for(int i = 0; i < bookList.size(); i++){
+                     if(bookList.get(i).getTitle().contains(keyword) || bookList.get(i).getAuthor().contains(keyword) ){
+                         searchList.add( bookList.get(i) );
+                     }
+                 }return searchList;
+         }
+
+        return searchList;
     }
 
 }
