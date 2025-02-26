@@ -28,7 +28,7 @@ public class Application1 {
         Map<String, Object> stu = new HashMap<>();
         // put(K, V) : 전달된 키-값을 map에 저장
         stu.put("name", "홍길동");
-        stu.put ("height", 120.1);
+        stu.put ("height", 120.1); // 동일한 key 로 다른 value put 하면 덮어씌어짐
         System.out.println(stu.get("name"));
         System.out.println(stu.get("height"));
         double height = (Double) stu.get("height"); // 반환값은 V타입 (Object)로 반환될 것임. 따라서 다운캐스팅 필요
@@ -58,7 +58,7 @@ public class Application1 {
         }
 
         // 방법2. entrySet() : Map내에 key-value 세트가 entry 타입으로 담겨있는 Set 반환
-        Set<Map.Entry<String, Object>> entrySet = stu2.entrySet(); // 키-밸류 세트의 집합
+        Set<Map.Entry<String, Object>> entrySet = stu2.entrySet(); // entry<키-밸류> 세트의 집합 *return타입 주의
         Iterator<Map.Entry<String, Object>> itEntry = entrySet.iterator();
 
         while(itEntry.hasNext()){
