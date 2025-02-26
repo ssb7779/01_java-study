@@ -4,9 +4,14 @@ import java.util.Scanner;
 
 public class Application1 {
     /*
-        ## 예외 처리 ##
+        ## 예외 핸들링 ##
+        1. try~catch문 (예외처리)
+        2. throws      (예외회피)
 
         ## try~catch문 ##
+        발생되는 예외를 직접 처리하는 예외처리 방법
+        - 예외가 발생될 수 있는 구문을 try 블럭에 작성
+        - 예외 발생시 처리할 구문을 catch 블럭에 작성
      */
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

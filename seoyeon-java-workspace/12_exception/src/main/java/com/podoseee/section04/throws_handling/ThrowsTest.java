@@ -8,7 +8,12 @@ public class ThrowsTest {
 
     /*
         ## throws ##
+        발생되는 예외를 위임(떠넘기기, 던지기)하는 예외회피 방법
+        즉, 해당 메소드를 호출하는 곳으로 예외를 던지는 방식
 
+           public 반환타입 메소드명(매개변수) throws 예외클래스1, 예외클래스2, .. {
+                // 예외 발생되는 구문
+           }
      */
 
     public void exceptionCase() throws IOException{
