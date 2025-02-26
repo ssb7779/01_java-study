@@ -30,8 +30,7 @@ public class NamingTest {
     }
 
     public boolean isSpecialWord(String user) {
-        for (String strToken : user.split("")) {
-            char token = strToken.charAt(0);
+        for (char token : user.toCharArray()) {
             /// 대소문자영어 + 특정 특수문자
             if (Character.isLetterOrDigit(token) || (token == '$' || token == '_')) {
                 continue;
