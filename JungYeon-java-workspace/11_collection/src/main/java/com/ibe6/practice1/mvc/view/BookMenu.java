@@ -1,3 +1,4 @@
+/*
 package com.ibe6.practice1.mvc.view;
 
 import com.ibe6.practice1.mvc.controller.BookController;
@@ -61,6 +62,8 @@ public class BookMenu{
         //                                >> 또는 for each 문 이용하여 출력
     }
 
+ */
+/*
     public void searchBook() {
 				/*
 					===== 검색 메뉴 =====
@@ -77,8 +80,9 @@ public class BookMenu{
 
         // 해당 리스트가 비어 있을 경우		>> “검색 결과가 없습니다.”출력
         // 해당 리스트가 비어있지 않을 경우	>> for문을 이용하여 검색 도서 출력
-    }
+//    }
 
+    /*
     public void deleteBook(){
         // “삭제할 도서명 : “ 				>> String 타입으로 입력 받기
         // “삭제할 저자명 : “				>> String 타입으로 입력 받기
@@ -89,3 +93,5 @@ public class BookMenu{
     }
 
 }
+
+*/

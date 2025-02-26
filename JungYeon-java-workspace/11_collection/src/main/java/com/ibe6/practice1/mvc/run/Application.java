@@ -1,3 +1,4 @@
+/*
 package com.ibe6.practice1.mvc.run;
 
 import com.ibe6.practice1.mvc.view.BookMenu;
@@ -7,3 +8,6 @@ public class Application {
         new BookMenu().mainMenu();
     }
 }
+
+
+ */
