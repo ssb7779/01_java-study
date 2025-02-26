@@ -33,7 +33,7 @@ public class NamingTest {
         for (String strToken : user.split("")) {
             char token = strToken.charAt(0);
             /// 특수문자라면
-            if (token == '$' || token == '_' && Character.isLetterOrDigit(token)) {
+            if (Character.isLetterOrDigit(token) || (token == '$' || token == '_')) {
                 continue;
             }
             /*
