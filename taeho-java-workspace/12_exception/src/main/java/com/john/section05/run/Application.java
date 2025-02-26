@@ -1,4 +1,6 @@
-package com.john.section05.throws_exception;
+package com.john.section05.run;
+
+import com.john.section05.throws_exception.ThrowTest;
 
 import java.util.Scanner;
 
