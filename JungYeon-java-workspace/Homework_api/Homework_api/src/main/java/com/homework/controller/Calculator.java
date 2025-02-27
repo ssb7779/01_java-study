@@ -6,6 +6,7 @@ import com.homework.common.MathCalculator;
 import com.homework.common.StringCalculator;
 import com.homework.dto.FoodShop;
 
+import java.time.LocalDateTime;
 import java.util.Calendar;
 
 public class Calculator implements DateCalculator, MathCalculator, StringCalculator {
@@ -16,6 +17,8 @@ public class Calculator implements DateCalculator, MathCalculator, StringCalcula
          *    단, "2024-01-04 17:30:05"  과 같은 형식으로 출력될 수 있도록 하시오.
          *    (toString, replace, substring, indexOf 메소드 모두 사용하여 푸시오)
          */
+        LocalDateTime dateTime1 = LocalDateTime.now();
+        System.out.println(dateTime1.toString().replace("T", " ").substring(0,8));
 
 
     }
