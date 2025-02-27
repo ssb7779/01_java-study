@@ -130,6 +130,11 @@ public class LibraryMenu {
             book = new Book(title, author, publisher);
         }
 
+        if(book == null){
+            System.out.println("존재하지 않는 카테고리입니다.");
+            return;
+        }
+
         if (lm.isExist(book)) {
             System.out.println("이미 존재하는 책입니다.");
             return;
