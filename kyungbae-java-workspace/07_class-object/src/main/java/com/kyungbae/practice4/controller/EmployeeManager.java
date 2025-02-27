@@ -9,18 +9,41 @@ public class EmployeeManager {
         return true;
     }
 
-    public Boolean modifyName(String name){
+    public boolean modifyName(String name){
         emp.setEmpName(name);
         return true;
     }
 
-    public Boolean modifySalary (String salary){
+    public boolean modifySalary (String salary){
         emp.setSalary(salary);
         return true;
     }
 
-    public Boolean modifyDept (String dept){
-        emp.setDept();
+    public boolean modifyDept (String dept){
+        emp.setDept(dept);
+        return true;
+    }
+
+    public boolean modifyJob(String job){
+        emp.setJob(job);
+        return true;
+    }
+
+    public boolean deleteEmployee(){
+        emp.setEmpName(null);
+        emp.setDept(null);
+        emp.setJob(null);
+        emp.setAge(null);
+        emp.setGender(null);
+        emp.setSalary(null);
+        emp.setBonusPoint(null);
+        emp.setPhone(null);
+        emp.setAddress(null);
+        return true;
+    }
+
+    public String outputEmployee(){
+        return emp.toString();
     }
 
 

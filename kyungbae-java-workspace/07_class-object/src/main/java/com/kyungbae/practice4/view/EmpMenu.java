@@ -25,8 +25,8 @@ public class EmpMenu {
             switch (menu){
                 case 1 : inputEmployee(); break;
                 case 2 : modifyEmployee(); break;
-                case 3 :  break;
-                case 4 :  break;
+                case 3 : deleteEmployee(); break;
+                case 4 : outputEmployee(); break;
                 case 0 :  return;
                 default:
                     System.out.println("다시 입력해주세요.");
@@ -79,32 +79,68 @@ public class EmpMenu {
 
             switch (menu){
                 case 1:
+                    System.out.print("이름 입력: ");
                     String name = sc.nextLine();
                     if(em.modifyName(name)){
                         System.out.println("이름이 변경되었습니다.");
                     };
                     break;
                 case 2:
+                    System.out.print("급여 입력: ");
                     String salary = sc.nextLine();
                     if(em.modifySalary(salary)){
                         System.out.println("급여가 변경되었습니다.");
                     }
                     break;
                 case 3:
+                    System.out.print("부서 입력: ");
                     String dept = sc.nextLine();
-                    if (em.modifyDept){
+                    if (em.modifyDept(dept)){
                         System.out.println("부서가 변경되었습니다.");
                     }
                     break;
-                case 4:  break;
+                case 4:
+                    System.out.print("직급 입력: ");
+                    String job = sc.nextLine();
+                    if (em.modifyJob(job)){
+                        System.out.println("직급이 변경되었습니다.");
+                    }
+                    break;
                 case 0:
-                    System.out.println("이전 메뉴로 돌아갑니다."); return;
+                    System.out.println("이전 메뉴로 돌아갑니다.");
+                    return;
                 default:
                     System.out.println("잘못 입력하셨습니다.");
             }
         }
 
 
+    }
+
+    public void deleteEmployee(){
+
+        while (true) {
+            System.out.println("\n=== 사원 정보 삭제 ===");
+            System.out.print("정말 삭제하시겠습니까? (y/n) : ");
+            char c = sc.nextLine().charAt(0);
+            if (c == 'y' || c == 'Y') {
+                if(em.deleteEmployee()) {
+                    System.out.println("삭제되었습니다.");
+                }
+                break;
+            } else if (c == 'n' || c == 'N') {
+                System.out.println("메뉴로 돌아갑니다.");
+                break;
+            } else {
+                System.out.println("잘못 입력하셨습니다. 다시 입력부탁드립니다.");
+            }
+        }
+
+    }
+
+    public void outputEmployee(){
+        System.out.println("\n=== 사원 정보 출력 ===");
+        System.out.println(em.outputEmployee());
     }
 
 }
