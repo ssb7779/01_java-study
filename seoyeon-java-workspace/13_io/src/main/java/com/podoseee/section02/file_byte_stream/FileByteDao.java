@@ -11,7 +11,6 @@ public class FileByteDao {
         - File : 파일이라는 외부매체와 직접 연결되는 "기반스트림"
         - OutputStream : 자바프로그램상의 데이터를 1byte 단위로 출력하는 "바이트스트림"
         - InputStream  : 자바프로그램상으로 데이터를 1byte 단위로 입력받는 "바이트스트림"
-
      */
 
     // * 프로그램(메모리) => 외부매체(파일) : 출력
