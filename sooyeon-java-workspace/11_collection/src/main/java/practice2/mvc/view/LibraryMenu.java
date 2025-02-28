@@ -1,11 +1,16 @@
 package practice2.mvc.view;
 
+import practice2.mvc.comparator.BookAuthorComparator;
+import practice2.mvc.comparator.BookPublisherComparator;
+import practice2.mvc.comparator.BookTitleComparator;
 import practice2.mvc.controller.LibraryManager;
 import practice2.mvc.dto.AniBook;
 import practice2.mvc.dto.Book;
 import practice2.mvc.dto.CookBook;
 import practice2.mvc.dto.Member;
 
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Scanner;
 
@@ -38,6 +43,7 @@ public class LibraryMenu {
             System.out.println("2. 새로운 도서 추가");    // 기능 추가 해보기
             System.out.println("3. 기존 도서 삭제");    // 기능 추가 해보기
             System.out.println("4. 기존 도서 수정");    // 기능 추가 해보기
+            System.out.println("5. 기본 도서 순서 변경");
             System.out.println("0. 프로그램 종료하기");
             System.out.print(">> 메뉴 선택 : ");
             int menu = sc.nextInt();
@@ -222,10 +228,35 @@ public class LibraryMenu {
     }
 
     public void selectAll() {
+        System.out.println("""
+                어떤 기준으로 정렬
+                1. 기본(추가 순서)
+                2. 이름
+                3. 저자
+                4. 출판사
+                """);
+        int sortType= sc.nextInt();
+        sc.nextLine();
+
         List<Book> result = lm.selectAll();
+        if(sortType == 2){
+            result.sort(new BookTitleComparator());
+        }else if(sortType == 3){
+            result.sort(new BookAuthorComparator());
+        }else if(sortType == 4){
+            result.sort(new BookPublisherComparator());
+        }
+
+        System.out.println("내림차순을 원하시면 1, 아니면 2를 입력하세요.");
+        boolean isDescendant = sc.nextInt() == 1;
+        if(isDescendant){
+            Collections.reverse(result);
+        }
+
         for (int i = 0; i < result.size(); i++) {
             System.out.println(i + 1 + "번째 " + result.get(i));
         }
+
     }
 
     public void searchBook() {

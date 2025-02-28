@@ -90,7 +90,7 @@ public class LibraryManager {
     }
 
     public List<Book> selectAll() {
-        return this.bookList;
+        return new ArrayList<>(bookList); ///정렬할때 원본이 변경되지않게하기 위해서 복사하고 보내야됨
     }
 
     public List<Book> searchBook(String keyword) {
