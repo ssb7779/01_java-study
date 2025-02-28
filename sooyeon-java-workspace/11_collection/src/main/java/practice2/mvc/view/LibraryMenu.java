@@ -50,10 +50,21 @@ public class LibraryMenu {
             sc.nextLine();
 
             switch (menu) {
-                case 1: selectAll();break;
-                case 2: addNewBookInLibrary();break;
-                case 3: deleteBookInLibrary();break;
-                case 4: editBookInLibrary();break;
+                case 1:
+                    selectAll();
+                    break;
+                case 2:
+                    addNewBookInLibrary();
+                    break;
+                case 3:
+                    deleteBookInLibrary();
+                    break;
+                case 4:
+                    editBookInLibrary();
+                    break;
+                case 5:
+                    switchBookOrder();
+                    break;
                 case 0:
                     System.out.println("안녕히가세요 관리자님.");
                     return;
@@ -101,7 +112,22 @@ public class LibraryMenu {
     }
 
 
+    public void switchBookOrder() {
+        List<Book> basicOrderBookList = lm.selectAll();
+        for (int i = 0; i < basicOrderBookList.size(); i++) {
+            System.out.println(i + 1 + "번째 " + basicOrderBookList.get(i));
+        }
 
+        System.out.println("변경하고싶은 책의 번호를 입력하세요");
+        int book1 = sc.nextInt();
+        int book2 = sc.nextInt();
+
+        if (lm.switchBookOrder(book1, book2)) {
+            System.out.println("순서가 변경되었습니다.");
+        } else {
+            System.out.println("실패");
+        }
+    }
 
 
     public void addNewBookInLibrary() {
@@ -136,7 +162,7 @@ public class LibraryMenu {
             book = new Book(title, author, publisher);
         }
 
-        if(book == null){
+        if (book == null) {
             System.out.println("존재하지 않는 카테고리입니다.");
             return;
         }
@@ -207,8 +233,6 @@ public class LibraryMenu {
     }
 
 
-
-
     public void myPage() {
         Member member = lm.getMember();
         System.out.println(member);
@@ -235,28 +259,27 @@ public class LibraryMenu {
                 3. 저자
                 4. 출판사
                 """);
-        int sortType= sc.nextInt();
+        int sortType = sc.nextInt();
         sc.nextLine();
 
         List<Book> result = lm.selectAll();
-        if(sortType == 2){
+        if (sortType == 2) {
             result.sort(new BookTitleComparator());
-        }else if(sortType == 3){
+        } else if (sortType == 3) {
             result.sort(new BookAuthorComparator());
-        }else if(sortType == 4){
+        } else if (sortType == 4) {
             result.sort(new BookPublisherComparator());
         }
 
         System.out.println("내림차순을 원하시면 1, 아니면 2를 입력하세요.");
         boolean isDescendant = sc.nextInt() == 1;
-        if(isDescendant){
+        if (isDescendant) {
             Collections.reverse(result);
         }
 
         for (int i = 0; i < result.size(); i++) {
             System.out.println(i + 1 + "번째 " + result.get(i));
         }
-
     }
 
     public void searchBook() {
