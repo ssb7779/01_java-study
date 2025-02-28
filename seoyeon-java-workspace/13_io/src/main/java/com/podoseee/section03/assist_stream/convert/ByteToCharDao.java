@@ -26,7 +26,7 @@ public class ByteToCharDao {
     /*
         ## InputStreamReader / OutputStreamWriter ##
      */
-    
+
     // * 프로그램 <= 콘솔
     public void consoleInput(){
 
