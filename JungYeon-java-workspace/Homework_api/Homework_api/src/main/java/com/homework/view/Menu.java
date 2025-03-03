@@ -3,6 +3,7 @@ package com.homework.view;
 
 import com.homework.controller.Calculator;
 
+import java.util.Calendar;
 import java.util.Scanner;
 
 public class Menu {
@@ -149,13 +150,24 @@ public class Menu {
 			if(menu == 1) {
 				
 				System.out.println("\n* 현재 시스템 날짜 및 시간 *\n");
-				
+				calc.printNowDateTime();
 				// Calculator 클래스의 printNowDateTime 메소드 호출하기
 				
 			}else if(menu == 2) {
 				
 				System.out.println("\n* 년도, 월, 일을 정수형으로 입력해주세요 *\n");
-				
+				System.out.print("년도: ");
+				String year = sc.nextLine();
+				System.out.print("월: ");
+				String month = sc.nextLine();
+				System.out.print("일: ");
+				String date = sc.nextLine();
+
+				Calendar cal = calc.makeCalendar(year, month, date);
+
+				calc.printFormat(cal);
+
+
 				// 년도, 월, 일(모두다 String타입)을 입력받은 후 
 				// Calculator 클래스의 makeCalendar 메소드 호출시 전달하여 결과받기
 				
@@ -165,7 +177,8 @@ public class Menu {
 			}else if(menu == 3) {
 				
 				System.out.println("\n* 궁금한 년도를 입력해주세요 *\n");
-				
+				int year = sc.nextInt();
+				= calc.isLeapYear(year);
 				// 년도(String타입)을 입력받은 후 
 				// Calculator클래스의 isLeapYear 메소드 호출시 전달하여 그에 맞는 결과 출력하기 
 				// 윤년일 경우 "해당 년도는 윤년입니다." 그게아닐 경우 "해당 년도는 평년입니다." 출력하기
