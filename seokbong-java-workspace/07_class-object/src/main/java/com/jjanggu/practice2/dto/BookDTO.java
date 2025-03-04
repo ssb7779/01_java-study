@@ -49,6 +49,6 @@ public class BookDTO {
     }
 
     public String getInformation() {
-
+        return title + "\t" + price + "\t" + discountRate + "\t" + author;
     }
 }
