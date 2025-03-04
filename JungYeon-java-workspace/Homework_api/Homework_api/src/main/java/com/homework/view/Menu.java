@@ -71,6 +71,9 @@ public class Menu {
 			}else if(menu == 3) {
 				
 				System.out.println("\n* 여러 영단어(소문자)를 공백과 함께 입력해주세요 *\n");
+				String result = calc.toSpaceUpper("apple kiwi strawberry");
+				System.out.println(result);
+
 				
 				// 문자열(String타입)으로 입력받은 후 
 				// Calculator 클래스의 toSpaceUpper 메소드 호출하면서 전달 후 결과받아 출력하기 
@@ -110,13 +113,31 @@ public class Menu {
 			if(menu == 1) {
 				
 				System.out.println("\n* 정수, 실수 아무거나 입력해도 됩니다 * \n");
-				
+				System.out.print("숫자1: ");
+				String num1 = sc.nextLine();
+				System.out.print("숫자2: ");
+				String num2 = sc.nextLine();
+
+				int result = calc.sumString(String.valueOf(num1), String.valueOf(num2));
+
+				System.out.println("덧셈 결과: " +  result);
+
 				// 두 수(String타입)를 입력받은 후
 				// Calculator 클래스의 sumString 메소드 호출시 전달하여 결과받아 출력하기 
 				
 			}else if(menu == 2) {
 				System.out.println("\n* 정수형으로만 입력해주세요 *\n");
-				
+				System.out.print("숫자1: ");
+				String num1 = sc.nextLine();
+				System.out.print("숫자2: ");
+				String num2 = sc.nextLine();
+
+				int result = calc.minusString(num1, num2);
+				if(result == -1){
+					System.out.println("정수만 입력하라니깐요.");
+				}else {
+					System.out.println("뺄셈 결과: " + result);
+				}
 				// 두 수(String타입)을 입력받은 후 
 				// Calculator 클래스의 minusString 메소드 호출시 전달하여 결과받아 출력하기
 				// 단, 두 수 중에 실수형태로 입력됐을 경우 "정수만 입력하라니깐요." 출력
@@ -178,7 +199,11 @@ public class Menu {
 				
 				System.out.println("\n* 궁금한 년도를 입력해주세요 *\n");
 				int year = sc.nextInt();
-				= calc.isLeapYear(year);
+				if(calc.isLeapYear(year)){
+					System.out.println("해당 년도는 윤년입니다.");
+				}else {
+					System.out.println("해당 년도는 평년입니다.");
+				}
 				// 년도(String타입)을 입력받은 후 
 				// Calculator클래스의 isLeapYear 메소드 호출시 전달하여 그에 맞는 결과 출력하기 
 				// 윤년일 경우 "해당 년도는 윤년입니다." 그게아닐 경우 "해당 년도는 평년입니다." 출력하기
@@ -186,6 +211,16 @@ public class Menu {
 			}else if(menu == 4) {
 				
 				System.out.println("\n* 특정년도 ~ 특정년도 까지의 총 일수를 구해드립니다 *\n");
+				System.out.print("시작년도: ");
+				int startYear = sc.nextInt();
+				System.out.print("끝년도: ");
+				int endYear = sc.nextInt();
+				if( startYear > endYear ) {
+					System.out.println("시작년도를 더 작은 숫자로 써야지..");
+				}else {
+					long sumYear = calc.leapDate(startYear, endYear);
+					System.out.println(sumYear);
+				}
 				
 				// 시작년도, 끝년도(모두 다 String타입)을 입력받은 후 
 				// Calculator 클래스의 leapDate 메소드 호출시 전달하여 결과받아 출력하기
