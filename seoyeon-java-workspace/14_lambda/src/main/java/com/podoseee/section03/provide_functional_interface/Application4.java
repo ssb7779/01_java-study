@@ -8,7 +8,12 @@ public class Application4 {
 
         /*
             ## java.util.function.XXXOperator ##
+            매개변수와 리턴값이 있는 apply 메소드 존재
+            Function과 유사하나 반환값을 전달값과 동일한 타입으로 반환해주는것이 다름
 
+            public interface XXXOperator<T> {
+                T apply(T t);
+            }
          */
 
         // 1. UnaryOperator<T> { T apply(T t) } : 전달된 T타입의 객체를 T타입의 객체로 매핑해서 반환

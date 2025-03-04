@@ -9,7 +9,12 @@ public class Application2 {
     public static void main(String[] args) {
         /*
             ## java.util.function.Supplier ##
+            매개변수 없고 리턴값이 있는 get 메소드 존재
+            특정 값을 반환하는 공급자 역할
 
+            public interface Supplier<T> {
+                T get();
+            }
          */
 
         // 1. Supplier<T> { T get() } : T타입의 객체를 반환

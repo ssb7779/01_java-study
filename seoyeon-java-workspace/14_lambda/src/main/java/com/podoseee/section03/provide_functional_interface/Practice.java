@@ -41,7 +41,15 @@ public class Practice {
 
         //선생님 풀이
         /*
-
+            Supplier<Set<Integer>> lottoGenerate = () -> {
+          Set<Integer> lotto = new TreeSet<>();
+          while(lotto.size() < 6){
+              lotto.add((int)(Math.random() * 45 + 1));
+          }
+          return lotto;
+        };
+        System.out.println(lottoGenerate.get());
+        System.out.println();
          */
 
 /*
@@ -87,6 +95,5 @@ public class Practice {
 
         }
 
-        /* 뒤에 코드 더있나???? */
     }
 }

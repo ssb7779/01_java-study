@@ -8,8 +8,13 @@ public class Application3 {
     public static void main(String[] args) {
         /*
             ## java.util.function.Function ##
+            매개변수와 리턴값이 있는 apply 메소드 존재
+            특정 값을 전달받아 특정 연산 후 반환해주는 역할
+            전달값을 반환값으로 매핑해준다 라고 함
 
-
+            public interface Function<T, R> {
+                R apply(T t);
+            }
          */
 
         // 1. Function<T, R> { R apply(T t) } : 전달된 객체 T를 R로 매핑해서 반환

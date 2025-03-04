@@ -9,13 +9,25 @@ import java.util.function.IntConsumer;
 public class Application1 {
     /*
         ## 표준 함수형 인터페이스 ##
+        1. JDK 8에서 빈번하게 사용되는 함수형 인터페이스를 표준 API로 제공하고 있음
+        2. 주요 종류
+           1) Consumer
+           2) Supplier
+           3) Function
+           4) Operator
+           5) Predicate
 
      */
 
     public static void main(String[] args) {
         /*
-            ## Consumer ##
+            ## java.util.function.Consumer ##
+            매개변수 있고 리턴값이 없는 accept 메소드 존재
+            전달된 인자값을 가지고 해당 값을 사용만 하는 소비자 역할
 
+            public interface Consumer<T> {
+                void accept(T t);
+            }
          */
 
         // 1. Comsumer<T> { void accept(T t) } : 객체 T를 받아 사용
