@@ -60,8 +60,11 @@ public class Application1 {
         // Map 내의 모든 key-value 순회 가능
         // 방법1. keySet() : Map내의 Key들만 따로 담기는 Set 반환
         Set<String> keySet = stu2.keySet();         // 1) 키들의 집합
+
         Iterator<String> itKey = keySet.iterator(); // 2) 반복자에 담기
+
         while (itKey.hasNext()){                    // 3) 반복문으로 키 도출
+
             String key = itKey.next();              // 반복자로부터 키 정보 뽑기
             Object value = stu2.get(key);           // 맵으로부터 밸류 정보 뽑기
             System.out.println("key : " + key + ", value : " + value);
