@@ -8,6 +8,8 @@ import java.io.IOException;
 public class FileCharDao {
     /*
         ## FileWriter / FileReader ##
+        - File : 파일과 연결되는 기반스트림
+        - Writer/Reader : 데이터를 2byte 단위로 입출력하는 문자스트림
      */
 
     public void fileSave(){

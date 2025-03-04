@@ -5,8 +5,9 @@ import java.io.*;
 public class DataDao {
 
     /*
-        ## DataOutputStream / DataInputStream ##
-
+        ## DataOutputStream/DataInputStream ##
+        1. 데이터 타입 입출력 보조 스트림
+        2. 데이터 자료형 별로 처리하는 기능이 추가되었음
      */
 
     public void fileSave(){

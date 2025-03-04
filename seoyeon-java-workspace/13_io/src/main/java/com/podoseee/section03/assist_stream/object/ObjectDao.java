@@ -7,8 +7,12 @@ import java.util.List;
 public class ObjectDao {
     
     /*
-        ## ObjectOutputStream / ObjectInputStream ##
-        
+        ## ObjectOutputStream/ObjectInputStream ##
+        1. 객체 단위로 입출력 할 수 있는 기능의 보조 스트림
+        2. 단, 전달되는 객체는 직렬화가 가능한 상태여야됨
+           * 직렬화
+             자바 객체를 외부에서 사용할 수 있도록
+             바이트(byte) 형태로 데이터를 변환하는 기술
      */
 
     public void fileSave() {
