@@ -15,4 +15,21 @@ public class ShopInformationManager {
     public ShopInformationManager(Shop shop) {
         this.shop = shop;
     }
+
+    public Shop getShop() {
+        return shop;
+    }
+
+    public void editShopName(String newName){
+        shop.setName(newName);
+    }
+
+    public void editShopAddress(String newAddress){
+        shop.setAddress(newAddress);
+    }
+
+    public void editShopMasterId(int newMasterId){
+        shop.setMasterId(newMasterId);
+    }
+
 }

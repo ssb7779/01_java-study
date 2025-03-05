@@ -36,14 +36,25 @@ public class Shop {
         this.address = address;
     }
 
-    public boolean addProduct(Product product) {
+    public Product findProductByName(String name) {
+        for(ProductType type : products.keySet()){
+            for(Product product : products.get(type)){
+                if(product.getName().equals(name)){
+                    return product;
+                }
+            }
+        }
+        throw new IllegalArgumentException("존재하지 않는 상품입니다.");
+    }
+
+    public void addProduct(Product product) {
         List<Product> result = products.get(product.getType());
 
         if(!result.contains(product)) {
             result.add(product);
-            return true;
+            return;
         }
-        return false;
+        throw new IllegalArgumentException("이미 존재하는 상품입니다.");
     }
 
     public List<Product> getCoffees() {

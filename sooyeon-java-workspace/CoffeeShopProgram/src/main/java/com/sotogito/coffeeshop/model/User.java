@@ -1,8 +1,6 @@
 package com.sotogito.coffeeshop.model;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class User {
     private String id;
@@ -11,7 +9,7 @@ public class User {
     private int amount;
     private boolean idAdministrator;
 
-    private final List<Product> orders = new ArrayList<>();
+    private final HashMap<Product, Integer> orders = new HashMap<>(); //상품 + 주문 개수
 
     public User() {
     }
@@ -31,20 +29,20 @@ public class User {
         this.idAdministrator = idAdministrator;
     }
 
-    public boolean addOrder(Product product) {
-        if(!orders.contains(product)) {
-            orders.add(product);
-            return true;
+    public void addOrder(Product product) {
+        if (orders.containsKey(product)) {
+            orders.put(product, orders.get(product) + 1);
+            return;
         }
-        return false;
+        orders.put(product, 1);
     }
 
     public void updateAmount(int amount) {
         this.amount += amount;
     }
 
-    public List<Product> getOrders() {
-        return Collections.unmodifiableList(orders);
+    public Map<Product,Integer> getOrders() {
+        return Collections.unmodifiableMap(orders);
     }
 
     public String getId() {
@@ -67,6 +65,18 @@ public class User {
         return idAdministrator;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        User user = (User) o;
+        return Objects.equals(id, user.id) && Objects.equals(password, user.password);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, password);
+    }
 
     @Override
     public String toString() {

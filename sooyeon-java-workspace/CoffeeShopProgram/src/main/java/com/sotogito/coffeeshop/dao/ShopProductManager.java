@@ -1,6 +1,9 @@
 package com.sotogito.coffeeshop.dao;
 
+import com.sotogito.coffeeshop.model.Product;
 import com.sotogito.coffeeshop.model.Shop;
+
+import java.util.List;
 
 /**
  *  2) 가게 상품 관리
@@ -17,4 +20,21 @@ public class ShopProductManager {
     public ShopProductManager(Shop shop) {
         this.shop = shop;
     }
+
+    public List<Product> getCoffeeList(){
+        return shop.getCoffees();
+    }
+
+    public List<Product> getBreadList(){
+        return shop.getBreads();
+    }
+
+    public void addNewCoffeeProduct(Product product){
+        shop.addProduct(product);
+    }
+
+    public Product findProductByName(String name){
+        return shop.findProductByName(name);
+    }
+
 }
