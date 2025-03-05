@@ -1,3 +1,4 @@
+/*
 package com.podoseee.practice1.controller;
 
 import javax.naming.NamingException;
@@ -44,4 +45,4 @@ public class NamingTest(){
         // NamingException발생(“변수 명명규칙에 어긋납니다.(맨 앞 숫자 불가능))
         return true;
     }
-}
+}*/
