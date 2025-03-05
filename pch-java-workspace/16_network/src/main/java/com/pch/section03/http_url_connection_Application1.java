@@ -15,6 +15,8 @@ public class http_url_connection_Application1 {
             4.  Content-Length: 컨텐트 크기
          */
 
+
+
         URL url = new URL("https://www.naver.com");
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
         int responseCode = conn.getResponseCode();
