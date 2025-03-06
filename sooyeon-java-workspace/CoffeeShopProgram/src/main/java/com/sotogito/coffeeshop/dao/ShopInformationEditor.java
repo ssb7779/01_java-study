@@ -9,10 +9,10 @@ import com.sotogito.coffeeshop.model.Shop;
  *  		 1_3) 가게 주소 수정
  *  		 1_4) 가게 마스터 id 수정
  */
-public class ShopInformationManager {
+public class ShopInformationEditor {
     private final Shop shop;
 
-    public ShopInformationManager(Shop shop) {
+    public ShopInformationEditor(Shop shop) {
         this.shop = shop;
     }
 

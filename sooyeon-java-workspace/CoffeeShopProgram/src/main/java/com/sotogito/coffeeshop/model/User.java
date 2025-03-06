@@ -21,11 +21,10 @@ public class User {
         this.amount = amount;
     }
 
-    public User(String id, String password, String name, int amount, boolean idAdministrator) {
+    public User(String id, String password, String name, boolean idAdministrator) {
         this.id = id;
         this.password = password;
         this.name = name;
-        this.amount = amount;
         this.idAdministrator = idAdministrator;
     }
 
@@ -37,11 +36,28 @@ public class User {
         orders.put(product, 1);
     }
 
-    public void updateAmount(int amount) {
+    public void chargeAmount(int amount) {
+        if(amount <= 0){
+            throw new IllegalArgumentException("1원 이상 입력해주세요.");
+        }
         this.amount += amount;
     }
 
-    public Map<Product,Integer> getOrders() {
+    public void purchase(Product product) {
+        if (amount == 0) {
+            throw new IllegalArgumentException("잔액이 없습니다. 충전해주세요.");
+        }
+
+        int purchaseAmount = product.getPrice();
+        if ((this.amount - purchaseAmount) <= 0) {
+            throw new IllegalArgumentException("잔액이 부족합니다.");
+        }
+
+        this.amount -= purchaseAmount;
+        System.out.println(amount);
+    }
+
+    public Map<Product, Integer> getOrders() {
         return Collections.unmodifiableMap(orders);
     }
 
@@ -65,17 +81,17 @@ public class User {
         return idAdministrator;
     }
 
+
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
-        return Objects.equals(id, user.id) && Objects.equals(password, user.password);
+        return Objects.equals(id, user.id);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, password);
+        return Objects.hashCode(id);
     }
 
     @Override

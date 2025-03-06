@@ -37,14 +37,11 @@ public class Shop {
     }
 
     public Product findProductByName(String name) {
-        for(ProductType type : products.keySet()){
-            for(Product product : products.get(type)){
-                if(product.getName().equals(name)){
-                    return product;
-                }
-            }
-        }
-        throw new IllegalArgumentException("존재하지 않는 상품입니다.");
+        return products.values().stream()
+                .flatMap(List::stream) //todo
+                .filter(product -> product.getName().equals(name))
+                .findAny()
+                .orElseThrow(() -> new NoSuchElementException("존재하지 않는 상품입니다.: " + name));
     }
 
     public void addProduct(Product product) {
