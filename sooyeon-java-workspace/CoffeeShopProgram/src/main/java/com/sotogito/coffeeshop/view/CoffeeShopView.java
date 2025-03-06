@@ -12,6 +12,8 @@ import java.util.Scanner;
 
 public class CoffeeShopView {
     private final Scanner scanner = new Scanner(System.in);
+    private final AdministratorView administratorView;
+    private final UserView userView;
 
     private final ShopController shopController;
     private final AdministratorController administratorController;
@@ -31,6 +33,9 @@ public class CoffeeShopView {
         shopController = new ShopController(productManager, ur);
         administratorController = new AdministratorController(shopEditor, productManager, fileMaker);
         userController = new UserController(orderManager, productManager);
+
+        administratorView = new AdministratorView(shopController, administratorController);
+        userView = new UserView(shopController, userController);
     }
 
     public void run() {
@@ -39,15 +44,21 @@ public class CoffeeShopView {
         String pwd = scanner.nextLine();
 
         User user = getUser(id, pwd);
-        System.out.printf("%s님 안녕하세요.", user.getName());
+        System.out.printf("%s님 안녕하세요.\n", user.getName());
 
-        if(user.isIdAdministrator()){
-            /// 관리자 로작
-        }
-        /// 구매 로직
+        checkAdmin(user);
 
 
     }
+
+    public void checkAdmin(User user) {
+        if(user.isIdAdministrator()){
+            administratorView.run(user);
+        }else {
+            userView.run(user);
+        }
+    }
+
 
     private User getUser(String id,String pwd) { //fixme view에 두는게 맞나?
         Optional<User> foundUser = shopController.login(id, pwd);
