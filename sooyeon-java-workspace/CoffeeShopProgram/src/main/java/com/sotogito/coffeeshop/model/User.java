@@ -37,6 +37,9 @@ public class User {
     }
 
     public void chargeAmount(int amount) {
+        if(amount <= 0){
+            throw new IllegalArgumentException("1원 이상 입력해주세요.");
+        }
         this.amount += amount;
     }
 
@@ -46,11 +49,12 @@ public class User {
         }
 
         int purchaseAmount = product.getPrice();
-        if ((this.amount + purchaseAmount) <= 0) {
+        if ((this.amount - purchaseAmount) <= 0) {
             throw new IllegalArgumentException("잔액이 부족합니다.");
         }
 
         this.amount -= purchaseAmount;
+        System.out.println(amount);
     }
 
     public Map<Product, Integer> getOrders() {

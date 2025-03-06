@@ -17,6 +17,10 @@ public class UserController {
     public void setUser(){
     }
 
+    public void changeAmount(User user,int amount){
+        user.chargeAmount(amount);
+    }
+
     public void order(User user,String productName){
         Product product = shopProductManager.findProductByName(productName);
         userOrderManager.orderByOne(user, product);

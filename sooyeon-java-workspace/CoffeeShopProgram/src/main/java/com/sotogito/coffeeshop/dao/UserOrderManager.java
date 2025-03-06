@@ -11,8 +11,8 @@ public class UserOrderManager {
     }
 
     public void orderByOne(User user, Product product){
-        user.addOrder(product);
         user.purchase(product);
+        user.addOrder(product);
     }
 
 }
