@@ -1,19 +1,17 @@
 package com.sotogito.coffeeshop.controller;
 
-import com.sotogito.coffeeshop.dao.ShopInformationManager;
+import com.sotogito.coffeeshop.dao.ShopInformationEditor;
 import com.sotogito.coffeeshop.dao.ShopProductManager;
-import com.sotogito.coffeeshop.dao.ShopSalesManager;
+import com.sotogito.coffeeshop.dao.ShopSalesFileMaker;
 import com.sotogito.coffeeshop.model.Product;
 import com.sotogito.coffeeshop.model.Shop;
 
-import java.util.List;
-
 public class AdministratorController {
-    private final ShopInformationManager shopInformationManager;
+    private final ShopInformationEditor shopInformationManager;
     private final ShopProductManager shopProductManager;
-    private final ShopSalesManager shopSalesManagement;
+    private final ShopSalesFileMaker shopSalesManagement;
 
-    public AdministratorController(ShopInformationManager shopInformationManager, ShopProductManager shopProductManager, ShopSalesManager shopSalesManagement) {
+    public AdministratorController(ShopInformationEditor shopInformationManager, ShopProductManager shopProductManager, ShopSalesFileMaker shopSalesManagement) {
         this.shopInformationManager = shopInformationManager;
         this.shopProductManager = shopProductManager;
         this.shopSalesManagement = shopSalesManagement;

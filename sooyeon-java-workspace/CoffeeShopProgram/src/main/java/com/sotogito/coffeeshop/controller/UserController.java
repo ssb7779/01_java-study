@@ -8,7 +8,6 @@ import com.sotogito.coffeeshop.model.User;
 public class UserController {
     private final UserOrderManager userOrderManager;
     private final ShopProductManager shopProductManager;
-    private User user;
 
     public UserController(UserOrderManager userOrderManager, ShopProductManager shopProductManager) {
         this.userOrderManager = userOrderManager;
@@ -18,9 +17,9 @@ public class UserController {
     public void setUser(){
     }
 
-    public void order(String productName){
+    public void order(User user,String productName){
         Product product = shopProductManager.findProductByName(productName);
-        userOrderManager.order(user, product);
+        userOrderManager.orderByOne(user, product);
     }
 
 
