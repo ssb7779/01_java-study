@@ -38,6 +38,7 @@ public class Application {
 //        lp.practice14();
 //        lp.star1();
 //        lp.star2();
+        lp.star3();
 
 
     }

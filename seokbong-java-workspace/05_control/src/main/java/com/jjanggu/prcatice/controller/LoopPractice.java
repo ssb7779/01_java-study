@@ -330,7 +330,27 @@ public class LoopPractice {
 
     public void star3() {
 
-        for( int i = 10; i < ; )
+        for(int i = 0; i< 5; i++){
+            if(i == 0 || i ==4){
+                for(int j = 0; j < 10; j ++){
+                    System.out.print('*');
+                }
+            }else{
+                for(int j = 0; j < 10; j ++){
+                    if(j == 0 || j== 9){
+                        System.out.print('*');
+                    }else{
+                        System.out.print(" ");
+                    }
+                }
+
+            }
+            System.out.println();
+        }
+
+    }
+
+    public void star4() {
 
     }
 }
