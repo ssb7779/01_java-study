@@ -4,68 +4,112 @@ import com.jjanggu.practice4.dto.Employee;
 
 import java.util.Scanner;
 
-public class EmpMenu{
+public class EmpMenu {
+
     Scanner sc = new Scanner(System.in);
 
-    public void mainMenu {
-        Employee emp  = null;
+    public void mainMenu() {
+        Employee emp = null;
 
         while(true) {
-            System.out.println("\n ==== 사원 정보 관리 프로그램 ====");
+            System.out.println("===== 사원 정보 관리 시스템 =====");
             System.out.println("1. 새 사원 정보 입력");
-            System.out.println("2, 사원 정도 수정");
+            System.out.println("2. 사원 정보 수정");
             System.out.println("3. 사원 정보 삭제");
             System.out.println("4. 사원 정보 출력");
-            System.out.println("0. 프로그램 종료" );
-            System.out.println("메뉴 번호 선택 : ");
+            System.out.println("0. 프로그램 종료");
+            System.out.print("메뉴 번호 선택 : ");
             int menu = sc.nextInt();
             sc.nextLine();
 
-            if((menu == 2 || menu == 4) && emp == null){
-                System.out.println("사원정보를 먼저 입력해야됩니다.");
-                continue;
+            switch (menu) {
+                case 1:
+                    inputEmployee();
+                    break;
+                case 2:
+                    modifyEmployee(emp);
+                    break;
+                case 3:
+                    emp = null;
+                    System.out.println("삭제되었습니다.");
+                    break;
+                case 4:
+                    System.out.println(emp.getInformation());
+                    break;
+                case 0:
+                    System.out.println("프로그램을 종료합니다.");
+                    return;
+                default:
+                    System.out.println("잘못입력하셨습니다. 다시 입력해주세요.\n");
             }
-
-            switch (menu){
-                case
-            }
-
         }
 
-        // 메뉴 화면 출력 --> 반복 실행 처리
-				/*
-					===== 사원 정보 관리 프로그램 =====
-					1. 새 사원 정보 입력		// inputEmployee() 실행 -> 반환 값으로 emp 초기화
-					2. 사원 정보 수정		  // modifyEmployee() 실행
-					3. 사원 정보 삭제  		// 가비지 컬렉터가 지워주게끔
-					4. 사원 정보 출력		  // Employee의 getInformation() 사용
-					0. 프로그램 종료		  // return 처리
-					메뉴 번호 선택 : 		  >> 입력 받음
-				*/
-    }
-    /*
-    public Employee inputEmployee() {
-        // 키보드를 통해 사원 정보를 입력받고
-        // 매개변수 생성자를 이용하여 입력 받은 값으로 객체 생성
-        // 생성된 객체 반환
     }
 
-     */
+    public Employee inputEmployee() {
+
+        System.out.print("이름 : ");
+        String empName = sc.nextLine();
+        System.out.println("부서 : ");
+        String dept = sc.nextLine();
+        System.out.println("직급 : ");
+        String job = sc.nextLine();
+        System.out.println("나이 : ");
+        int age = sc.nextInt();
+        sc.nextLine();
+        System.out.println("성별(남/여) : ");
+        char gender = sc.nextLine().charAt(0);
+        System.out.println("급여 : ");
+        int salary = sc.nextInt();
+        System.out.println("보너스포인트 : ");
+        double bonusPoint = sc.nextDouble();
+        sc.nextLine();
+        System.out.println("전화번호 : ");
+        String phone = sc.nextLine();
+        System.out.println("주소 : ");
+        String address = sc.nextLine();
+
+        return new Employee(empName, dept, job, age, gender, salary, bonusPoint, phone, address);
+
+    }
 
     public void modifyEmployee(Employee emp) {
-        // 서브 메뉴 화면 출력 --> 반복 실행 처리
-				/*
-					==== 사원 정보 수정 메뉴 ====
-					1. 이름 변경
-					2. 급여 변경
-					3. 부서 변경
-					4. 직급 변경
-					0. 이전 메뉴로
-				*/
-        // 각 번호에 맞춰 변경할 값을 입력 받고 setter 메소드를 이용하여
-        // 전달받은 emp 객체 정보 수정되도록 작업
+
+        while(true) {
+            System.out.println("===== 사원 정보 수정 메뉴 =====");
+            System.out.println("1. 이름 변경");
+            System.out.println("2. 급여 변경");
+            System.out.println("3. 부서 변경");
+            System.out.println("4. 직급 변경");
+            System.out.println("0. 이전 메뉴로");
+            System.out.print("메뉴 번호 선택 : ");
+            int menu = sc.nextInt();
+
+            switch (menu) {
+                case 1:
+                    System.out.print("변경할 이름 : ");
+                    emp.setEmpName(sc.nextLine());
+                    break;
+                case 2:
+                    System.out.print("변경할 급여 : ");
+                    emp.setSalary(sc.nextInt());
+                    break;
+                case 3:
+                    System.out.print("변경할 부서 : ");
+                    emp.setDept(sc.nextLine());
+                    break;
+                case 4:
+                    System.out.print("변경할 직급 : ");
+                    emp.setJob(sc.nextLine());
+                    break;
+                case 0:
+                    return;
+                default:
+                    System.out.println("잘못입력하셨습니다. 다시 입력해주세요");
+            }
+        }
+
+
     }
-
-
 
 }
